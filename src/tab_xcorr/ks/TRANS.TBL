@@ -1,0 +1,7 @@
+F 00MAKE_INTER1.CSH;1               	00make_inter1.csh
+F 00MAKE_INTER2.CSH;1               	00make_inter2.csh
+F 00MAKE_SPECTYPES.CSH;1            	00make_spectypes.csh
+D BAK                               	bak
+F BSCSPEC.TEX;1                     	bscspec.tex
+F GOODSPEC.TEX;1                    	goodspec.tex
+F SPECTYPES.TEX;1                   	spectypes.tex

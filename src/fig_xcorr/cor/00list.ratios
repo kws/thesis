@@ -1,0 +1,9 @@
+#!/bin/csh -f
+
+set templates = ("tausco" "iother" "picet" "alplyr")
+
+foreach t ($templates)
+  echo -n "v_best / v_$t = "
+  head -1 $t.corr | awk '{print 1/$4}'
+end
+

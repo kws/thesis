@@ -1,0 +1,48 @@
+set star = hd225160
+set cat = "HD 225160"
+set title = "HD\\(0698)225160   O8\\(0698)Ib(f)"
+set sptype = O8
+set lumcl = "Ib"
+set othclass = "(f)"
+
+# These are lists of values that will be used
+set v = (00 05 10 15)
+
+# Y can only have 4 members!!!!!
+set y = (11 12 13 14)
+
+# The y value to use for hydrogen in fig_ewd
+set hy = 12
+
+# Do we want to include the hydrogen chi maps (fig_ewd)
+set inc_h = yes
+
+# Tgkiel grid
+
+set tmin = 30000
+set tmax = 40000
+set gmin = 3.0
+set gmax = 4.0
+
+# And then a number of static variables for the star
+set rot = m109
+set rot_vel = -109
+
+
+# Add suport for model output
+# Temporary results
+
+set fit_v = 15
+set fit_y = .15
+set fit_t = 38000
+set fit_g = 3.4
+
+#Change to unset if model output disabled
+set fit_write 
+
+# The ewd window coordinates
+set window = "window 41 26 4.1 2.6"
+
+# The absolute magnitude 
+set Mv = -6.6
+

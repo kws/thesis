@@ -1,0 +1,11 @@
+#!/bin/csh -f
+
+if (!(-e $1)) then 
+  echo $1 not found - exiting
+  exit 99
+endif
+
+sed -e 's|\\\\|\\|g' $1 >! tmp.$$
+mv tmp.$$ $1
+
+

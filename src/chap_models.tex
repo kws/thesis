@@ -1,0 +1,540 @@
+\chapter{Models}
+\label{ch:mod}
+
+Having obtained spectroscopic observations of the sample stars, we now
+would like to extract information from those observations about the
+physical properties of these stars. We do this by comparing the
+observations with published theoretical models. The complete theory of
+stellar atmospheres is far beyond the scope of this work, but some of
+the more important aspects of the models are presented below.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% SECTION = STELLAR ATMOSPHERES %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Modelling stellar atmospheres}
+
+There is today a vast variety of different computer codes available
+for the modelling of stellar atmospheres (for a good, but now slightly
+outdated, summary see \cite{hu:91}). Although these codes sometimes
+vary substantially in their approach and/or emphasis they all more or
+less trace their ancestry to the work of Uns\"old in the 1930s.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Basic assumptions}
+The `classical stellar atmosphere theory' is based on several
+assumptions, which are still commonly made in modern atmospheric
+models:
+
+\begin{itemize}
+
+\item	\textbf{Plane-parallel geometry} assumes that the stellar
+	atmosphere can be divided into plane-parallel layers (see
+	figure \ref{fig:planepar}). This reduces the geometrical
+	dimensions from 3 to 1 and simplifies numerical
+	calculations. Such an assumption is only valid if the
+	thickness of photosphere constitutes a small fraction of the
+	stellar radius. For stars with extended atmospheres, the
+	geometry is likely to play an important role, and more
+	rigorous spherical models are preferable.
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=11cm
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_models/planepar.eps}
+%\fnote{Scanned schematic of plane-parallel atmospheres from Kudritzki}
+\caption[The geometry of plane-parallel and extended atmospheres]
+{\fcfont The geometry of plane-parallel and extended atmospheres. From
+Kudritzki, 1988.
+}
+\label{fig:planepar}
+\end{figure}   %%%%%%%%%%%%%%%
+
+\item 	\textbf{Steady State}, i.e. no time-dependent phenomena (like
+	shocks or pulsations). 
+
+\item	\textbf{Hydrostatic equilibrium} implies that gravitational
+	forces are exactly balanced by gas pressure. There is no net
+	flow of mass.
+
+\item	\textbf{Radiative equilibrium} assumes that radiation is the
+	only (or at least the dominant) carrier of energy through the
+	atmosphere. Other processes which transport energy, in particular
+	convection, are neglected.
+
+\item	\textbf{Chemical homogeneity}. It is generally assumed that
+	the chemical composition is constant throughout the stellar
+	atmosphere. 
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Radiative transfer}
+
+The general aim of a model atmosphere is to calculate the emergent
+flux at the surface of a star. The interaction of radiation with the
+stellar material can simply be considered as the sum of the losses and
+gains in intensity when the radiation has travelled a length
+$\mathrm{d}s$
+%
+\begin{equation}
+\mathrm{d}I_\nu = - \kappa_\nu \rho I_\nu \mathrm{d}s
+		  + j_\nu \rho \mathrm{d}s
+\end{equation}
+%
+where $j_\nu$ and $k_\nu$ are the mass coefficients for emissivity and
+absorption respectively. We now define the \emph{optical depth}
+which is simply the amount of absorbing matter the radiation
+encounters over a length $L$
+%
+\begin{equation}
+\tau_\nu = \int_0^L\kappa_\nu \rho \mathrm{d}s
+\end{equation}
+%
+and the \emph{source function} which describes the ratio of the
+emissivity and absorption coefficients
+%
+\begin{equation}
+S_\nu(\tau_\nu) = \frac{j_\nu}{k_\nu}\mathrm{.}
+\end{equation}
+%
+By combining these three equations we get
+%
+\begin{equation}
+\mathrm{d}I_\nu \mathrm{d}\tau_\nu = -I_\nu + S_\nu
+\end{equation}
+%
+which is called the \emph{equation of radiative transfer} and
+describes the change in intensity when radiation travels along an
+infinitesimal length $\mathrm{d}\tau_\nu$. The formal solution of
+this equation can be written as
+%
+\begin{equation}
+F_\nu = 2\pi \int_0^\infty S_\nu(\tau_\nu)E_2(\tau_\nu)d\tau_\nu
+\end{equation}
+%
+where $F_\nu$ is the total emergent flux at frequency $\nu$ and
+$E_2(x)$ is the second exponential integral given by
+%
+\begin{equation}
+E_2(x) = \int_1^\infty \frac{e^{-xt}}{t^2}dt\mathrm{.}
+\end{equation}
+%
+The mass emissivity and absorption coefficients depend on details of
+the interactions of photons with the stellar material, and can only be
+found if we know the physical properties of this material. This is the
+main difficulty in modelling a stellar photosphere: the radiation
+field depends on the properties of the matter, but the state of the
+material itself depends on the radiation field which, through
+interaction with photons, heats it and determines its excitation and
+ionisation characteristics.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Local Thermodynamic Equilibrium}
+
+The properties of a gas are most easily found if the gas is in
+\emph{thermodynamic equilibrium} (TE). In TE, the state of the gas (the
+distribution of atoms over bound and free states) is described by the
+equations of statistical mechanics, and can be uniquely defined by two
+thermodynamic variables. In the physics of stellar atmospheres it is
+customary to use the temperature, $T$, and the particle number density, $n$.
+
+However, it is clear that a stellar atmosphere is far from
+Thermodynamic Equilibrium. New energy is constantly being created in
+the core and `pumped' into the atmosphere, and at the same time
+photons are escaping from the surface (otherwise we wouldn't be able
+to observe the star at all). Instead, since TE does not hold, we make
+the assumption of \emph{Local Thermodynamic Equilibrium}, or LTE,
+which means that state of the gas is at its equilibrium value as
+determined by the \emph{local} values of $T(r)$ and $n(r)$.
+
+More specifically, this means that for the local values of $T$ and $n$,
+
+\renewcommand{\theenumi}{\roman{enumi}}
+\renewcommand{\labelenumi}{(\theenumi)}
+\begin{enumerate}
+\item	the particle velocity distributions are Maxwellian
+	\begin{equation}
+	f(v)\mathrm{d}v = \biggl( \frac{m}{2\pi kT}\biggr)^{3/2}
+		\exp\biggl(\frac{-mv^2}{2kT}\biggr)\mathrm{d}v
+	\end{equation}
+	where $m$ and $v$ are the particle mass and velocity and $k$
+	is the Boltzmann constant.
+
+\item	the excitation equilibrium is given by the Boltzmann
+	distribution
+	\begin{equation}
+	\frac{n_j}{n_i} = \frac{g_j}{g_i}
+	\exp\biggl[\frac{-(E_j - E_i)}{kT}\biggr]
+	\end{equation}
+	where $g_{i}$ is the statistical weight assigned to level
+	$i$ to account for degenerate sublevels, and $E_{i}$ is the
+	level energy (measured from the ground state).
+
+\item	the ionisation equilibrium is given by Saha's equation
+	\begin{equation}
+	\frac{N_j}{N_{j+1}} = n_e\frac{U_j}{U_{j+1}}
+		\biggl(\frac{h^2}{2\pi mkT}\biggr)^{3/2}
+		\exp \biggl(\frac{\chi_{Ij}}{kT}\biggr)
+	\end{equation}
+	where $N_j$ is the total number density, and $\chi_{Ij}$ is the ionisation potential,
+	of ionisation stage $j$. $U$ is the partition function, given by
+	$U_j = \sum_1^\infty g_j \exp (-\chi_j/kT)$.
+
+\item	the source function, $S_\nu$, is given by the Planck
+	function, $B_\nu$.
+\end{enumerate}
+\renewcommand{\theenumi}{\arabic{enumi}}
+\renewcommand{\labelenumi}{\theenumi.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Departures from simple model}
+
+With all the assumptions discussed in the previous sections is
+relatively easy to compute the properties of a `simple' stellar
+atmosphere, which in many cases will be fairly successful in
+describing the gross properties of the observed stellar spectrum, like
+the visual continuum. However, there are also many cases where these
+assumptions fail completely.
+
+In the late 1960s and early 1970s, important work was done on
+developing computational procedures that relieved the need for
+LTE. In this approach, usually referred to as non-LTE or nLTE, the
+populations of atomic and ionic states are allowed to deviate from
+their LTE values, yielding (one hopes) a more realistic description of
+the atmosphere. However, non-LTE routines are both relatively complex and
+computationally expensive, and often only a few selected ionic
+levels are allowed to depart from LTE.
+
+A lot of work in the 1990s has been on the creation of `unified' model
+atmospheres which simultaneously and consistently treat the
+photosphere and the stellar wind. Classically, the outer boundary of
+the photosphere was considered to be in hydrostatic equilibrium
+(something that clearly is not the case, especially if the stars are
+experiencing mass loss). The emergent flux from the static-atmosphere
+model was then imposed as the lower boundary of the expanding envelope
+--- a ``core--halo'' model. In unified atmospheres this artificial
+segregation is removed and the photosphere and expanding envelope are
+treated self-consistently, taking into account opacity effects in the
+envelope.
+
+Also several of the `new-generation' models remove the assumption of
+plane-parallel atmospheres, and include the 3-dimensional angle
+dependence in the radiation-transfer equations.
+
+However, perhaps the most important of all has been the
+increased quality (and quantity) of atomic and molecular
+data. Although it might appear from the visible spectrum (see
+appendix \ref{app:10lac}) that hydrogen and helium are the dominant
+sources of opacity in early-type stars, UV spectra of these same stars
+show a wealth of lines of heavier atomic species. The combined
+opacity from these sources can significantly alter the temperature
+structure in the upper layers of the stellar photosphere (e.g. \cite{hu:98}).
+
+A graphical summary of the physics of O-star atmospheres is shown in
+figure \ref{fig:atmophys}.
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=11cm
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_models/atmophys.eps}
+%\fnote{Scanned schematic of atmospheric physics from Kudritzki}
+\caption[Physics of O-stars atmospheres]
+{\fcfont The physics of hot star atmospheres. From
+Kudritzki, 1988.
+}
+\label{fig:atmophys}
+\end{figure}   %%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% SECTION = Model Grid %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Model grid}
+
+The grid of model spectra used in this work for the analyses of O
+stars was primarily calculated by K. C. Smith (unpublished) at
+UCL. Details of this grid can be found in \ybcite{sm:94}, and will
+only be summarised here. The grid consists of over 2200 individual
+model spectra calculated for several different values of four
+independent variables, namely effective temperature, surface gravity,
+helium number fraction and microturbulence. It spans a range in
+effective temperatures, \teff, from 27~kK to 3.5~kK in steps of 1~kK,
+and in surface gravity, \logg, from close to the effective Eddington
+limit%
+\footnote{The lowest gravity models are 2.7 dex and 3.3 dex for
+effective temperatures of 27~kK and 40~kK respectively.}
+%
+to 3.7 dex (c.g.s.) at intervals of 0.1 dex, with additional
+`main-sequence' models calculated for 4.0 and 4.5 dex at each
+temperature. Each of these \teff--\logg\ grids is repeated for
+helium number fractions of 0.05, 0.09 (solar), 0.20 and 0.30, and
+for microturbulent velocities of 0, 5, 10 and 15~\kms.
+
+\subsection{Atmospheric structure calculations}
+
+The model atmospheres were calculated using \tlusty\ version 160
+(\cite{tlusty1}; \cite{tlusty2}), assuming plane-parallel geometry and
+hydrostatic and radiative equilibria. Only hydrogen and helium were
+considered explicitly in the structure calculations, with 8 non-LTE
+levels each of \hi\ and \heii\, and 14 non-LTE levels of \hei. In
+addition to these, series of LTE hydrogenic levels were considered,
+extending to principal quantum numbers, $n$~=~16, 16, and 32 for \hi,
+\hei, and
+\heii\ respectively.
+
+\subsection{Synthetic spectra}
+
+Using the atmospheric structures discussed above, line-formation
+calculations were carried out using the codes \detail\ and
+\surface\ (\cite{gi:81}; \cite{bu:84}; \cite{bu:85}).
+
+\detail\ solves the coupled equations of statistical equilibrium and
+radiative transfer, using the fixed atmospheric structure
+calculated above. It uses the method of complete linearization as
+formulated by \ybcite{au:74}. The advantage with this formulation is
+that the computational timing is linearly proportional to the number
+of frequency points. This, coupled with the fact that good agreement
+between model and observed line profiles is very dependent on the
+complexity of the model atoms used in this step (e.g. Herrero
+\cite*{he:87hyd} and \cite*{he:87he}), meant that line-formation
+calculations were carried out using an increased number of non-LTE
+levels for all ions (see \cite{sm:94}, for specific details about the
+model atoms used).
+
+Finally, synthetic H/He spectra were computed using \surface\ for each
+of the values of \teff, \logg, $y$ and microturbulence discussed
+above. These grids of spectra were then loaded into an analysis package,
+\prog{tgkiel}, written by K. C. Smith, that for a given value of
+microturbulence will interpolate the grid of model spectra in all 3
+dimensions (i.e. \teff,
+\logg\ and $y$). These interpolated models were then used for the
+analyses.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Model predictions}
+
+In subsequent chapters we compare these models to observed spectra; in
+particular, we will concentrate on the equivalent widths of certain
+\hei\ and \heii\ lines, and the profiles of \hi\
+lines. Before attempting such analyses, it is useful to investigate the
+theoretical behaviours of the lines in question. Figures
+\ref{fig:cont:he1} and \ref{fig:cont:he2} show the equivalent width
+behaviour predicted by the models for the helium lines considered in
+the analyses. It is worth keeping in mind when selecting lines for
+\teff--\logg\ fit-diagram techniques (as explained in chapter
+\ref{ch:casestudy}), lines which show a low equivalent width
+sensitivity to the model input parameters (i.e., \teff\ and \logg)
+might `amplify' uncertainties in measured equivalent widths when used
+in the analyses. This is discussed further in chapter
+\ref{ch:casestudy}. Similarly, lines which have a high sensitivity
+might emphasise missing physics or assumptions made in the
+models. This is clearly seen for the \hei\ triplet lines, in
+particular for \hei\ \lam4471\AA, where the models consistently fail
+to reproduce observed equivalent widths (see also chapter \ref{ch:analyses}).
+
+Although it has previously been demonstrated (e.g. \cite{sm:94}) that
+these models are successful in reproducing, at least to an acceptable
+level, certain H and He lines in spectra of hot stars, they still do
+fail, sometimes catastrophically, in modelling others. In particular,
+these hydrostatic models neglect the effects of the stellar wind
+envelope surrounding the stars, and are unable to reproduce the
+wind-induced emission features or distortions often observed in lines
+such as the lower members of the hydrogen Balmer series (for example
+\ha\ and \hb) and \heii~\lam4686\AA.
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_models/contours/he1_cont.eps}
+\caption[Equivalent-width contours for \hei]
+{\fcfont Equivalent-width contours for \hei\ lines for models with
+solar helium abundance ($y = 0.09$). Contours are drawn every 20m\AA,
+with thick lines every 100m\AA.  
+}
+\label{fig:cont:he1}
+\end{figure}   %%%%%%%%%%%%%%%
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_models/contours/he2_cont.eps}
+\caption[Equivalent-width contours for \heii]
+{\fcfont Equivalent-width contours for \heii\ lines. Contours as in
+previous figure. Note `edge effects' caused by interpolation defects
+close to edge of the grid (determined by the Eddington Limit). 
+}
+\label{fig:cont:he2}
+\end{figure}   %%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Effects of microturbulence}
+
+Microturbulence was originally incorporated into curve-of-growth
+analyses to explain the observed fact that equivalent widths of
+certain lines are larger than those predicted by
+models\footnote{Models here does not necessarily refer to computer
+models, but to any predicted behaviour of the curve-of-growth} not
+taking this parameter into account.
+
+Lately there has been a lot of interest in microturbulence in O and
+B-type stars. \ybcite{mcer:98} and \ybcite{sm:98} have both performed
+in-depth analyses of the effects of microturbulence when comparing
+models to observations. Both groups have found that including
+microturbulence in the line formation calculations results in an
+increaase in the model
+\hei-line equivalent widths. This is an unavoidable consequence of
+desaturation if only line formation is considered, but \acite{sm:98}
+also showed that this is not true for all lines if microturbulence is
+treated in both line formation \emph{and} statistical equilibrium
+calculations. However, it still holds for some important lines
+(e.g. \hei~\lam4921\AA\ and \lam4471\AA) commonly used in the analysis
+of O stars.  This increase in equivalent width can lead to a
+lower adopted helium abundance than if microturbulence is neglected,
+something that could, at least partly, help resolve the so-called
+`helium discrepancy' identified in OB-type stars by
+\ybcite{he:92}. It also appears that the inclusion of microturbulence
+has a greater effect on the \hei\ triplet lines than on the
+singlet lines. This could help explain the `generalized dilution
+effect' described by \ybcite{vo:89}. There is a more detailed
+discussion of this in chapters \ref{ch:casestudy} and
+\ref{ch:analyses}.
+
+In the model grid used in this thesis%
+\footnote{Work is underway to construct a grid which treats
+microturbulence in both line-formation and statistical-equilibrium
+calculations.}%
+, microturbulence was only
+included in the line-formation step of the modelling, and its effect
+on the statistical-equilibrium was neglected. Microturbulence was
+incorporated into the Voigt functions by including a non-thermal term
+thus:
+\begin{equation}
+\Delta \lambda_\mathrm{D} = (\lambda/c)\sqrt{(2kT/Am_\mathrm{H}) +
+v_\mathrm{turb}^2}
+\end{equation}
+where $c$ is the speed of light, $k$ is the Planks constant, $T$ is the
+gas temperature, $A$ is the atomic mass (of He in this case),
+$m_\mathrm{H}$ is the mass of an H atom, and $v_\mathrm{turb}$ is the
+microturbulent velocity.
+
+The effects of microturbulence for \hei\ lines can be seen in figure
+\ref{fig:mturb:he1}. Including 15~\kms\ microturbulence can add almost
+a third to the equivalent width of certain \hei\ lines. It is also
+appears that microturbulence is slightly more important in
+supergiants, with a low surface gravity, than it is for main-sequence
+stars, with $\logg \sim 4.5$. The \heii\ lines are relatively
+unaffected by the inclusion of microturbulence in the line formation
+calculations only (maximum changes are only of the order of a few per
+cent).
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_models/contours/he1_mturb.eps}
+\caption[Microturbulence dependence for \hei]
+{\fcfont Equivalent-width contours for \hei\ lines highlighting the
+effects of the microturbulence parameter. Contours are drawn every 100m\AA.
+Thick lines are for a microturbulent velocity of 15~\kms, and thin
+lines for zero microturbulence.
+}
+\label{fig:mturb:he1}
+\end{figure}   %%%%%%%%%%%%%%%
+
+%\begin{figure} %%%%%%%%%FIGURE
+%\epsfxsize=\figwidth
+%\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+%\hspace{\cen}\epsfbox{fig_models/contours/he2_mturb.eps}
+%\caption[Microturbulence dependence for \hei]
+%{\fcfont Equivalent width contours for \heii\ lines highlighting the
+%effects (i.e. none) of the microturbulence parameter. Contours as in previous
+%figure.  
+%}
+%\label{fig:mturb:he2}
+%\end{figure}   %%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Rotational or macroturbulent broadening}
+
+A subject which we will repeatedly come back to throughout this work
+is the question of whether the dominant `macroscopic' broadening process
+in O-type stars is rotational Doppler broadening, or some other
+`macroturbulent' velocity field. We distinguish between `microscopic'
+processes which act on, essentially, atomic scales (Stark broadening,
+thermal broadening, etc.) or which otherwise affect the intrinsic line
+profile (like microturbulence), and `macroscopic' processes which do
+not affect the line strength, but only the observed line profile (like
+rotation and macroturbulence).
+
+To try to resolve this problem, we will in chapters \ref{ch:casestudy}
+and \ref{ch:analyses} compare observations to model spectra convolved
+with either a rotational Doppler function (\cite{gray} p. 374):
+%
+\begin{equation}
+\mathrm{f}(\Delta x,\Delta\lambda,\epsilon) =
+\frac{2(1-\epsilon)\sqrt{1-\Delta x^2} + \frac{1}{2} \pi \epsilon (1
+-\Delta x^2)}{\pi \Delta \lambda (1 - \epsilon/3)} 
+\label{eq:mod:rotation}
+\end{equation}
+%
+or a Gaussian function which simulates a macroturbulent velocity field
+in the stellar atmosphere:
+%
+\begin{equation}
+\mathrm{f}(\Delta x,\Delta\lambda) =
+\frac{\sqrt{\pi}}{\Delta\lambda \times \exp(-\Delta x^2)}
+\end{equation}
+%
+where $\epsilon$ is the limb-darkening coefficient, $\Delta\lambda$ is
+the apparent velocity shift. The value $x$ is the x-coordinate of an
+imaginary strip (see figure \ref{fig:rot:gray}) of the stellar disk,
+and, for rotation, is related to $\Delta\lambda$ through:
+%
+\begin{equation}
+\Delta\lambda = v = x\Omega\sin i
+\label{eq:dopshift}
+\end{equation}
+%
+where $\Omega$ is the angular velocity and $i$ is the angle
+of inclination as illustrated in figure \ref{fig:rot:gray}.
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=12cm
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_models/gray.eps}
+\caption[Schematic of a rotating star]
+{\fcfont Schematic of a rotating star. \textbf{Left diagram} illustrates
+symbols discussed in text. The $y$ axis is chosen to make $\Omega$ lie
+in the $y$ -- $z$ plane. \textbf{Right diagram} shows how the
+apparent disk of a star can be thought of as a series of strips, each
+with a Doppler shift according to equation \ref{eq:dopshift}. From Gray (1992).}
+
+\label{fig:rot:gray}
+\end{figure}   %%%%%%%%%%%%%%%
+
+Figure \ref{fig:brfunc:comparison} shows the model \hei~\lam4143\AA\
+line convolved with the rotational function (solid line) and the
+macroturbulent function (dashed line). The rotational convolution gives
+the line a much deeper rounder shape, whereas the macroturbulent
+convolution gives a sharper and broader profile, almost a `v'-shape.
+
+In an attempt at determing which of these line broadening functions
+best reproduce the observed line profiles, model spectra convolved
+with the above functions are compared to observations using a $\chi^2$
+fitting procedure. This analysis is described in section
+\ref{sec:casestudy:broadening}.
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_models/broadening/comparison.eps}
+\caption[Comparison of rotational Doppler and macroturbulent broadening 
+functions]
+{\fcfont Comparison of rotational Doppler and macroturbulent broadening
+functions. Solid lines show the rotationally broadened line profiles,
+and the dashed lines are the line profile broadened by macroturbulence.}
+
+\label{fig:brfunc:comparison}
+\end{figure}   %%%%%%%%%%%%%%%
+

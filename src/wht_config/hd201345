@@ -1,0 +1,48 @@
+set star = hd201345
+set cat = "HD 201345"
+set title = "HD\\(0698)201345   ON9\\(0698)V"
+set sptype = ON9
+set lumcl = "V"
+
+
+# These are lists of values that will be used
+set v = (00 05 10 15)
+
+# Y can only have 4 members!!!!!
+set y = (13 14 15 16)
+ 
+# The y value to use for hydrogen in fig_ewd
+set hy = 14
+
+# Do we want to include the hydrogen chi maps (fig_ewd)
+# Do we want to include the hydrogen chi maps (fig_ewd)
+set inc_h = yes
+
+# Tgkiel grid
+
+set tmin = 30000
+set tmax = 40000
+set gmin = 3.5
+set gmax = 4.5
+
+# And then a number of static variables for the star
+set rot = r109
+set rot_vel = 109
+
+# Add suport for model output
+# Temporary results
+
+set fit_v = 15
+set fit_y = .14
+set fit_t = 36000
+set fit_g = 3.9
+
+#Change to unset if model output disabled
+set fit_write 
+
+# The ewd window coordinates
+set window = "window 41 26 4.6 3.1"
+
+# The absolute magnitude 
+set Mv = -4.2
+

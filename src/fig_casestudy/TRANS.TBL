@@ -1,0 +1,13 @@
+F 10LAC_LINES.EPS;1                 	10lac_lines.eps
+D ELF_FITS                          	elf_fits
+D ERRORS                            	errors
+F ERRORS_HE1.EPS;1                  	errors_he1.eps
+F ERRORS_HE2.EPS;1                  	errors_he2.eps
+D EWD                               	ewd
+F EWD.EPS;1                         	ewd.eps
+D FLOWCHART                         	flowchart
+D HE2_4200                          	he2_4200
+D HYDROGEN                          	hydrogen
+D MODELFITS                         	modelfits
+F MODEL_FIT_HE1.EPS;1               	model_fit_he1.eps
+F MODEL_FIT_HE2+H.EPS;1             	model_fit_he2+h.eps

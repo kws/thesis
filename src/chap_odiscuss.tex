@@ -1,0 +1,805 @@
+\chapter{Properties of the O stars}
+\label{ch:odiscuss}
+
+In chapter \ref{ch:analyses} we derived physical parameters for a
+large sample of O stars.  There are obvious shortcomings to the
+models, as is clearly seen in the case of \hei~$\lambda$4471\AA, for
+which the models consistently fail to reproduce the observed
+spectra. However, even with important physics left out or
+approximated, we believe the stellar models of today are good enough
+to give us a reasonable representation of the stellar atmosphere
+and a unique insight into the processes that might take place in, on
+and around the star. In this chapter we will look at the stellar
+parameters derived in chapters \ref{ch:casestudy} and
+\ref{ch:analyses}, and try to interpret some of the observed properties.
+
+\subsubsection{Chapter conventions}
+Several of the figures shown in this chapter will use a set of
+`standard' symbols used throughout this chapter (and also in some
+diagrams appearing in earlier chapters). Table \ref{ta:symbols}
+summarises the different symbols. In addition to use of different
+symbols for different subgroups of stars, the symbols are also
+sometimes scaled according to some other parameter, e.g. the inferred
+helium number fraction. In these cases the scaling will be explained,
+either in the caption, or in the figure itself.
+
+When the figures are there to investigate a relationship between two
+parameters, rank correlation coefficients are calculated and shown in
+the figure. Two such correlation coefficients are calculated; the Spearman
+Rank-Order Correlation Coefficient, $r_\mathrm{s}$, and Kendall's~$\tau$.
+Both of these are shown with their respective significance levels,
+$p$. A small value of $p$ indicates a significant correlation. The
+properties of these correlation coefficients are described in
+\emph{Numerical Recipes} (\cite{nr}).
+
+\begin{table} %%%%%%%%% TABLE (symbols)
+\begin{center}
+\caption{Symbols used in this chapter}
+\vspace{\abovecaptionskip}
+\begin{tabular}{r|cc}
+\hline\hline
+\multicolumn{1}{c}{} & \multicolumn{2}{c}{Luminosity Class}\\
+\multicolumn{1}{c}{} & I, II, III & IV, V \\ \hline
+Morphologically normal&
+\epsfxsize=11pt\epsfbox{fig_odiscuss/symbols/oI.eps}&
+\epsfxsize=11pt\epsfbox{fig_odiscuss/symbols/oV.eps}\\
+OC classified&
+\epsfxsize=11pt\epsfbox{fig_odiscuss/symbols/ocI.eps}\\
+ON classified&
+\epsfxsize=11pt\epsfbox{fig_odiscuss/symbols/onI.eps}&
+\epsfxsize=11pt\epsfbox{fig_odiscuss/symbols/onV.eps}\\
+\hline\hline
+\end{tabular}
+\label{ta:symbols}
+\end{center}
+
+\tnote{There are no known OC main-sequence stars.}
+\end{table} %%%%%%%%%%%%% TABLE
+
+\subsubsection{H--R diagrams and evolutionary tracks}
+Figure \ref{fig:hrd:params} shows the sample stars on the H--R
+diagram, with evolutionary tracks from \ybcite{schaller:92}. Also
+indicated on the diagram is the Zero Age Main Sequence (ZAMS) and the
+Terminal Age Main Sequence (TAMS). The latter is taken here to be the
+most redward point the stars reach during their core hydrogen burning
+lifetimes. One of the ON main sequence stars, the binary star
+HD~12323, falls below the ZAMS (although the ZAMS is well within the
+error box surrounding this star; see figure for typical uncertainties).
+
+% NOTE ON POSITION OF HD~12323
+%offset about 1.6~kK and log(L/L) between 4.65 and 4.8 although
+%if we combine these the individual errors get a lot smaller.
+
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_odiscuss/hrd/hrd.eps}
+\caption[H--R diagram with evolutionary tracks]
+{\fcfont H--R diagram showing O star parameters and evolutionary
+tracks. Main sequence stars are shown as squares, all other stars as
+circles. The size of the symbols depends on the helium number fraction,
+$y$ (see key in lower left-hand corner). The OC star is shown as a
+filled circle, and the ON stars are shown cross-hatched. Evolutionary
+tracks for 20, 25, 40, 60 and 85 $M_\odot$ from Schaller et al. (1992)
+are shown, with the predicted ZAMS and TAMS (dashed line). Typical
+error box (assuming an error of 0.3 on $M_V$; see Herrero et al. 1992)
+is shown to the left of the ZAMS.}
+\label{fig:hrd:params}
+\end{figure}   %%%%%%%%%%%%%%%
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=11cm
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_odiscuss/schaller_fig5.eps}
+\caption[H--R diagram including post-MS evolutionary tracks]
+{\fcfont H--R diagram including post-MS evolutionary tracks from
+Schaller et al. (1992).}
+\label{fig:hrd:evol}
+\end{figure}   %%%%%%%%%%%%%%%
+
+After the core hydrogen is exhausted, the stars make a long trip
+redwards in the H--R diagram before they return again (only for stars
+with a ZAMS mass, $M_0 \gtrsim 40M_\odot$) to the O star
+region, as shown in figure \ref{fig:hrd:evol}; this time the models
+ predict nuclear processed material on the surface, and the
+star are tens of per cent lighter than they were on the ZAMS. On the
+return trip to the O-star region, the stars are very evolved and have
+a high mass-loss. The atmospheres are predicted to show large amounts
+of CNO processed materials, and much higher helium fractions than we observe.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% SECTION = helium abundance %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The helium abundance}
+\label{sec:helium}
+
+From looking at the results listed in table \ref{ta:ostars} we see
+than one of the most noticeable trends is that a large number of the
+stars show a higher-than-solar helium abundance. This has also been
+found by several other authors. \ybcite{ku:83} and \ybcite{bo:86} both
+% Kudritzki et al. 1983 A&A 118 245
+% Bohannan et al 1986 ApJ 308 728
+found increased helium abundances for the O4~If star $\zeta$~Pup
+($y$~=~0.14 and 0.17 respectively). \ybcite{sc:88} analysed a sample
+of OBN class V stars and compared them to the normal OB stars 10~Lac
+and $\tau$~Sco. All the nitrogen-rich stars also came out with high
+helium abundances, whereas the normal stars had solar
+composition. \ybcite{vo:89} performed a study of stars of spectral
+type O9.5 and found helium enrichment only in the Ia star
+$\alpha$~Cam. All other luminosity classes showed normal helium
+abundances. Along the same lines, \ybcite{he:92} studied a sample of
+OB stars and came to the conclusions that all main sequence stars (if
+not fast rotators) have normal helium abundances; almost all stars
+with a \vsini\ faster than 200~\kms\ or classified as Ia, Iab, f or
+(f) show helium enhancement ($y \geq 0.12$; most of the sample $y \geq
+0.15$); and that all other objects show normal helium fractions ($y
+\leq 0.12$). From this they deduce that most O giants and supergiants
+show CNO enrichment which is ``apparently the only explanation for
+helium enrichment'', and further that the enrichment is reinforced
+when the star has a high
+\vsini\ or a low gravity and high luminosity. More recently,
+\ybcite{sm:94} studied three supergiants of approximately the same spectral
+type and luminosity class, one of which was an OC star, one was
+classified as ON, and the third was a normal O star. They found that
+both the ON and the O star showed enhanced helium abundances (0.17 and
+0.13 respectively), and that the OC had a solar composition.
+
+
+\subsection{Evolutionary effects}
+All these effects could be explained as evolutionary effects. Hot
+stars experience a large mass loss through stellar wind during their
+lifetimes, and this will slowly strip off the outer layers of the
+stars, exposing deeper layers. These layers might contain the products
+of nuclear burning brought up from the core through some deep
+convective process. The evolutionary models by \ybcite{schaller:92}
+discussed above, taking into account mass loss and convective
+overshooting, do reveal nuclear processed materials on the surface of
+the stars. This happens, however, at a much later evolutionary stage
+(i.e., post red supergiant) than that which these stars appear to be
+in, and the helium abundances predicted by the evolutionary models are
+far larger than observed. Only the very high-mass evolutionary tracks
+predict an increase in surface helium abundance while the star is
+still core hydrogen burning. Figure \ref{fig:3D} shows the predicted
+surface helium number fraction of the evolutionary tracks, and figure
+\ref{fig:hrd:mod_y} shows the same diagram as figure
+\ref{fig:hrd:params}, with the inclusion of the model helium fractions. To
+make the diagram easier to read, all stars are here shown as identical
+symbols. It appears that the predicted increase in $y$ is roughly the
+same as observed. However, only stars at a higher luminosity and lower
+temperature than those analysed in this study, are predicted to show
+this increased helium abundance.
+
+\begin{figure} %%%%%%%% FIGURE
+
+\setlength{\cen}{\figwidth/2}
+
+\begin{tabular}{cc}
+$40 M_\odot$ & $60 M_\odot$ \\
+\epsfxsize=\cen\epsfbox{fig_odiscuss/3D/he_numfrac40.eps}&
+\epsfxsize=\cen\epsfbox{fig_odiscuss/3D/he_numfrac60.eps}\\
+$85 M_\odot$ & $120 M_\odot$ \\
+\epsfxsize=\cen\epsfbox{fig_odiscuss/3D/he_numfrac85.eps}&
+\epsfxsize=\cen\epsfbox{fig_odiscuss/3D/he_numfrac120.eps}\\
+\end{tabular}
+
+\caption[Helium number fractions, $y$, predicted by evolutionary tracks]
+{\fcfont Helium number fractions, $y$, predicted by evolutionary tracks.}
+\label{fig:3D}
+\end{figure} %%%%%%%
+
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_odiscuss/mod_y/mod_y.eps}
+\caption[H--R diagram with evolutionary helium fractions]
+{\fcfont H--R diagram showing O star parameters and evolutionary
+tracks (as in figure \ref{fig:hrd:params}). The predicted surface
+helium number fractions are shown as `ghost' stars on the evolutionary
+tracks. The size of the symbols depends on the helium number fraction,
+$y$ (see key in lower left-hand corner). All stars are shown as
+circles to simplify diagram.}
+\label{fig:hrd:mod_y}
+\end{figure}   %%%%%%%%%%%%%%%
+
+\ybcite{wa:76} proposed several scenarios to explain the observed
+carbon, nitrogen and sometimes oxygen anomalies in the OBN and OBC
+stars, and it is probable that these are very closely related to the
+observed variations in helium abundances (see section
+\ref{sec:cno_anomalies}). Apart from the evolutionary effects
+discussed above, it is also possible that the observed abundance
+anomalies (C, N or He) could reflect initial abundance
+differences. The main (if not only) evidence supporting this theory is
+the existence of the three nitrogen deficient Orion Belt stars
+(HD~36486, HD~37128, HD~37742). HD~37128 is a B0~Ia star, and as such
+is not covered by this study. The other two are, and both are found to
+have a normal helium abundance ($y~=~0.10$). In a recent study,
+\ybcite{mcer:98} analysed HD~37128 using models very similar to the
+ones used in this thesis, and they derived $y$~=~0.10.
+
+To return to Herrero's conclusions; they notice that all their main
+sequence stars, except the fast rotators ($\vsini \geq 200$~\kms),
+have normal helium abundances. Figure \ref{fig:helium:logg} shows $y$
+against \logg\ and luminosity class. Unlike Herrero et al., we have no
+main sequence stars with a \vsini\ faster than 200~\kms, but we do
+observe that two (out of four) of the MS stars do show enhanced
+helium. Both of these stars were classified as ON stars by Walborn,
+and both are possibly binaries\footnote{HD~12323 is a binary according to
+\ybcite{ga:80}; HD~201345 was listed as binary according to
+\ybcite{bolt_rog}, but single by \ybcite{gi:86} and
+\ybcite{mason:98}}. Although 50~\% of the MS sample show helium
+enhancement, there is a strong bias towards stars classified as either
+ON or OC in our sample (there are no known OC main sequence stars) so
+this is certainly not a representative percentage of helium enhanced O
+main-sequence stars.
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_odiscuss/deps/loggplot.eps}
+\caption[Helium fractions for different \logg\ and luminosity classes]
+{\fcfont Helium number fractions for different \logg\ (\textbf{top
+panel}) and luminosity classes (\textbf{bottom panel}). $r_s$ is the
+Spearman rank-order correlation coefficient, and $\tau$ is Kendall's
+$\tau$. The numbers in brackets indicate the probabilities that the
+points belong to a random distribution, ie no correlation.}
+\label{fig:helium:logg}
+\end{figure}   %%%%%%%%%%%%%%%
+
+Our supergiants also show a much larger spread in helium abundances
+than those studied by Herrero et al. Roughly half the luminosity class
+I objects have a helium abundance of 0.12 or below, but only two have
+a $y$ of 0.15 or higher, whereas Herrero et al. found that all but one
+of their Ia, Iab, f or (f) classified stars had abundances of 0.15 or
+higher. In our sample, only five stars appear to have a helium
+abundance this high, and two of these are classified as ON (one is the ON
+main-sequence binary HD~12323).
+
+Comparing the position in the H--R diagram to evolutionary models
+allows us to estimate the mass of the star, and also its
+age. Interpolating between the models by \ybcite{schaller:92} we can
+find the evolutionary track that passes through a given point on the
+H--R diagram (by supplying a \teff\ and $L$). Mapping this
+evolutionary track onto a \teff\ -- $\log_{10} (L/L_\odot)$ grid we
+can find the current mass (see section \ref{sec:mass_discrepancy}) and
+age from the spectroscopic \teff. Figure \ref{fig:helium:age} shows
+the helium abundance as a function of age and fractional age (age / MS
+lifetime). Neither shows a clear relation, but the rank correlation
+coefficients $r_s$ and $\tau$ shown in upper right-hand corner of
+figures, suggest that there is possibly some correlation
+between age and $y$. The probability that there is no correlation is
+only 12~--~17\%, but there is no conclusive evidence to suggest that
+the helium abundance increases with age, especially since there
+appears to be very small probability of a correlation between the
+fractional age and $y$.
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_odiscuss/ages/age.eps}
+\caption[Helium fractions against stellar age]
+{\fcfont Helium number fractions against the stellar age predicted by
+evolutionary models (Schaller et al. 1992). \textbf{Top panel} shows
+$y$ vs. the evolutionary age, and the \textbf{bottom panel} shows $y$
+vs. fractional age (age / core hydrogen burning lifetime). HD~12323 is
+not plotted due to its position below the main-sequence. $r_s$ and
+$\tau$ are the correlation coefficients as for figure
+\ref{fig:helium:logg}.}
+\label{fig:helium:age}
+\end{figure}   %%%%%%%%%%%%%%%
+
+
+\subsection{Rotation}
+\label{sec:odiscuss:rotation}
+As mentioned above, \ybcite{he:92} found that their fast rotators,
+arbitrarily defined as those stars with a \vsini~$\geq$~200~\kms,
+showed high ($y \geq 0.15$) helium abundances. We have only one star
+with a broadening velocity higher than 200~kms. Figure
+\ref{fig:helium:vsini} shows $y$ as a function of broadening
+velocity. Notice that the MS stars (marked as squares) and the two
+fastest rotators belong to a separate distribution from the other
+stars due to the use of different profiles to estimate the broadening
+velocity. We have, however, treated them as one dataset when calculating
+the correlation coefficient, $r$, shown in the upper right-hand
+corner. Although the star with the broadest absorption lines shows only a
+moderately high helium abundance, there appears to be a clear trend
+between the width of the spectral lines and the helium abundance. From
+the linear correlation coefficient we find a low probability
+that these parameters are not correlated.
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}
+\epsfbox{fig_odiscuss/deps/vsini.eps}
+\caption[Helium fractions against broadening velocity]
+{\fcfont Helium number fractions against the stellar broadening
+velocity. Symbols are as shown in table \ref{ta:symbols}}
+\label{fig:helium:vsini}
+\end{figure}   %%%%%%%%%%%%%%%
+
+If we assume that the main broadening mechanism in all O-stars is
+rotation, then the implication of this would be that there is some
+turbulent mixing of the stellar interior caused by the rotation that
+brings processed material up to the surface. There is, however,
+extensive evidence to suggest that this is not the case. The almost
+total absence of sharp-lined O stars (as would be expected in the case
+of rotational broadening, considering a number of the stars would be
+seen pole-on) could imply that the broadening must, at least partly, be
+caused by other mechanisms (see discussion in chapter
+\ref{ch:xcorr}). That the dependence of $y$ on the line broadening
+velocity is apparently the same for both main-sequence and giant stars
+implies that the broadening mechanism must be the same. However, there
+are only 4 main-sequence stars in the sample, and two of these have
+very narrow lines, so the sample is too small to draw any firm
+conclusions.
+
+There is of course the possibility that the increases in helium
+abundance are not real. It is easy to imagine that for stars with broad
+lines, it is difficult to detect blends, and the measured equivalent
+widths might be overestimated. Figure \ref{fig:helium:hd214680_250}
+shows a simulation of this effect. The left hand column of the figures
+shows the fit diagrams for the measured equivalent widths of 10~Lac
+(HD~21460). This star has very narrow lines, and a `normal' helium
+abundance. The right hand column shows equivalent widths measured
+after artificially spinning this star up to 250~\kms\ by convolving the
+spectrum with equation \ref{eq:mod:rotation} discussed in chapter
+\ref{ch:mod}. The star now appears to have a helium abundance of roughly
+0.12, compared to the `original' adopted value of 0.09. However, we
+made no attempts at using multiple gaussians to fit irregular looking
+lines, and it is quite likely that, in a careful study, these errors
+could be reduced by careful fitting of the lines. It is therefore
+possible that blending effects could cause a \emph{slight} increase in
+the adopted helium fractions, but not enough to explain the enhanced
+helium abundances observed in this study.
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=15cm
+\epsfbox{fig_odiscuss/hd214680_250.eps}
+\caption[Fit diagrams for `spun-up' 10~Lac]
+{\fcfont Fit diagrams for artificially `spun-up' 10~Lac.  The
+left-hand column shows the real fit diagrams for 10~Lac (HD~214680)
+with an adopted helium fraction of 0.09. The right-hand column shows
+fit diagrams from equivalent widths measured after artificially
+`spinning-up' the spectrum of 10~Lac to 250~\kms. The star now appears
+to have a helium fraction of 0.12.}
+\label{fig:helium:hd214680_250}
+\end{figure}   %%%%%%%%%%%%%%%
+
+Another factor that might be contributing to the increase in helium
+abundances observed by Herrero et al. for the very fastest rotators,
+could be caused by rotational distortion. For stars that rotate very
+fast, close to their break-up angular velocity, $\omega_\mathrm{c}$,
+the equatorial radius will be significantly larger than the polar
+radius, and similarly the gravity at the equator will be lower than at
+the pole.  From the `law of gravity darkening' (\cite{zeipel}) we have
+$\teff^4 \propto |\mathbf{g}|$. This will lead to differences in
+atmospheric structure at the poles and equator, and differing
+contributions from different elements (it will also lead to different
+line profiles for lines that form predominantly near the equator and
+those that form predominantly at the poles).
+
+Ian Howarth (private communication) has generated synthetic spectra
+for stars with $\omega/\omega_\mathrm{c}$ near 1. At these high
+velocities the stars `bulge' around the equator, and consequently have
+lower effective temperature and gravity at the equator. The synthetic
+spectra are generated by dividing the stellar surface into sections,
+and calculating an average \teff\ and \logg\ for each section. Spectra
+from the grid of models are then co-added to generate a synthetic
+spectrum of the star. We have fitted a random sample of these
+synthetic spectra as if they were actual observed stars (the `true'
+atmospheric parameters were not revealed until after the
+analyses). Table \ref{ta:omega_crit} summarises the results of the
+analysis. The models closest to their breakup-velocity appear to have
+a slightly increased helium abundance. The effect is very small,
+however, and probably too small to be observed in real stellar
+spectra. For the low $\omega/\omega_\mathrm{c}$ models, we find values
+of \teff\ and \logg\ very close to the input parameters. However, as
+$\omega/\omega_\mathrm{c}$ increases, we find values that appear to
+lie about half-way between the polar and equatorial values. Adopting
+these values and computing synthetic spectra, we find that the \hei\
+lines are predicted too strong and the \heii\ lines too broad and
+weak. It would be very difficult to fit the observed line profiles
+using just one value of \vsini\ since the \hei\ lines are mainly
+formed closer to the hot poles (\heii\ is very temperature sensitive)
+where the star rotates slower. From table \ref{ta:omega_crit} it
+appears that the effects of rotational distortion are unable to
+account for the observed enhanced helium abundances.
+
+\begin{table}
+\begin{center}
+\caption{Results of high $\omega/\omega_\mathrm{c}$ analyses}
+\vspace{\abovecaptionskip}
+\begin{tabular}{ccccc|cccc}
+\hline\hline
+\multicolumn{5}{c|}{Input spectrum} &
+\multicolumn{4}{c}{Fit parameters} \\
+$\omega/\omega_\mathrm{c}$ 	&
+$T_\mathrm{p}$			& $T_\mathrm{e}$ & 
+$\log_{10}g_\mathrm{p}$ 	& $\log_{10}g_\mathrm{e}$ &
+\teff				& \logg &
+$y$				& \vsini \\
+& (kK) & (kK) & & & (kK) & & & (\kms) \\
+\hline
+%Model 2
+0.10 & 32.00 & 31.95 & 3.50 & 3.50 &
+32.0 & 3.5 & 0.09 & 440 \\
+%Model 3
+0.10 & 40.00 & 39.94 & 3.90 & 3.90 &
+39.0 & 3.9 & 0.09 & 440 \\
+%Model 4
+0.90 & 32.00 & 25.21 & 3.50 & 3.09 &
+27.0 & 3.2 & 0.10 & 435 \\
+%Model 5
+0.90 & 40.00 & 31.51 & 3.90 & 3.49 & 
+35.0 & 3.8 & 0.09 & 444 \\
+%Model 8
+0.95 & 32.00 & 23.00 & 3.50 & 2.93 &
+27.0 & 3.3 & 0.09 & 435 \\
+%Model 7
+0.95 & 40.00 & 28.74 & 3.90 & 3.33 &
+33.0 & 3.5 & 0.10 & 442 \\
+%Model 6
+0.98 & 32.00 & 20.37 & 3.50 & 2.72 &
+27.0 & 3.1 & 0.10 & 428 \\
+%Model 1
+0.98 & 40.00 & 25.46 & 3.90 & 3.12 &
+31.0 & 3.5 & 0.10 & 436 \\
+\hline\hline
+\end{tabular}
+\label{ta:omega_crit}
+\end{center}
+\tnote{The velocity of all input spectra were 438~\kms. The velocities
+listed are those found from the \hei\ lines. \heii\ line broadening
+velocities are lower, at about 350~\kms, because the main contribution
+is from closer to the hot poles. The subscripted \emph{p}s and
+\emph{e}s denote polar and equatorial values respectively.}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% SECTION = mass discrepancy %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The `mass discrepancy'}
+\label{sec:mass_discrepancy}
+Using exactly the same method as we described earlier to find the
+stellar ages, we can also find their `evolutionary masses'. The
+evolutionary mass is the mass predicted by the (model) evolutionary
+track that passes through a star's position on the H--R diagram. Table
+\ref{ta:ostars:mass_disc} lists the spectroscopic mass (derived in
+chapter \ref{ch:analyses}), the ZAMS mass, and the `current'
+evolutionary mass for each target. For the main sequence stars the two
+`evolutionary' masses are similar, but it is apparent from the table
+that the stars lose a significant amount of mass during their core
+H-burning lifetime.
+
+%Groenwegen, a&a 221
+\ybcite{gr:89} and \ybcite{he:92} both noticed that there was a discrepancy
+between the spectroscopic and evolutionary masses in O and B
+stars. Herrero et al. suggested that this discrepancy could be made
+smaller by assuming the stars were no longer core H-burning, and on
+their way back to the blue after the red supergiant stage. However, at
+this stage the stars are expected to be at a highly evolved stage with
+very different properties than those observed (different surface
+abundances, mass-loss etc.), so this is unlikely to be the case. Herrero
+et al. also derive masses from radiation driven wind theory, and
+find that these masses agree within the errors to the spectroscopic
+masses. This probably rules out any large systematic errors in the
+spectroscopic masses (however, see discussion below about the impact
+of recent evolutionary models).
+
+Table \ref{ta:ostars:mass_disc} clearly shows that the mass
+discrepancy is also significant for our data, and that the
+distribution of values is very similar to that found by Herrero et
+al. Although we only have a very small sample of main-sequence stars,
+we clearly see that the mass discrepancy is significantly smaller for
+these objects. Figures \ref{fig:dm:logg} and \ref{fig:dm:age} show the
+mass discrepancy against \logg\ and age. These two parameters are
+clearly related, so it is no big surprise to see that the distribution
+of values is similar in the two figures. What \emph{is} striking
+however is a small clustering of three stars with near zero mass
+discrepancy. These are clearly not main-sequence stars, as they both
+show a higher age and lower surface gravity than the luminosity class
+V objects. These three stars are the two Orion Belt stars (HD~36486
+and HD~37742) and HD~16429 (which is the broad-lined star, with a
+relatively low helium abundance). It is very interesting that these
+three stars are the only stars in the sample which appear on Walborn's
+list of normal O stars with moderate N deficiencies. The third Orion
+Belt star, $\epsilon$~Ori (HD~37128; B0~Ia), which also appears on
+Walborn's list, has recently been studied by \cite{mcer:98}. For their
+adopted parameters, and $M_V = -7.0$ from \ybcite{gr:89}, we find that
+this star has a $M_s = 48.5$ and $M_e = 49.9$; so it appears that this
+star also belongs to the group with $\delta M \sim 0$.
+
+Recent evolutionary models that also take into account the effects of
+stellar rotation could partly help resolve the problem of the mass
+discrepancy. Rotating stars evolve towards higher luminosity than
+predicted by non-rotating models (\cite{ma:98}; \cite{me:98}). This
+is mainly caused by two processes:
+%
+\begin{itemize}
+\item	Rotational mixing `erodes' the molecular-weight gradient at
+	the outer edge of the convective core, leading to a mass
+	enhancement of the convective core.
+\item	The mixing brings hydrogen-burning products (such as helium)
+	to the surface. The surface helium enhancement decreases
+	opacity.
+\end{itemize}
+%
+Since the evolutionary masses are derived by comparing the
+evolutionary tracks with observed luminosities and temperatures, the
+effect of the overluminous models is to lower the evolutionary masses,
+which would bring them more in line with the spectroscopic masses.
+
+\begin{table} %%%%%%% TABLE %%%%%%%%%%%%%%%
+\begin{center}
+\caption{Spectroscopic and evolutionary masses for the O stars}
+\vspace{\abovecaptionskip}
+\begin{tabular}{llccccccc}
+\hline\hline
+HD/BD & \multicolumn{1}{c}{Sp. Type} &
+\teff (kK) & \logg & $y$ & $M_s$ & $M_0$ & $M_e$ & $\delta M$\\
+\hline
+% Automatically generate tex table Thu Oct 15 11:23:38 BST 1998
+% cat spec teff logg y M_s M_0 Me dM 
+   10125 &       O9.7 II & 32.5 &  3.3 & 0.15 &20.9 & 34.2 & 32.8 & $11.9$\\
+   12323 &         ON9 V & 36.0 &  4.1 & 0.17 &13.6 & 20.7 & 20.6 & $ 7.0$\\
+   13745 &  O9.7 II((n)) & 33.0 &  3.3 & 0.20 &12.9 & 29.0 & 28.1 & $15.2$\\
+   16429 &  O9.5 II((n)) & 35.0 &  3.4 & 0.12 &59.0 & 62.8 & 58.0 & $-1.0$\\
+   30614 &       O9.5 Ia & 33.0 &  3.1 & 0.13 &18.6 & 42.0 & 39.6 & $21.0$\\
+   34078 &        O9.5 V & 37.0 &  4.2 & 0.09 &26.2 & 24.1 & 24.1 & $-2.2$\\
+   36486 &       O9.5 II & 34.0 &  3.4 & 0.10 &51.2 & 54.2 & 49.8 & $-1.4$\\
+   37742 &       O9.7 Ib & 34.0 &  3.3 & 0.10 &64.5 & 69.7 & 64.3 & $-0.1$\\
+  188209 &      O9.5 Iab & 33.0 &  3.1 & 0.14 &16.9 & 40.1 & 38.0 & $21.1$\\
+  189957 &      O9.5 III & 33.0 &  3.5 & 0.11 &15.5 & 26.1 & 25.4 & $ 9.9$\\
+  191781 &     ON9.7 Iab & 31.0 &  3.1 & 0.16 &18.8 & 36.3 & 34.4 & $15.6$\\
+  194280 &     OC9.7 Iab & 32.0 &  3.2 & 0.09 &24.6 & 39.7 & 37.5 & $12.9$\\
+  195592 &       O9.7 Ia & 31.0 &  3.0 & 0.12 &14.9 & 36.3 & 34.4 & $19.5$\\
+  201345 &         ON9 V & 36.0 &  3.9 & 0.14 &16.4 & 23.9 & 23.7 & $ 7.4$\\
+  202124 &      O9.5 Iab & 34.0 &  3.2 & 0.13 &20.4 & 41.9 & 39.7 & $19.4$\\
+  207198 &      O9 Ib-II & 36.0 &  3.4 & 0.12 &18.8 & 36.9 & 35.8 & $17.0$\\
+  209975 &       O9.5 Ib & 35.0 &  3.4 & 0.09 &23.5 & 38.4 & 36.9 & $13.4$\\
+  210809 &        O9 Iab & 36.0 &  3.3 & 0.13 &28.4 & 50.8 & 47.5 & $19.1$\\
+  214680 &          O9 V & 38.0 &  4.2 & 0.09 &36.6 & 27.9 & 27.7 & $-8.9$\\
+  218195 &        O9 III & 37.0 &  3.6 & 0.12 &18.1 & 32.2 & 31.6 & $13.5$\\
+  218915 &      O9.5 Iab & 34.0 &  3.2 & 0.10 &20.4 & 41.9 & 39.7 & $19.4$\\
+  225160 &      O8 Ib(f) & 38.0 &  3.4 & 0.15 &48.3 & 68.5 & 65.5 & $17.2$\\
++36 4063 &       ON9.7 I & 32.0 &  3.1 & 0.11 &16.2 & 36.2 & 34.5 & $18.2$\\
+\hline\hline
+\end{tabular}
+\label{ta:ostars:mass_disc}
+\end{center}
+\tnote{$M_s$ -- spectroscopic mass; $M_0$ -- evolutionary ZAMS mass;
+       $M_e$ -- evolutionary mass; $\delta M = M_e - M_s$\\
+       All masses are in units of solar mass ($M_\odot$).}
+\end{table} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_odiscuss/massdisc/dm_g.eps}
+\caption[Mass discrepancy against \logg]
+{\fcfont Mass discrepancy against \logg.}
+\label{fig:dm:logg}
+\end{figure}   %%%%%%%%%%%%%%%
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_odiscuss/massdisc/dm_age.eps}
+\caption[Mass discrepancy against age]
+{\fcfont Mass discrepancy against age.}
+\label{fig:dm:age}
+\end{figure}   %%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% SECTION = OBN & OBC %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Carbon and nitrogen abundance anomalies}
+\label{sec:cno_anomalies}
+
+Carbon and nitrogen, and sometimes oxygen, abundance anomalies in the
+O and B stars have been known since 1967 when Jaschek and Jaschek
+observed nitrogen deficiencies in two early-type supergiants. In the years
+following, several more objects were discovered and there existed a
+certain amount of confusion as to exactly which objects were anomalous
+(e.g. $\zeta$~Ori or HD~188209; see \cite{jaja:74}). \ybcite{wa:76}
+re-examined the classification criteria and reviewed the material and
+we have mostly adopted classifications from his papers, with the
+exception of BD+36~4063.
+
+There are some problems in understanding the actual cause of the
+anomalies, not so much in the case of the OBNs\footnote{OBN is a
+collective term for BN and ON stars. Similarly, OBC includes both BC
+and OC.}, where the strong nitrogen enhancement is probably caused by
+mixing of CNO processed material into the atmosphere of the star, but
+there is no obvious way of creating a nitrogen deficiency in a star at
+early evolutionary stages. This led Walborn to propose that the
+morphologically normal O and B stars, which are by definition the
+largest groups, are not necessarily \emph{chemically} normal. The sequence
+would then be that the nitrogen deficient OBC stars correspond to the
+natal abundances, while the morphological normal OB stars are in fact
+slightly chemically evolved, and the OBN stars are the extreme cases.
+
+This picture is very pleasing and simple; it does, however, have some
+major shortcomings. The existence of both main-sequence and supergiant
+OBN stars, objects that should be highly evolved if the above theory is
+correct, suggests that other mechanisms also exist for bringing
+processed material onto the surface of the stars. There is also the
+problem that all known OBC stars are supergiants (and are evolved objects --- see
+e.g. figure \ref{fig:helium:age}) but show no chemical evolution. So
+the chemical enrichment cannot solely be an evolutionary process.
+
+Even considering all these problems, the evolutionary theory is still
+probably one of the strongest candidates, although current models do
+not predict any abundance enhancements until a later evolutionary
+stage than that which is observed (see section
+\ref{sec:helium}). These results are constantly being revised,
+however, and recent calculations, including rotation (which we know to
+be very important in O and B stars), clearly show a much earlier
+mixing than previous models (cf. \cite{me:98}).
+%Meynet, cumberland lodge
+It is also clear that there are other factors that might influence the
+stars' surface abundaces. There is some evidence to suggest that the
+anomalies reflect the natal abundances. All three Orion Belt stars (of
+which only two are analysed here) were found by Walborn to be nitrogen
+deficient, and we also find that both stars have relatively low (ie. solar)
+helium abundances. Interestingly enough, these two stars, and HD~16429,
+seem to form a little subgroup of evolved stars with near-zero mass
+discrepancy (see section \ref{sec:mass_discrepancy}).
+
+A number (possibly all) of the OBN stars are also binaries, and it is possible that,
+at least for some objects, the nature of the anomalies could be caused
+by the binary nature of these stars. Mass transfer, either active or
+past, by an evolved companion has been suggested as a method of
+bringing CNO processed material onto the surface of the stars. Of the
+two ON main-sequence stars in our sample, both have been proposed as
+binaries by \ybcite{bolt_rog}. They also derived orbital elements for
+HD~12323, but could only say that the line profiles for HD~201345
+varied in a way as to suggest that it might be a binary. This star was
+later regarded as single by \ybcite{gi:86}. 
+% Gies(see HP89)
+Of the other ON stars in our sample, \acite{bolt_rog} found variability
+in the spectrum of HD~191781, but they did not have enough data to
+confirm that it is a binary. Finally, BD+36~4063 has been confirmed as a
+single-lined spectroscopic binary by I. D. Howarth (private communication).
+
+\subsection{Carbon and nitrogen line strengths}
+As we lack good model predictions for the strengths of carbon and
+nitrogen lines, we cannot directly determine abundances for these
+elements in our data. We can, however, try to identify anomalous
+objects by looking at the ratio of equivalents widths for these two
+elements. There is a lack of strong, unblended carbon and nitrogen
+lines, and the only two unblended candidates are
+N\scr{2}~$\lambda$4630\AA\ and C\scr{2}~$\lambda$4267\AA. These lines
+are very weak and difficult to measure, so we can expect large errors
+on these measurements. The equivalent widths were measured at least 4
+times using the data analysis package \dipso\ (\cite{dipso}), and the
+results are shown in table \ref{ta:cn_ew}. The uncertainties quoted
+are based on the standard deviation of repeated measurements of the
+equivalent widths.
+
+\begin{table} %%%%%%% TABLE %%%%%%%%%%%%%%%
+\begin{center}
+\caption{C \& N equivalent widths}
+\vspace{\abovecaptionskip}
+\begin{tabular}{lccc}
+\hline\hline
+& N\scr{2}~$\lambda$4630\AA &
+  C\scr{2}~$\lambda$4267\AA &
+  N\scr{2} / C\scr{2} \\
+\multicolumn{1}{c}{HD/BD} &
+\multicolumn{1}{c}{EW (m\AA)} &
+\multicolumn{1}{c}{EW (m\AA)} & ratio\\
+\hline
+% Automatically generate tex table Fri Oct 16 17:14:34 BST 1998
+% Created by ./00maketable.csh (/home/kws/latex/thesis/fig_odiscuss/cno)
+BD +36 4063 & $133.5 \pm  2.4$ & $  4.4\pm  2.2$ & $ 30.1 \pm 14.9$ \\
+   HD 10125 & $159.4 \pm  9.8$ & $ 25.8\pm  3.9$ & $  6.2 \pm  1.0$ \\
+   HD 12323 & $ 88.6 \pm  4.7$ & $  6.0\pm  2.1$ & $ 14.7 \pm  5.3$ \\
+   HD 13745 & $166.0 \pm  7.0$ & $ 53.6\pm  2.7$ & $  3.1 \pm  0.2$ \\
+   HD 16429 & $102.6 \pm 15.3$ & $ 21.0\pm  4.2$ & $  4.9 \pm  1.2$ \\
+   HD 30614 & $ 91.7 \pm  6.2$ & $ 37.8\pm  3.3$ & $  2.4 \pm  0.3$ \\
+   HD 34078 & $105.8 \pm  1.3$ & $ 65.2\pm  0.8$ & $  1.6 \pm  0.0$ \\
+   HD 36486 & $ 95.2 \pm 13.1$ & $ 35.5\pm  4.5$ & $  2.7 \pm  0.5$ \\
+   HD 37742 & $ 97.4 \pm  5.6$ & $ 44.2\pm  5.4$ & $  2.2 \pm  0.3$ \\
+  HD 188209 & $123.5 \pm  4.0$ & $ 39.0\pm  3.5$ & $  3.2 \pm  0.3$ \\
+  HD 189957 & $137.7 \pm  8.8$ & $ 73.2\pm  3.0$ & $  1.9 \pm  0.1$ \\
+  HD 191781 & $211.2 \pm  9.1$ & $  9.5\pm  6.1$ & $ 22.3 \pm 14.5$ \\
+  HD 194280 & $176.2 \pm  6.5$ & $ 81.2\pm 10.7$ & $  2.2 \pm  0.3$ \\
+  HD 195592 & $198.0 \pm  7.0$ & $ 18.8\pm  2.6$ & $ 10.5 \pm  1.5$ \\
+  HD 201345 & $103.8 \pm  2.7$ & $  6.1\pm  2.2$ & $ 16.9 \pm  6.2$ \\
+  HD 202124 & $ 74.8 \pm  8.1$ & $ 13.7\pm  2.9$ & $  5.5 \pm  1.3$ \\
+  HD 207198 & $ 55.8 \pm  4.6$ & $ 32.0\pm  5.9$ & $  1.7 \pm  0.4$ \\
+  HD 209975 & $ 91.0 \pm  7.3$ & $ 42.2\pm  4.3$ & $  2.2 \pm  0.3$ \\
+  HD 210809 & $ 73.2 \pm  3.8$ & $  8.7\pm  2.7$ & $  8.4 \pm  2.6$ \\
+  HD 214680 & $ 66.2 \pm  1.6$ & $ 38.5\pm  2.4$ & $  1.7 \pm  0.1$ \\
+  HD 218195 & $ 47.0 \pm  3.6$ & $ 31.3\pm  3.0$ & $  1.5 \pm  0.2$ \\
+  HD 218915 & $114.8 \pm  2.5$ & $ 20.6\pm  4.7$ & $  5.6 \pm  1.3$ \\
+  HD 225160 & $ 11.5 \pm  3.1$ & $  6.7\pm  3.1$ & $  1.7 \pm  0.9$ \\
+\hline\hline
+\end{tabular}
+\end{center}
+\label{ta:cn_ew}
+\end{table} %%%%%%%%%%%%%%%%%%%%%%% END TABLE %%%%%%%%%%%%%%%%%%
+
+Since we do not know the expected behaviour of this ratio, we have
+plotted the N/C line ratio as functions of both \teff\ and \logg\ in figure
+\ref{fig:cno:tg}. What we can clearly see from these figures are that
+the ON stars all have far larger N/C line ratios than the other stars.
+There also appears to be a subgroup of slightly higher ($\approx 5$)
+ratios, but by comparing with figure \ref{fig:cno:behaviour} it
+appears that this might be a luminosity effect. Most of these stars
+seem to be at the low-\logg\ end of the distribution for their
+temperature. The only exception to this is possibly HD~10125 at
+32.5~kK, although these data have to be taken as they were intended;
+simply as an illustration of the OBN/OBC anomaly.
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_odiscuss/cno/nc_t.eps}
+
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_odiscuss/cno/nc_logg.eps}
+
+\caption[N\textsc{ii}~$\lambda$4630\AA\ /
+C\textsc{ii}~$\lambda$4267\AA\ against \teff\ and \logg]
+{\fcfont N\textsc{ii}~$\lambda$4630\AA\ /
+C\textsc{ii}~$\lambda$4267\AA\ against \teff\ (\textbf{top}) and \logg\
+(\textbf{bottom})}
+\label{fig:cno:tg}
+\end{figure}   %%%%%%%%%%%%%%%
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_odiscuss/cno/nc_behaviour.eps}
+\caption[Dependence N\textsc{ii}~$\lambda$4630\AA\ /
+C\textsc{ii}~$\lambda$4267\AA\ of stellar parameters]
+{\fcfont Dependence of N\textsc{ii}~$\lambda$4630\AA\ /
+C\textsc{ii}~$\lambda$4267\AA\ ratio on stellar parameters \teff\ and
+\logg. Symbols are scaled to represent the line-strength ratio as shown
+in lower right-hand corner. The N to C ratio seems to be higher at the
+low-\logg\ end of the distribution for each temperature (except in the
+case of the ON stars).}
+\label{fig:cno:behaviour}
+\end{figure}   %%%%%%%%%%%%%%%
+
+\begin{figure}[t] %%%%%%%%%FIGURE
+\setlength{\cen}{\figwidth / 2}
+\epsfxsize=\cen
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_odiscuss/cno/nc_y.eps}
+\caption[N\textsc{ii}~$\lambda$4630\AA\ / C\textsc{ii}~$\lambda$4267\AA\ against $y$]
+{\fcfont N\textsc{ii}~$\lambda$4630\AA\ / C\textsc{ii}~$\lambda$4267\AA\ against $y$}
+\label{fig:cno:y}
+\end{figure}   %%%%%%%%%%%%%%%
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_odiscuss/cno/nc_age.eps}
+\caption[N\textsc{ii}~$\lambda$4630\AA\ / C~\textsc{ii}~$\lambda$4267\AA\ against age]
+{\fcfont N\textsc{ii}~$\lambda$4630\AA\ / C~\textsc{ii}~$\lambda$4267\AA\ 
+against evolutionary age}
+\label{fig:cno:age}
+\end{figure}   %%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+
+

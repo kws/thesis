@@ -1,0 +1,6 @@
+# Directory with fits
+set fitd = /mnt/fits
+
+# Dir with all bstars catalogues etc.
+set bsdir = /mnt/bstars
+

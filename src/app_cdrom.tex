@@ -1,0 +1,82 @@
+\chapter{Description of CD-ROM}
+\label{app:cdrom}
+
+The attached CD-ROM is written in ISO-9660 Level 1 format. Filenames
+are restricted to 8+3 uppercase characters for maximum portability.
+
+The filesystem is as follows:
+
+
+\newenvironment{Ventry}[1]%
+  {\begin{list}{}{\renewcommand{\makelabel}[1]{\texttt{##1}\hfil}%
+    \settowidth{\labelwidth}{\textsf{#1:}}%
+    \setlength{\leftmargin}{\labelwidth+\labelsep}}}%
+  {\end{list}}
+
+\begin{Ventry}{\texttt{123}}
+\item[/]
+	The root directory contains several `index' files. The files
+	00README.TXT and 00README.HTM contain descriptions of the CD
+	contents. A hypertext version of the table in appendix
+	\ref{app:xcorr} can be found in XCORR.HTM (or by following the
+	links in 00README.HTM).
+
+	\begin{Ventry}{{\texttt 1234567890}}
+	\item[IMG/]
+		Contains images for 00README.HTM.
+
+	\item[THESIS/]
+		Postscript version of this thesis. 
+		\begin{Ventry}{{\texttt 12345678}}
+		\item[DOUBLE/]
+			Typeset for double sided printing.
+		\item[SINGLE/]
+			Typeset for single sided printing.
+		\end{Ventry}
+		Each chapter is stored in a separate .PS file. Each
+		filename starts with a two digit number denoting
+		the order the files should be printed in.
+
+	\item[WHT\_0895/]
+		WHT/UES observations from August 1995 (see chapter
+		\ref{ch:obs}). Observations are available as .SDF
+		files and in printable postscript (.PS) format
+		similar to appendix \ref{app:10lac}.
+
+	\item[XCORR/] 
+		This directory contains files used for the
+		hypertext version of appendix~\ref{app:xcorr}.
+
+		\begin{Ventry}{{\texttt 12345678}}
+		\item[EPS/]
+			Contains encapsulated postscript plots of the
+			cross-correlation functions. The plots are
+			stored in subdirectories named after the
+			cross-correlation template. Files are named
+			with the SWP number and this number is
+			appended a C for `raw' cross-correlation
+			function, and F for normalised function with
+			fit. The files are compressed using
+			\prog{gzip} (Lempel-Ziv) compression.
+
+		\item[HTML/]
+			Contains a hypertext summary of the results
+			for each star. The files are named by the six
+			digit HD number.
+
+		\item[JPG/]
+			Contains low-resolution versions of the
+			postscript files above for the HTML summaries.
+
+                \item[PSFILES/]
+			Postscript versions of the hypertext summaries. Named
+			by the HD catalogue number. The files are compressed
+			using \prog{gzip} compression. Each file contains plots
+                        of the cross-correlation functions and a summary of
+			the measurements and results for each star.
+		\end{Ventry}
+	\end{Ventry}
+\end{Ventry}
+
+
+

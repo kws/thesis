@@ -1,0 +1,20 @@
+
+0calculate.csh: Running with
+
+  Teff = 29.0
+  logg = 3.06
+  Mv   = -7.0
+
+make: Entering directory `/mnt/thesis/thesis/programs'
+make: `star2' is up to date.
+make: `interp' is up to date.
+make: Leaving directory `/mnt/thesis/thesis/programs'
+Results:
+ HD      Teff    Log(g)  Mv   log(l) r/rsol m/msol  log(Teff)
+37128    29.00   3.06  -7.00   5.87  34.01  48.49   4.46
+ logTeff   =   4.46239805
+ logL      =   5.86999989
+ M_0  =   55.7997246
+ M_e  =   49.8650208
+ Ages  =  0.314E+07 0.357E+07 0.88
+Mass disc: 1.3750208

@@ -1,0 +1,819 @@
+\chapter{10 Lac --- a case study}
+\label{ch:casestudy}
+
+
+10 Lacertae (HD 214680) is one of a very few narrow-lined O-stars. Its
+projected equatorial rotation velocity is only of the order 25--35
+\kms\ (35 \kms\ in 
+\cite{ho:xcorr}; 31~\kms\ in \cite{pe:xcorr}; see also table 
+\ref{ta:10Lac_results}). This makes 10 Lac a good star to use as
+a case study. The narrow lines make line identification relatively
+easy, and many lines that are either badly blended or too broadened to
+be reliably measured for most of the other O stars in the sample are easily
+measured. This chapter will primarily look at the method used to find
+the stellar parameters for the O stars in this thesis, and demonstrate
+its use by applying it to 10 Lac. It is important that, although the
+strength of this analysis is in its consistency, the method should
+yield good results for individual stars. However, the results of a single
+star should always be considered in the context of to the complete sample.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SECTION = Spec. Features %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Spectral features}
+
+The 10~Lac spectrum is a good example of a typical late O-type
+main-sequence spectrum\footnote{We are here only considering the
+optical spectrum, but UV spectra of 10~Lac has also been studied in
+detail by several authors (e.g., \cite{wa:96}).}. Figure
+\ref{fig:10Lac:spec} shows some of the spectral features considered in
+this thesis. The optical spectrum is dominated by strong, broad
+hydrogen lines of the Balmer series and by the relatively strong \hei\
+triplet lines (e.g. \lam\lam4026 and 4471\AA). The \heii\ lines are
+relatively weak compared to the H and \hei\ triplet lines, although
+these lines are considerably stronger in stars with higher effective
+temperatures, \teff (i.e. earlier spectral types).
+
+Also visible are many weaker lines, in particular lines from several
+ions of C, N, O and Si. Only some of these are shown in the figure.
+See appendix~\ref{app:10lac} for more complete diagrams. 
+
+The 4630--4640--4650\AA\ region contains a wealth of C, N and O lines, and
+the strong lines here are often used to check for carbon and nitrogen
+abundance anomalies in these stars (see also appendix \ref{app:ocn}).
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=15cm
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_casestudy/10lac_lines.eps}
+%\fnote{Include key regions of the 10~Lac spec. here.
+%Could do 100\AA\ per strip, 3780 -- 3880, 3880 -- 3980}  
+\caption[Selected wavelength regions from the spectrum of 10~Lac]
+{\fcfont Selected wavelength regions from the spectrum of 10~Lac with
+some important lines labelled. Several of the lines used in the
+analyses are shown, as well as the 4630 -- 4640 -- 4650\AA\ CNO region
+(only C and N lines are identified here). Interstellar lines are
+labelled in \textit{italics}. The spectrum of 10~Lac is shown in its
+entirety in appendix \ref{app:10lac}.}
+
+\label{fig:10Lac:spec}
+\end{figure}   %%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SECTION = Stellar parameters %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Determining stellar parameters}
+
+As a general aim we want to find the effective temperature, \teff, the
+surface gravity, \logg, and the helium number fraction, $y$. These
+parameters define the most important properties of the star, and are
+intimately connected to other stellar parameters like the stellar mass
+and age. (There is also a fourth parameter which turns out to have an
+important effect on the final results: the microturbulence.) Using the
+grid of pre-calculated models discussed in chapter
+\ref{ch:mod} we want to find a method to estimate these parameters by
+comparing the models to the observations.
+
+In practice, we need to optimize pairs of parameters in tandem, since
+rigorous multi-dimensional optimisation is impractical (the models do
+not perfectly match the observations). After some initial testing, the
+method that was found to yield the most consistent results for the
+lines available was the construction of temperature -- gravity
+diagrams; 2-D slices through the 3-D parameter space (4-D with
+microturbulence) being explored. The measured equivalent widths of the
+helium lines are traced in the diagrams as the locii of temperatures
+and gravities of the models that reproduce the measured values. The
+\heii\ lines are, in the parameter space explored, mostly sensitive to
+the effective temperature, whereas the \hei\ lines are sensitive to
+both \teff\ and \logg.
+
+The plots give an intersection zone where most of the lines cross, and the
+best-fit model is likely to fall somewhere inside this intersection
+zone. Due to observational errors and noise, as well as inadequacies in the
+models, there will always be a certain scatter of the
+lines. The wrong choice of the microturbulence parameter or of the
+helium abundance will also affect the plotted lines, and the aim of the
+analysis is to find the values of the free parameters that
+minimise the size of the intersection zone.
+
+To constrain the solution further, a $\chi^2$ fitting technique is
+applied to the wings of H10 \lam3797\AA, H9 \lam3835\AA, H8 \lam3889\AA\ and
+\he\ \lam3970\AA. Unfortunately, the strong, wide hydrogen lines are often
+contaminated by blends with other lines and by wind emission; however,
+the pressure broadened wings are very sensitive to the surface
+gravity. By fitting the wings (and removing blends where they occured)
+consistent results could be obtained, even for the stars that show
+strong wind contamination.
+
+The steps above are then repeated for a range of values of $y$
+(usually between 0.09 and 0.18 in steps of 0.01) and microturbulence
+(for 0, 5, 10 and 15 \kms). The `best' solution is determined by using
+an impact-parameter analysis to find the point on each diagram that
+minimises the sum of the distances to individual lines. The best-fit
+diagram in all 4 dimensions is the one with the overall smallest value
+of the summed impact parameter. Figure \ref{fig:ewsummary}
+demonstrates the method, and each step is described in more detail in
+the following sections.
+
+\begin{figure} %%%%%%%%%%%%%%%%%%% FIGURE
+\begin{center}
+\input{fig_casestudy/flowchart/flow.pic}
+\end{center}
+\caption[Method used to determine stellar parameters]
+{\fcfont Summary of method used to determine stellar parameters}
+\label{fig:ewsummary}
+\end{figure} %%%%%%%%%%%%%%%%%%% END FIGURE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SECTION = EWs of He %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Equivalent widths of helium lines}
+\label{sec:ews}
+
+There are a large number of helium lines in the observed spectrum.
+However, a number of these are either too badly blended or too weak to be
+measured reliably for all the stars in this dataset. The possible lines
+available for analysis are shown and commented on in tables
+\ref{ta:he1_lines} and \ref{ta:he2_lines}. Some of the possible \hei\ lines are very
+insensitive to changes in the effective temperature and/or the surface
+gravity. Including these lines in the analysis can degrade the quality
+of the results rather than improve them, since even a small error in
+measuring the equivalent width can give rise to large errors in both
+\teff\ and \logg. The line that showed the least sensitivity to these parameters,
+\hei~$\lambda$5016\AA, has been left out of the analysis. However, 
+\hei~$\lambda$4713\AA, which is also fairly insensitive (see figure
+\ref{fig:cont:he1}) has been included to see what effects 
+this line might have on the analysis (see also fig
+\ref{fig:ew_errors:he1}). In cases where this line gives discrepant
+results it has been left out of the impact-parameter calculations.
+
+\begin{table} %%%%%%%%%%%%%% HeI LINES %%%%%%%%%%%%%%%%%%%%%%%%%%55
+\begin{center}
+\caption{Observed \hei\ lines}
+\begin{tabular}{rr@{ -- }lp{10cm}}
+\hline\hline
+\multicolumn{1}{c}{$\lambda$ (\AA)} & \multicolumn{2}{c}{Transition} &
+Comment \\ 
+\hline
+3819.6 		& $2p~^3P^\circ$ & $6d~^3D$	& \\
+3867.5 		& $2p~^3P^\circ$ & $6s~^3S$	& Blended with several weak lines\\
+3964.7 		& $2s~^1S$ & $4p~^1P^\circ$	& Blended with \hi \\
+\textbf{4009.3} & $2p~^1P^\circ$ & $7d~^1D$	& \\
+\textbf{4026.2} & $2p~^3P^\circ$ & $5d~^3D$	& \\
+4120.8 		& $2p~^3P^\circ$ & $5s~^3S$ 	& Blended with several strong lines\\
+\textbf{4143.8} & $2p~^1P^\circ$ & $6d~^1D$	& \\
+4169.0 		& $2p~^1P^\circ$ & $6s~^1S$	& Very weak and possibly blended\\
+\textbf{4387.9} & $2p~^1P^\circ$ & $5d~^1D$	& \\
+4437.5 		& $2p~^1P^\circ$ & $5s~^1S$	& Very weak and in the middle of diffuse
+     						interstellar band.\\
+\textbf{4471.5} & $2p~^3P^\circ$ & $4d~^3D$	& \\
+\textbf{4713.1} & $2p~^3P^\circ$ & $4s~^3S$	& Model predictions
+     						insensitive to \teff\
+     						and \logg\\
+\textbf{4921.9}	& $2p~^1P^\circ$ & $4d~^1D$	& \\
+5015.7 		& $2s~^1S$ & $3p~^1P^\circ$ 	& Model predictions insensitive to
+     						\teff\ and
+     						\logg. Excluded since
+     						it might introduce
+     						large errors into
+     						analysis.\\  
+\textbf{5047.7} & $2p~^1P^\circ$ & $4s~^1S$	& \\
+5875.6 		& $2p~^3P^\circ$ & $3d~^3D$ 	& Very strong line expected to be
+						extremely sensitive to
+						the dilution effect
+						(discussed in text).\\
+6678.1 		& $2p~^1P^\circ$ & $3d~^1D$	& Sometimes lost in interorder gap\\
+
+\hline\hline
+\end{tabular}
+\label{ta:he1_lines}
+\end{center}
+\tnote{The lines used in this analysis are shown in \textbf{bold} type.}
+\tref{Line identifications and wavelengths from
+\ybcite{scholtz:lines}; Transitions from \ybcite{striganov}.}
+\end{table} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table} %%%%%%%%%%%%%% HeII LINES %%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\caption{Observed \heii\ lines}
+\begin{tabular}{rr@{ -- }lp{10cm}}
+\hline\hline
+\multicolumn{1}{c}{$\lambda$ (\AA)} & \multicolumn{2}{c}{Transition} &
+Comment \\ 
+\hline
+3968.4 		& $4f~^2F^\circ$ & $14g~^2G$	& Very weak. Blended with \hi \\
+4025.6 		& $4f~^2F^\circ$ & $13g~^2G$	& Very weak. Blended
+						with \hei~\lam4026\AA \\
+4100.0 		& $4f~^2F^\circ$ & $12g~^2G$	& Blended with \hi\\
+\textbf{4199.8}	& $4f~^2F^\circ$ & $11g~^2G$	& \\
+4338.7 		& $4f~^2F^\circ$ & $10g~^2G$	& Blended with \hi\\
+\textbf{4541.6} & $4f~^2F^\circ$ & $9g~^2G$	& \\
+\textbf{4685.7} & $3d~^2D$ & $4f~^2F^\circ$	& Sometimes contaminated by wind emission\\
+4859.3 		& $4f~^2F^\circ$ & $8g~^2G$	& Blended with \hi\\
+\textbf{5411.5}	& $4f~^2F^\circ$ & $7g~^2G$	& \\
+6683.2 		& $5g~^2G$ & $13h~^2H^\circ$	& Very weak\\
+\hline\hline
+\end{tabular}
+\label{ta:he2_lines}
+\end{center}
+\tnote{The lines used in this analysis are shown in \textbf{bold} type.}
+\tref{Line identifications and wavelengths from
+\ybcite{scholtz:lines}; Transitions from \ybcite{striganov}.}
+\end{table} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The lines originating in the $2~^3S$, $2~^1S$, $2p~^3P^\circ$ and
+$2p~^1P^\circ$ levels (in order of decreasing sensitivity), are very
+sensitive to the so-called \emph{generalized dilution effect}
+discussed in detail by \ybcite{vo:89}. For stars where the
+plane-parallel assumption is no longer accurate (most likely all stars
+not belonging to luminosity class V), the models fail to reproduce the
+strengths of these lines. The strongest lines of each series are the
+most sensitive to this effect, and \acite{vo:89} found that the weaker
+lines (like \lam\lam4713 and 4388\AA) reproduced observations
+well. \ybcite{sm:98} showed that including microturbulence in both
+statistical equilibrium and line formation calculations increased the
+strength of the lines assumed to be affected by the dilution effect
+more than some of the weaker lines. They suggested that
+microturbulence could possibly explain the dilution effect. We have
+only included microturbulence in the line formation calculations and,
+according to \acite{sm:98}, this might not be enough to bring
+\hei~\lam4471\AA\ into agreement with the observations.  However, we
+have chosen to include this line to evaluate the effects of
+microturbulence.
+
+The spectra were measured using the Starlink data analysis program
+\dipso\ (\cite{dipso}). In \dipso\ there are two basic ways of measuring the
+equivalent width of an absorption (or emission line). One is using the
+command \comm{ew}. Using a user defined continuum the program
+calculates the equivalent width between two interactively defined
+points by simple trapezoidal integration. This method is quick and
+works very well for strong, unblended lines with a well defined
+continuum. However, where the lines are blended or the signal-to-noise
+is low, fitting a gaussian (using the
+\dipso\ subroutine \elf) and using the equivalent width of the fit
+seems to give better and more consistent results. This works well for
+stars where the rotational broadening is large enough to give the
+lines a broad profile that can be approximated well by a
+gaussian. However, for the stars with narrow profiles the gaussians
+are poor approximations of the line profiles (figure
+\ref{fig:elf_fits}).
+
+\begin{figure} %%%%%%%%%%%%%%%%%%% FIGURE
+
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_casestudy/elf_fits/elf_fits.eps}
+
+\caption[\elf\ fits to selected lines in HD~214680 and HD~195592]
+{\fcfont \elf\ fits to selected lines in HD~214680 and HD~195592. The
+gaussians do not fit the narrow line profiles of the slow rotator
+(HD~214680) very well, but reasonable fits are obtained for the
+slightly broader lines in HD~195592.}
+\label{fig:elf_fits}
+\end{figure} %%%%%%%%%%%%%%%%%%% END FIGURE
+
+
+Table \ref{ta:elf_vs_ew} shows a comparison of equivalent widths
+measured using \elf\ and \comm{ew} for 10 Lac and for
+HD~195592. HD~195592 is the third slowest rotator in the dataset,
+with a \vsini\ of approximately 50 -- 60 \kms\ (\cite{sl:56};
+\cite{co:vii}; this thesis). In the case of the slower rotators it
+appears that there there is a clear tendency for
+the equivalent widths measured using \elf\ to be smaller than those
+measured using
+\comm{ew}. However, this trend
+disappears for HD~195592 where already the gaussians are a fairly good
+approximation of the line shape. It also appears that the typical
+differences in equivalent widths are of the order 5 to 10 per cent. By
+comparing this to figures
+\ref{fig:ew_errors:he1} and \ref{fig:ew_errors:he2} it appears that
+this corresponds to a difference of less than 1000K in temperature and
+0.1 dex in \logg\ for most lines. In the interest of maintaining
+consistency, the \elf\ equivalent widths are used for the analysis,
+but the uncertainty on the final results for 10~Lac (and the slow
+rotators in general) is likely to be slightly larger than for the fast
+rotators.
+
+\begin{table} %%%%%%%%%%%%%%% ELF VS EW %%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\caption{Comparison of the \dipso\ commands \elf\ and \comm{ew}}
+\small
+\begin{tabular}{c|rrr@{}l}
+\multicolumn{5}{c}{HD 214680} \\ \hline\hline
+Line			& ELF (m\AA)	& EW (m\AA)	& 
+\multicolumn{2}{c}{$\mathrm{\frac{EW - ELF}{ELF} \times 100}$}\\
+\hline
+\hei\ \lam 4009\AA 	& 224		& 200 		& $-10.7$ \\
+\hei\ \lam 4026\AA 	& 791		& 851 		& 7.5 \\
+\hei\ \lam 4143\AA 	& 247		& 290 		& 17.4 \\
+\hei\ \lam 4388\AA 	& 399		& 421 		& 5.5 \\
+\hei\ \lam 4471\AA 	& 646		& 715 		& 10.6 \\
+\hei\ \lam 4713\AA 	& 265		& 266 		& 0.3 \\
+\hei\ \lam 4922\AA 	& 466		& 510 		& 9.4 \\
+\hei\ \lam 5047\AA 	& 117		& 121 		& 3.4 \\
+\heii\ \lam 4200\AA 	& 632		& 650 		& 2.8 \\
+\heii\ \lam 4541\AA 	& 562		& 680 		& 20.9 \\
+\heii\ \lam 4686\AA 	& 797		& 850 		& 6.6 \\
+\heii\ \lam 5411\AA 	& 764		& 780 		& 2.0 \\
+\hline
+Mean 			&		&		& 6.3 & ~$\pm$~7.8 \\
+\hline\hline
+\multicolumn{4}{c}{} \\
+\multicolumn{5}{c}{HD 195592} \\ \hline\hline
+Line			& ELF (m\AA)	& EW (m\AA)	&
+\multicolumn{2}{c}{$\mathrm{\frac{EW - ELF}{ELF} \times 100}$}\\
+\hline
+\hei\ \lam 4009\AA 	& 215		& 196 		& $-8.8$ \\
+\hei\ \lam 4026\AA 	& 641		& 650 		& 1.4 \\
+\hei\ \lam 4143\AA 	& 207		& 210 		& 1.4 \\
+\hei\ \lam 4388\AA 	& 386		& 378 		& $-2.0$ \\
+\hei\ \lam 4471\AA 	& 811		& 828		& 2.0\\
+\hei\ \lam 4713\AA 	& 309		& 319		& 3.2\\
+\hei\ \lam 4922\AA 	& 500		& 504 		& 0.8 \\
+\hei\ \lam 5047\AA 	& 145		& 135 		& $-6.8$ \\
+\heii\ \lam 4200\AA 	& 202		& 193 		& $-4.4$ \\
+\heii\ \lam 4541\AA 	& 264		& 249 		& $-5.6$ \\
+\heii\ \lam 4686\AA 	& \multicolumn{4}{c}{\emph{contaminated by emission}}  \\
+\heii\ \lam 5411\AA 	& 364		& 362 		& $-0.5$ \\
+\hline
+Mean			&		&		& $-1.8$ & ~$\pm$~3.9 \\
+\hline\hline
+\end{tabular}
+\label{ta:elf_vs_ew}
+\end{center}
+\tnote{Comparison of equivalent widths for 10~Lac and
+HD~195592. HD~195592 is the third slowest rotator in the sample, and
+with a relatively slow \vsini\ of approximately 50~\kms. It is clear
+that the agreement between \elf\ and \comm{ew} is better for the
+faster rotator.}
+\end{table}   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SECTION = VSINI %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Rotational velocity and macroturbulence}
+\label{sec:casestudy:broadening}
+
+The $\chi^2$ fitting of the hydrogen line wings requires an estimate
+of the `macroscopic' and `instrumental' broadening of the lines
+(at least if either of the two are significantly large; see figure
+\ref{fig:h_sensitivity}) As it turns out, in the case of the
+broad hydrogen wings, the contribution due to the instrumental
+broadening is negligible, and rotation/macroturbulence only have to be
+considered if the velocity is sufficiently high (negligible for
+velocities less than 100 -- 120~\kms, so only important for the
+fastest rotators). Rotation is unimportant for the \hei\ and \heii\
+line statistics, since we use measured equivalent widths for these.
+
+One way of determining the projected rotational velocity, \vsini\, in
+the stars in this sample, would be to measure the FWHM of the
+absorption lines of metallic species like C, N, Si and O. These lines
+are relatively unaffected by atmospheric broadening mechanisms
+compared to the hydrogen and helium lines. These metallic lines are,
+however, usually weak compared to H and He. Although they are easy to
+measure in the slow rotators like 10 Lac, in the faster rotators the
+lines are broadened too much to be accurately measured with our
+signal-to-noise.
+
+Since consistency is paramount in this part of the analysis, a
+different approach to finding the \vsini\ is needed that will work for
+stars with broad lines and for stars with narrow lines. A method that
+seems to work well is to perform a quick equivalent width analysis
+similar to that described in section \ref{sec:ew_analysis} but without
+the hydrogen line analysis. The results of this quick analysis are
+used to fix a starting point for the effective temperature and surface
+gravity. A $\chi^2$ fitting method is then use to find the values of
+\vsini\ and $y$ in the models that will best fit the observed line
+profiles of the helium lines. Since the $\chi^2$ value is dependent on
+the number of `spectral bins', it will vary depending on how much of
+the spectrum is examined. To make comparisons between individual lines
+possible, we usually use the normalised-$\chi^2$, $\chi_\nu^2 =
+\chi^2/\nu$, where $\nu$ is the \emph{number of degrees of freedom},
+which is usually the number of bins minus two.
+
+The effective temperature, \teff, and surface gravity, \logg, both
+affect the widths of the lines. Varying $y$ only changes the strengths
+of the lines and does not directly affect any of the broadening
+functions. Thus it is possible to get a good fit for the
+line broadening in a consistent way for all the \hei\ lines,
+even when the initial estimates of the stellar parameters could be
+slightly wrong.
+
+\begin{table}
+\begin{center}
+\caption{Fitted values for \vsini\ and macroturbulence for 10~Lac}
+\vspace{\abovecaptionskip}
+\begin{tabular}{c|ccc|ccc}
+\hline\hline
+\hei\ $\lambda$	& \multicolumn{3}{c|}{\vsini} 	& \multicolumn{3}{c}{m.turb.} \\
+(\AA)	& $v$ (\kms) & $y$ & $\chi_\nu^2$ & $v$ (\kms) & $y$ & $\chi_\nu^2$ \\
+\hline
+4009	& 61	& 0.07	& 1.548	& 50	& 0.07 	& 1.515\\
+4026	& 21	& 0.09	& 2.122	& 14	& 0.10	& 2.148\\
+4143	& 44	& 0.07	& 0.412	& 33	& 0.08	& 0.382\\
+4388	& 23	& 0.08	& 0.718	& 16	& 0.08	& 0.732\\
+4922	& 31	& 0.12	& 2.717	& 22	& 0.13	& 2.727\\
+5047	& 29	& 0.10	& 0.222	& 22	& 0.10	& 0.212\\
+\hline
+\multicolumn{1}{r|}{Median:} 	& 30	& & & 22 \\
+\hline\hline
+\end{tabular}
+\label{ta:10lacparams}
+\end{center}
+
+\tnote{Values are fitted for initial `guesstimate' of stellar
+parameters (\teff~=~37~kK; \logg~=~4.3). Note that in this case, $y$ is
+not an accurate representation of the actual helium number fraction of
+the star, but indicates whether the model line for the given
+parameters is too strong ($y~<~0.09$) or too weak
+($y~>~0.09$). However, if all the lines are too weak it could indicate
+that the star does have a helium abundance higher than the solar value
+(but could also indicate the wrong choice of \teff\ and/or \logg).}
+\end{table}
+
+Two different line broadening functions are compared to the
+observations, as described in chapter \ref{ch:mod}. From table
+\ref{ta:10lacparams} it appears that there is no statistically significant
+difference between the goodness of fit (given by the $\chi_\nu^2$
+value) for the rotational and the macroturbulent broadening functions
+for 10 Lac and we adopt the rotational function. The reasons for this
+choice will be further discussed in chapter \ref{ch:analyses}; however
+as noted above, the line broadening is unimportant for the final
+results when the line broadening velocity is low.
+
+\ybcite{ho:xcorr} found the \vsini\ of 10 Lac to be 35~$\pm$~14~\kms,
+and other analyses of this star (see table \ref{ta:10Lac_results})
+adopted values between 25 and 30 \kms. These values compare well with
+the 30~\kms\ adopted here (typical uncertainties on velocity
+measurements are of the order 10--15~\kms; see chapter \ref{ch:analyses}). 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SECTION = CHI-SQUARE %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{$\chi^2$ maps of hydrogen line wings}
+\label{sec:chi-sq}
+
+The pressure-broadened wings of the hydrogen lines are used to fix the
+surface gravity. They are relatively insensitive to changes in \teff\
+and show almost no dependence on the helium abundance (see fig
+\ref{fig:h_sensitivity}).
+
+The equivalent width, $W$, is not a useful parameter for the hydrogen
+lines since their cores are very sensitive to stellar wind
+contamination and also because their broad wings make the measured $W$
+very sensitive to continuum placement. Because of their broad
+profiles, they are also often blended with other lines. However, it is
+possible to extract useful information from these lines by
+concentrating on the wings. The method developed for this thesis
+involves extracting just the wings from the spectra by removing the
+cores of the lines and any blends that might occur. Then the wings are
+compared to the synthetic model spectra. For each grid-point (i.e.
+value of \teff\ and \logg) a $\chi_\nu^2$ fit value is calculated as
+in the previous section. These $\chi_\nu^2$ values are tabulated in a
+two-dimensional `map' in the \teff - \logg\ plane and an automatic
+routine traces the $\chi_\nu^2$ minima. The resulting locus of
+points describes a line of best-fit values of \teff\ and
+\logg.
+
+This is a very time consuming (both human and cpu) and due to the \hi\
+lines' insensitivity to the helium abundance, $y$, it usually only
+calculated for $y$ = 0.09. However, if the star has a high helium
+abundance (say $y~\geq~0.14$) then the $\chi_\nu^2$ map is
+re-calculated.
+
+\begin{figure} %%%%%%%%%%%%%%%%%%% FIGURE
+
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_casestudy/hydrogen/hydrogen.eps}
+
+\caption[Sensitivity of \hi\ lines]
+{\fcfont Model predictions of the sensitivity of H10~$\lambda$3797\AA\ to
+physical parameters. Diagrams illustrate, from top to bottom,
+sensitivity to changes in gravity, in helium number fraction
+($y$), and in rotational broadening parameter (\vsini). It is
+clear that of these, gravity is the most important parameter. Only
+a small part of the wings is shown to emphasize differences between
+models.}
+\label{fig:h_sensitivity}
+\end{figure} %%%%%%%%%%%%%%%%%%% END FIGURE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SECTION = Fit DIAGRAMS %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fit diagrams}
+\label{sec:ew_analysis}
+
+The measurements discussed in sections \ref{sec:ews} and
+\ref{sec:chi-sq} are used to construct fit diagrams similar to those
+used by, among others, \ybcite{he:92} and \ybcite{sm:94}. The loci of
+closest equivalent widths for helium lines, and best-fit wings for
+hydrogen lines, are plotted in the \teff\ -- \logg\ plane for a given
+value of $y$ and microturbulence. The best-fit parameters are found by
+calculating the point of closest approach to all the fitted lines. The
+goodness-of-fit is estimated from the root-mean-square distance of the
+point to the fit-lines. Diagrams are constructed for values of $y$
+between 0.09 and 0.18 and for microturbulence-values of 0, 5, 10 and
+15 \kms.
+
+The fit diagram for 10 Lac is show in figure \ref{fig:10lac:ewd} and a
+sequence of diagrams for varying $y$ and microturbulence is shown in
+appendix \ref{app:osumm}. The best-fit value is found by defining a
+grid of points that surrounds the lines on the fit diagram. For each
+point in the grid, the shortest distance to each line is found, and
+the sum of squares of these distances is calculated. The point in the
+grid with the smallest sum of squares is taken to be the best-fit
+point. There is a slight ambiguity in defining the distances between
+point on the fit diagrams since the axes are not in the same
+units. The effective temperatures will typically be of the order 30000
+-- 40000, whereas the surface gravities are of the order 3.0 --
+4.5. Unless these values are scaled, the temperatures will dominate in
+the calculation of impact parameters. In an attempt at ``normalising''
+the axes, the y-axis (\logg) is simply multiplied by 10 (and effective
+temperatures are measured in kK). Thus both axes have units which are
+of the same magnitude.
+
+\begin{figure} %%%%%%%%%%%%%%%%%%% FIGURE
+%\fnote{Fit diagram for 10 Lac}
+
+\epsfxsize=12cm
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_casestudy/ewd.eps}
+
+\caption[Fit diagram for 10 Lac]
+{\fcfont The fit diagram for 10 Lac at $y = 0.09$. The diagram is
+plotted in the same orientation as the Hertzsprung-Russel diagram,
+with \logg\ ($\equiv$ luminosity) increasing downwards and
+\teff\ increasing to the left. Each line on the plot represents the
+locus of parameters for the model spectrum which best fits either the
+equivalent width (for the helium lines) or the line-wing profile (for the
+hydrogen lines).}
+\label{fig:10lac:ewd}
+\end{figure} %%%%%%%%%%%%%%%%%%% END FIGURE
+
+From the fit diagram it appears that most lines are in fairly good
+agreement, with none of the lines falling outside the plotted
+area. There do, however, appear to be some lines that lie well
+outside the $\pm$ 5\%  variations shown in figures
+\ref{fig:ew_errors:he1} and \ref{fig:ew_errors:he2} (a discussion of
+the uncertainties and these plots follows later). The \hei\ lines at
+4009\AA\ and 4471\AA\ and the \heii\ line at 4200\AA\ all appear to
+lie well outside the intersection zone of the greater number of
+lines. The \hei\ lines are both among the lines in table
+\ref{ta:elf_vs_ew} with the largest differences in measured equivalent
+widths. \hei\ $\lambda$4009\AA\ is a weak line, and appears to be
+blended in all the observed stars, and this blend could lead to the
+observed over-estimation of the measured equivalent width. \hei\
+$\lambda$4471\AA\ on the other hand, is a relatively strong line, and
+the measured equivalent width is in this case under-estimated. This is a
+triplet line with a strong forbidden component. There are also
+several blends in the line wings. Because this line has a strong but
+narrow line profile, and because of the resolved forbidden component,
+it is very poorly fitted using \elf. The blends in the line wings make
+reliable measurements using \comm{ew} difficult. The \comm{ew}
+measurements (715~m\AA) are significantly larger than the \elf\
+estimates (646~m\AA), and in the model spectrum for \teff ~=~38~kK and
+\logg ~=~4.2 the equivalent width between 4466\AA\ and 4476\AA\ is
+766~m\AA. However in the unblended region between 4468\AA\ and
+4474\AA\ the model equivalent width is only 663~m\AA, so it appears
+that the model is not in disagreement with the observations.
+
+In the case of \heii\ $\lambda$4200\AA\ (4199.8\AA), the disagreement
+between model and observations is most likely caused by a blend with
+a N\scr{3}\ line at 4200.0\AA. Using \elf\ to fit \heii\
+$\lambda$4200\AA\ and both N\scr{3}\ lines at 4195.7\AA\ and 4200.0\AA\
+(see figure \ref{fig:he2_4200fit}) yields an equivalent width of 433
+m\AA\ which is in good agreement with the 454 m\AA\ predicted by the model.
+
+\begin{figure} %%%%%%%%%%%%%%%%%%% FIGURE
+
+\epsfxsize=12cm
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_casestudy/he2_4200/he2_4200_fit.eps}
+
+\caption[\elf\ fit to \heii\ $\lambda$4200\AA]
+{\fcfont \elf\ fit used to estimate equivalent width of \heii\
+$\lambda$4200\AA. The dotted line shows the \elf\ fit to the \heii\
+line component, and the dashed line shows the fit to the combined line
+profile. The \comm{ew} measurements included the blend with N\scr{3}
+and overestimated the equivalent width of the \heii\ line. Using \elf\
+we can get a far better measurement, although because the line
+profiles are not well fitted by Gaussians it is likely that the \heii\
+line strength is underestimated in this figure.}
+\label{fig:he2_4200fit}
+\end{figure} %%%%%%%%%%%%%%%%%%% END FIGURE
+
+It is difficult to give an accurate breakdown of the uncertainties that might
+be included in the analysis. Obviously the method is limited by the
+physics of the models and these results are difficult to quantify. It
+is slightly easier to look at the possible errors on the
+measurements. In the process of measuring the equivalent widths, the
+main pitfall is the determination of the continuum. For some lines
+this is relatively easy; however, when the lines are in a part of the
+spectrum with many other lines it can be very difficult. Nonetheless, by
+looking back at table \ref{ta:elf_vs_ew} (where we compare equivalent
+widths measured independently using two different methods and
+repeating the steps of spectral normalisation), it seems that the
+uncertainties on the equivalent widths are within a few per cent for most
+lines, and that an error estimate of $\pm 5\%$ is probably quite
+reasonable. Figures \ref{fig:ew_errors:he1} and
+\ref{fig:ew_errors:he2} show the effects of adding these errors to the
+\hei\ and \heii\ lines respectively. The change in position of the
+plotted lines is more or less of the order of the minimum spread seen
+in the fit-diagrams (e.g. HD~195592, HD~202124; see fig
+\ref{fig:allewd}). This could imply that we have underestimated the
+uncertainty on the equivalent width measurements, but more likely it is
+down to a combination of uncertainties in measurements and
+omissions/simplifications in the models.
+
+\begin{figure} %%%%%%%%%%%%%%%%%%% FIGURE
+%\fnote{Errors on \hei\ lines}
+
+\epsfxsize=12cm
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_casestudy/errors_he1.eps}
+
+\caption[Equivalent widths of \hei\ lines plotted with errors]
+{\fcfont These diagrams show the \hei\ lines plotted as they would
+appear on a fit diagram using the equivalent widths predicted by the
+models for the adopted parameters of 10 Lac (solid lines). Error
+estimates of $\pm 5$ per cent on the equivalent widths are shown as
+dashed lines (+5\%) and dotted lines (-5\%).}
+\label{fig:ew_errors:he1}
+\end{figure} %%%%%%%%%%%%%%%%%%% END FIGURE
+
+\begin{figure} %%%%%%%%%%%%%%%%%%% FIGURE
+%\fnote{Errors on \heii\ lines}
+
+\epsfxsize=12cm
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_casestudy/errors_he2.eps}
+
+\caption[Equivalent widths of \heii\ lines plotted with errors]
+{\fcfont These diagrams show the \heii\ lines plotted as they would
+appear on a fit diagram using the equivalent widths predicted by the
+models for the adopted parameters of 10 Lac (solid lines). Error
+estimates of $\pm 5$ per cent on the equivalent widths are shown as
+dashed lines (+5\%) and dotted lines (-5\%).}
+\label{fig:ew_errors:he2}
+\end{figure} %%%%%%%%%%%%%%%%%%% END FIGURE
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SECTION = RESULTS %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Physical parameters of 10 Lac}
+
+The results of the impact parameter analysis are listed in table
+\ref{ta:10Lac:imp}. From this table it appears that both temperature
+and gravity are well constrained by the equivalent width
+diagrams. It is also clear that the fits are significantly better for
+high microturbulent velocities of the order 10-15 \kms. The parameter
+$p$ listed in the table is the root-mean-square distance to the lines
+as discussed in section \ref{sec:ew_analysis}. The smallest value of
+$p$ is for $y$~=~09 and $\xi$~=~15~\kms, and we adopt these values,
+and \teff~=~38,000~K and \logg~=~4.2 as the best-fit parameters for
+10~Lac. Comparisons of model spectra for these parameters and the
+observations are shown in figures \ref{fig:model_fit_he1} and
+\ref{fig:model_fit_he2+h}.
+
+The \hei\ lines fit the observed equivalent widths very well, but for
+all lines apart from 4009\AA\ and 4143\AA\ the model line profiles are
+too weak in the cores. Lowering the \vsini\ by 10 -- 15\kms\ resolves
+this, but the profiles then appear too narrow. The model \heii\ lines
+are consistently too narrow and the line at 4200\AA\ is also clearly
+blended as discussed earlier. The \hi\ lines fit the line wings very
+well, but the model cores are clearly too weak and too narrow. In
+addition to this, the red wing of H10~\lam3797\AA\ does not fit
+the observations. It is possible that the normalisation at this point
+is poor. This line appears in the first echelle order observed and the
+normalisation could be affected by edge effects (see also chapter
+\ref{ch:obs}).
+
+
+%%%%%%%%%%%%%%%% TABLE %%%%%%%%%%%%%%
+\begin{table}
+\begin{center}
+\caption[Impact-parameter analysis for 10 Lac]{Impact parameter
+	analysis for 10 Lac.}
+\vspace{\abovecaptionskip}
+\begin{tabular}{cr|ccc}
+\hline\hline
+$y$	& $\xi$	(\kms) & \teff\ (kK)	& \logg	& $p$ \\
+\hline
+09	&  0	& 37.6	& 4.21	& 1.439	\\
+	&  5	& 37.7	& 4.24	& 1.437 \\
+	& 10	& 37.7	& 4.22	& 1.376 \\
+	& 15	& 37.6	& 4.16	& 1.136 \\
+&&&&\\
+10	&  0	& 37.6	& 4.20	& 1.419 \\
+	&  5	& 37.5	& 4.16	& 1.430 \\
+	& 10	& 37.5	& 4.18	& 1.363 \\
+	& 15	& 37.5	& 4.09	& 1.142 \\
+&&&&\\
+11	&  0	& 37.8	& 4.20	& 1.459 \\
+	&  5	& 37.8	& 4.18	& 1.463 \\
+	& 10	& 37.0	& 4.02	& 1.167 \\
+	& 15	& 37.5	& 4.03	& 1.281 \\
+\hline\hline
+\end{tabular}
+\label{ta:10Lac:imp}
+\end{center}
+\tnote{$\xi$ is the microturbulence and $p$ is
+	a number representing the goodness of fit. It is given by the
+	sum of the distances squared. A small $p$ represents a tight
+	clustering of the lines in the diagram, with $p = 0$ if all
+	the lines intersect at a single point.}
+\end{table}
+%%%%%%%%%%%%%% END TABLE %%%%%%%%%%%
+
+
+\begin{figure} %%%%%%%%%%%%%%%%%%% FIGURE
+\epsfxsize=15cm
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_casestudy/model_fit_he1.eps}
+\caption[10 Lac \hei\ model fits]
+{\fcfont Model fits to \hei\ lines in 10~Lac.}
+\label{fig:model_fit_he1}
+\end{figure} %%%%%%%%%%%%%%%%%%% END FIGURE
+
+\begin{figure} %%%%%%%%%%%%%%%%%%% FIGURE
+\epsfxsize=15cm
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_casestudy/model_fit_he2+h.eps}
+\caption[10 Lac \heii\ and \hi\ model fits]
+{\fcfont Model fits to \heii\ and \hi\ lines in 10~Lac.}
+\label{fig:model_fit_he2+h}
+\end{figure} %%%%%%%%%%%%%%%%%%% END FIGURE
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SECTION = DISCUSSION %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+\label{sec:casestudy:discussion}
+
+As shown in table \ref{ta:10Lac_results}, our results are in good
+agreement with \ybcite{sc:88}, but disagree with
+\ybcite{gr:92}. \acite{gr:92} put this difference down to the
+inclusion of \heii\ $\lambda$4686\AA\ in \acite{sc:88} We have also
+included this line; however it is in good agreement with all the other
+lines. Excluding this line does not appear to affect the analysis; the
+impact parameter results for 10~Lac exluding \hei\ \lam4686\AA\ are
+\teff~=~37.7~kK and \logg~=~4.16 (for $y=0.09$; $\xi =
+15$~\kms). Including this line gave \teff~=~37.6~kK. Clearly \heii\
+$\lambda$4686\AA\ has no effect on the final results in this case.
+
+The likely cause of the differences (also noted for other stars, see
+\ref{ch:analyses}) must then be put down to differences in the
+atmospheric models and fitting methods used. In particular,
+\acite{gr:92} used the cores of \ha, \hb\ and \hg\ and the \hei\ lines
+\lam4471\AA\ and \lam4922\AA\ to determine temperatures. The cores of
+the hydrogen lines are likely to be filled-in by emission from the
+stellar wind, although from the plots in \acite{gr:92} this would
+appear to have the effect of increasing the adopted effective
+temperatures, contrary to what would be required to bring their
+results into agreement with ours. The line \hei\ \lam4471\AA\
+consistently predicts lower temperature than the rest in our study.
+It is possible that this line could have affected their results
+(although \acite{gr:92} note that their models also fail to reproduce
+the strength of this line). It is also worth noting that \acite{gr:92}
+used line-blanketed atmospheric models, and
+\ybcite{hu:98} showed that when comparing analyses using H/He models to
+analyses using line-blanketed models, the H/He model analyses
+\emph{overestimate} the derived temperatures. \acite{hu:98} found
+differences between the approaches of the order 2.5~kK, however he
+only `analysed' synthetic spectra, not actual observations.
+
+
+%%%%%%%%%%%%%%%% TABLE %%%%%%%%%%%%%%
+\begin{table}
+\begin{center}
+\caption{Published parameters for 10~Lac}
+\vspace{\abovecaptionskip}
+\label{ta:10Lac_results}
+\begin{tabular}{r|cccc}
+\hline\hline
+       & This study	& Sch\"onberner et al. & Grigsby et al. & Herrero et al. \\
+\hline
+\teff  & 38,000 K	& 38,000 K & 30,000 K & 37,500 K\\
+\logg  & 4.20		& 4.25     & 4.00     & 4.00    \\
+$y$    & 0.09		& 0.09     & 0.10     & 0.10    \\
+\vsini & 30 \kms	& 25 \kms  & 30 \kms  & 50 \kms \\
+\hline\hline
+\end{tabular}
+\end{center}
+\tref{\ybcite{sc:88}; \ybcite{gr:92}; \ybcite{he:92}}
+\end{table}
+%%%%%%%%%%%%%% END TABLE %%%%%%%%%%%
+
+
+
+
+
+
+
+

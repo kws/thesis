@@ -1,0 +1,30 @@
+%% This package hacks the captioning commands for the ereport
+%% document class, and introduces a continued caption command
+
+\renewcommand{\@makecaption}[2]{%
+  \vskip\abovecaptionskip%
+  \sbox\@tempboxa{#1: #2}%
+  \ifthenelse{\lengthtest{\wd\@tempboxa > 0.95\linewidth}%
+  {\begin{center}\begin{minipage}{0.95\linewidth}%
+   #1: #2%
+   \end{minipage}\end{center}}%
+  {\begin{center}#1: #2\end{center}}}%
+  \vskip\belowcaptionskip%
+}
+
+\newcommand{\@makecontcaption}[2]{%
+  \vskip\abovecaptionskip%
+  \sbox\@tempboxa{#1 (cont): #2}%
+  \ifthenelse{\lengthtest{\wd\@tempboxa > 0.95\linewidth}%
+  {\begin{center}\begin{minipage}{0.95\linewidth}%
+   #1 (cont): #2%
+   \end{minipage}\end{center}}%
+  {\begin{center}#1 (cont): #2\end{center}}}%
+  \vskip\belowcaptionskip%
+}
+    
+\newcommand{\contcaption}[2]{
+ \addcontentsline{lof}{figure}%
+ {\protect\numberline{\thefigure} #1}
+ \@makecontcaption{Figure~\thefigure}{#2}}
+

@@ -1,0 +1,46 @@
+set star = hd218195
+set cat = "HD 218195"
+set title = "HD\\(0698)218195   O9\\(0698)III"
+set sptype = O9
+set lumcl = "III"
+
+# These are lists of values that will be used
+set v = (00 05 10 15)
+
+# Y can only have 4 members!!!!!
+set y = (11 12 13 14)
+
+# The y value to use for hydrogen in fig_ewd
+set hy = 12
+
+# Do we want to include the hydrogen chi maps (fig_ewd)
+set inc_h = yes
+
+# Tgkiel grid
+
+set tmin = 30000
+set tmax = 40000
+set gmin = 3.2
+set gmax = 4.5
+
+# And then a number of static variables for the star
+set rot = m59
+set rot_vel = -59
+
+# Add suport for model output
+# Temporary results
+
+set fit_v = 15
+set fit_y = .12
+set fit_t = 37000
+set fit_g = 3.6
+
+#Change to unset if model output disabled
+set fit_write 
+
+# The ewd window coordinates
+set window = "window 41 26 4.6 2.8"
+
+# The absolute magnitude 
+set Mv = -5.1
+

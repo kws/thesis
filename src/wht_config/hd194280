@@ -1,0 +1,47 @@
+set star = hd194280
+set cat = "HD 194280"
+set title = "HD\\(0698)194280   OC9.7\\(0698)Iab"
+set sptype = OC9.7
+set lumcl = "Iab"
+
+
+# These are lists of values that will be used
+set v = (00 05 10 15)
+
+# Y can only have 4 members!!!!!
+set y = (09 10 11 12)
+
+# The y value to use for hydrogen in fig_ewd
+set hy = 10
+
+# Do we want to include the hydrogen chi maps (fig_ewd)
+set inc_h = yes
+
+# Tgkiel grid
+
+set tmin = 27000
+set tmax = 37000
+set gmin = 2.7
+set gmax = 3.7
+
+# And then a number of static variables for the star
+set rot = m101
+set rot_vel = -101
+
+# Add suport for model output
+# Temporary results
+
+set fit_v = 15
+set fit_y = .09
+set fit_t = 32000
+set fit_g = 3.2
+
+#Change to unset if model output disabled
+set fit_write 
+
+# The ewd window coordinates
+set window = "window 38 23 3.8 2.3"
+
+# The absolute magnitude 
+set Mv = -6.1
+

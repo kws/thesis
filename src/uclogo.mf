@@ -1,0 +1,120 @@
+%
+% UCL logogram
+%
+mode_setup;
+% declarations
+def variables =
+	numeric pen_size; 
+	numeric thick;  thick:=.036w;
+	numeric thin; thin:=.0047w;
+enddef;
+
+% Proof Labels
+def p_labels = 
+	labels(range 0 thru 100);
+enddef;
+
+% Pen definitions
+def logo_pens =
+	pen_size:=w/60; pickup pencircle scaled pen_size; portico_pen:=savepen;
+	pen_size:=.022w;pickup pencircle scaled pen_size; letter_pen:=savepen;
+enddef;
+
+% Plinth
+def plinth =
+ x1=x3=0; y1=y2=0; x2=x4=x1+w; y3=y4=y1+.056h; x5=x7=.038w;
+ x6=x8=w-x5; y5=y6=.081h; y7=y8=y5+.051h;
+ pickup portico_pen;
+ draw z1--z2--z4--z3--cycle; draw z5--z6--z8--z7--cycle;
+enddef;
+
+% Dome
+def dome =
+% Top of portico
+ y9=y10=.444h; x9=w-x10=x13=w-x14=.062w;
+ y11=y12=y13=y14=.494h; x11=w-x12=x15=w-x16=.048w;
+ y15=y16=.517h; x17=w-x17; y17=.597h;
+% Base for Dome
+ z18=.460[z15,z17]; x20=x18=w-x19=w-x21;
+ y19=y18; y20=y21=.579h; x22=w-x23=x24=w-x25=.262w;
+ y22=y23=y20+.018w; y24=y25=.633h; x26=w-x27=.288w;
+ y26=y27=y28=y34=y35=y36=y37=y38=y39=.671h; x28=w-x28;
+% Dome
+ x29=x28; y29=y30=y31=y40=y41=y42=y43=.815h; x30=w-x31=.398w; x34=w-x35=.305w;
+ x36=w-x39=.366w; x37=w-x38=.431w; x40=w-x43=.432w; x41=w-x42=.466w;
+% Top
+ y32=y33=.846h; x32=w-x33=.450w; y44=y45=.884h; x44=w-x45=x46=w-x47=.467w;
+ x48=w-x49=.454w; y46=y47=y48=y49=.942h; y50=y51=.979h;
+ x50=x52=w-x51=w-x53=.488w; y52=y53=h;
+% draw
+ pickup portico_pen;
+ draw z13--z9--z10--z14; draw z11--z12--z16--z17--z15--cycle;
+ draw z18--z20--z22--z24; draw z19--z21--z23--z25;
+ draw z24--z25--z27--z26--cycle; draw z28--z29; draw z30--z31;
+ draw z34{dir90}..z30--z32; draw z35{dir90}..z31--z33;
+ draw z36{dir90}..z40; draw z37{dir90}..z41; draw z38{dir90}..z42;
+ draw z39{dir90}..z43; draw z32{dir112}..z44--z46--z48--z50--z52--z53;
+ draw z33{dir68}..z45--z47--z49--z51--z53;
+enddef;
+
+% The letter "U"
+def letter_u =
+ penpos54(thick, 0); penpos56(thick, 0); penpos58(thin,90);
+ penpos57(thin,180); penpos55(thin,180); x54=x56=.144w; x55=x57=.344w;
+ y54=y55=.384h; y56=y57=.239h; x58=.5x55+.5x54; y58=.176h; y67=.405h;
+ y68=.397h; x67=x54l; x68=x54; x69=x56+.004w; y69=.195h;
+ y71=y72=y73=y74=.410h; x71=x54-.079w; x72=x54+.081w; x73=x55-.053w;
+ x74=x55+.051w;
+ pickup letter_pen;
+ filldraw z72--z71{right}..z54l---z56l..z58l..z57l---
+	  z55l..{right}z74--z73{right}..z55r---z57r..
+	  z58r..z56r---z54r..{right}z72..cycle;
+ unfill z56--z68--z67--z56l{down}..{dir320}z69..{up}cycle;
+enddef;
+
+% The letter "C"
+def letter_c =
+ penpos59(1.5thin,20); penpos60(thick,180); penpos61(1.5thin,340);
+ penpos65(thin,90); penpos66(thin,270); penpos79(2thin/3,0);
+ penpos80(2thin/3,0);
+ y59=.394h; y61=.193h; y60=.5y59+.5y61; x60=.430w; x59=x61=.645w;
+ x65=x66=.568w; y66=.176h; y65=.405h; y70=y60+.08h; x70=x60l+.008w=x84;
+ y84=y60-.09h; y79=2.0y60-y80=.353h; x79=x80=x59r+.005w;
+ pickup letter_pen;
+ filldraw z79r--z59r{dir160}..{left}z65r{left}..tension.92..
+	  {down}z60r{down}..tension.92..{right}z66r{right}..
+	  {dir10}z61r--z80r--z80l--z61l{dir200}..{left}z66l{left}..
+	  {up}z60l{up}..{right}z65l{right}..{dir340}z59l--z79l--cycle;
+ unfill z70{dir214}..tension.92..{dir267}z60r{dir273}..{dir322}z84{dir128}..
+	tension.92..z60{up}..{dir52}cycle;
+enddef;
+
+% The letter "L"
+def letter_l =
+ penpos62(thick,0); penpos63(thick,0);
+ x62=x63=.781w; y62=.384h; y63=.200h; x64=.933w; y75=.405h; y76=.397h;
+ y77=y78=.410h; x77=x62-.079w; x78=x62+.079w; x75=x62l; x76=x62; x81=x77;
+ x82=x63l; y64=y81=.177h; y82=.192h; y83=.180h; x83=.844w; y85=.232h;
+ x85=.950w;
+ pickup letter_pen;
+ filldraw z78--z77{right}..z62l---z63l..{left}z81--z64--z85{dir240}..
+	  z83..{up}z63r---z62r..{right}z78..cycle;
+ unfill z63--z76--z75--z82--cycle;
+enddef;
+
+def draw_logo(expr code, logo_size) =
+beginchar(code, logo_size*15.7mm#, logo_size*19.6mm#, 0); "UCL Logo";
+variables; logo_pens;
+plinth; dome; letter_u; letter_c; letter_l; p_labels; 
+endchar;
+enddef;
+
+
+logo_code = 96;
+for scale_factor=5 upto 30:
+draw_logo(incr logo_code, .1scale_factor);
+endfor
+
+% letter head size (15.7mil by 19.6mil)
+% proof size (3.14mil 3.92mil)
+end;

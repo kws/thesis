@@ -1,0 +1,47 @@
+set star = hd010125
+set cat = "HD 10125"
+set title = "HD\\(0698)10125   O9.7\\(0698)II"
+set sptype = O9.7
+set lumcl = "II"
+
+# These are lists of values that will be used
+set v = (00 05 10 15)
+
+# Y can only have 4 members!!!!!
+set y = (12 14 16 18)
+
+# The y value to use for hydrogen in fig_ewd
+set hy = 12
+
+# Do we want to include the hydrogen chi maps (fig_ewd)
+set inc_h = yes
+
+# Tgkiel grid
+
+set tmin = 28000
+set tmax = 38000
+set gmin = 3.0
+set gmax = 4.0
+
+# And then a number of static variables for the star
+#set rot = r162
+#set rot_vel = 162
+set rot = m132
+set rot_vel = -132
+
+# Add suport for model output
+
+set fit_v = 15
+set fit_y = .15
+set fit_t = 32500
+set fit_g = 3.3
+
+#Change to unset if model output disabled
+set fit_write 
+
+# The ewd window coordinates
+set window = "window 39 24 4.1 2.6"
+
+# The absolute magnitude 
+set Mv = -5.8
+

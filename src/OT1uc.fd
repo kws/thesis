@@ -1,0 +1,7 @@
+%% Short .fd file for the UCL Logo
+%%
+%% Rich Townsend 26/3/96
+
+\DeclareFontFamily{OT1}{uc}{}
+\DeclareFontShape{OT1}{uc}{m}{n}{ <-> uclogo }{}
+

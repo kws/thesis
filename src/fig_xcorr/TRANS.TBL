@@ -1,0 +1,10 @@
+F 00BSCONFIG.;1                     	00bsconfig
+D CAL                               	cal
+D CCFS                              	ccfs
+D COR                               	cor
+D FWHM                              	fwhm
+D IDH_COMP                          	idh_comp
+D MSGROUPS                          	msgroups
+D SLETTEBAK                         	slettebak
+D VSINI                             	vsini
+D VSINI_BSCSPEC                     	vsini_bscspec

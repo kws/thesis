@@ -1,0 +1,29 @@
+#!/bin/csh
+
+set lines = (4009 4026 4143 4388 4471 4713 4922 5047)
+set style1 = (2 2 2 2 2 2 2 2)
+set style2 = (20 4 5 4 3 3 3 3)
+set style3 = (1 1 1 1 1 1 1 1)
+set style4 = (0 45 0 0 90 270 0 180)
+
+echo '' >! display_he1.cmd
+
+@ c = 1
+while( $c <= $#lines )
+  set l =  $lines[$c]
+  cat  >! tmp.sed <<EOF
+s|%LINE%|$l|g
+s|%STYLE1%|$style1[$c]|g
+s|%STYLE2%|$style2[$c]|g
+s|%STYLE3%|$style3[$c]|g
+s|%STYLE4%|$style4[$c]|g
+EOF
+
+  echo 'input display_'$l'.cmd' >> display_he1.cmd 
+  if ($c < $#lines) echo 'page' >> display_he1.cmd 
+  cat display_he1.tplt | sed -f tmp.sed > display_${l}.cmd
+  @ c++
+end
+
+rm tmp.sed
+

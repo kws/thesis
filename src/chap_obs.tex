@@ -1,0 +1,555 @@
+\chapter{Observations and data reduction}
+\label{ch:obs}
+
+\section{WHT observations of late O-type stars}
+
+The high-resolution, high signal-to-noise data needed for the line
+analysis were acquired using the Utrecht Echelle Spectrograph (UES)
+during four nights in August 1995. The UES is permanently mounted on
+one of the nasmyth platforms at the f/11 focus of the 4.2 metre
+William Herschel Telescope (WHT), which is part of the Isaac Newton
+Group (ING) of telescopes at La Palma.
+
+One of the main criteria for selecting target stars was brightness. In
+order to get high-quality spectra of as many stars as possible, it was
+important to keep exposure times to a minimum. After the second night
+of observing, it was decided to remove the image de-rotator from the
+instrument. This disabled the WHT's auto-guider, forcing us to guide
+the telescope manually, but it also increased the throughput (i.e. reduced
+the exposure times) by about 30 per cent.
+
+Most of the four nights were spent observing with the UES, however
+several lower resolution spectra were acquired with both the red and blue
+arms of the ISIS double beam spectrograph. These spectra were not used
+for the analysis discussed in this thesis, but they were obtained to
+help define the wings of the broad hydrogen lines. They have also
+sometimes been used as a comparison to check for faults in the reduction of
+the high-resolution data, and to help correct for the echelle blaze in
+the data. A special routine was later developed to automatically
+de-blaze the spectra (see section \ref{sec:blaze}).
+
+\subsection{The sample}
+
+One of the main aims of this thesis is to look for object-to-object
+variations in the helium abundance of O stars. To look for
+evolutionary tracers, we wanted a large sample of stars that populate
+a small part of the HR diagram, and with a bias towards stars that
+have been proposed to show abnormal surface abundances. By chosing
+stars with similar effective temperatures and surface gravities, we
+hope that reliable \emph{differential} parameters for the stars can be
+derived.  To test the hypothesis that OC -- O -- ON is an evolutionary
+sequence, and that the nitrogen enhancements should be reflected in
+the helium abundance, several stars that were classified as OC and ON
+by \ybcite{wa:76} were chosen. The ``new'' ON star identified in
+\ybcite{ma:89}, BD+36~4063, was also observed, and recent observations
+show that this star is a single-lined spectroscopic binary (Howarth,
+private communication).  See table
+\ref{tab:obs_targets} for a complete list of the UES target stars.
+
+These stars are probably not a representative sample of the O
+stars. There are only 4 stars (roughly 17~\% of the sample) classified
+as belonging to luminosity class V, corresponding to a main sequence
+star. It is difficult to say what the ``true'' distribution of
+luminosity classes are, but as a quick estimate we can check with
+Garmany's unpublished catalogue of O stars. This catalogue contains a
+more or less complete sample out to approximately 2~kpc
+(\cite{ga:imf}) and although the spectral types are not always
+consistent with those we have adopted (see table
+\ref{tab:obs_targets}) there are probably no important differences. For the
+list containing about 1000 stars (some without luminosity
+classifications), there are 375 stars classified as either If, I, II
+or III and 394 as IV or V.
+
+The sample does, however, contain a mix of morphologically normal
+stars, and stars which have been at one point or another been
+classified as chemically peculiar. These stars include the ON and OC
+stars, the Orion belt stars, $\delta$ Ori and $\zeta$ Ori, and several
+other stars which have been noted to have moderate chemical
+anomalies. In particular, the Orion belt stars are interesting
+because, although not classified as OCs, they both have been noted by
+\ybcite{wa:76} to be slightly N deficient.
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_obs/hrd/hrd.eps}
+\caption[HR-diagram]
+{\fcfont HR Diagram showing the positions of the sample stars as open
+symbols. The physical parameters for the stars are calculated in this
+thesis. Also indicated are the core hydrogen (H-b) and helium burning
+(He-b) phases of the evolutionary tracks, and predicted positions of
+the zero-age main-sequence (ZAMS), dredge-ups (D-up), extended part of
+asymptotic giant branch (EAGB), thermal pulsing part of the AGB
+(TPAGB), and the positions of planetary nebulae (PNs), Wolf-Rayet
+stars (WRs), luminous blue variables (LBVs) and the white dwarf (WD)
+cooling track. The thick black lines denote `slow' parts of the
+evolutionary tracks, i.e. where the stars are most likely to be
+observed. Diagram adapted from Chiosi (1998).}
+\label{fig:hrd1}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_obs/hrd/hrd2.eps}
+\caption[Spectral types and absolute magnitudes of WHT sample]
+{\fcfont Absolute magnitudes and spectral types for the sample
+stars. The magnitudes are from Garmany's unpublished catalogue, and
+the spectral types are taken from the various references discussed in
+the text. The lines show the loci of absolute magnitudes adopted by
+Howarth and Prinja (1989).}
+\label{fig:hrd2}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}
+\begin{center}
+\small % SMALL!!!!!!!!!!
+\caption{UES target stars}
+\begin{tabular}{rllrccrrrr}
+\\ \hline\hline
+HD/BD & \centering{Name} & \multicolumn{2}{c}{Spectral Type} & V &
+\multicolumn{2}{c}{No. exposures} & \multicolumn{2}{c}{Tot. time} & S/N\\
+& & & & & 4190\AA & 5426\AA &
+4190\AA & 5426\AA \\
+
+\hline
+
+10125   &            	& O9.7 II       & W76 & 8.22 & 2 & 2 & 3000 & 2700 & 300 \\
+12323   & 		& ON9 V         & W76 & 8.90 & 2 & 2 & 2700 & 2400 & 300 \\
+13745   &         	& O9.7 II((n))  & W76 & 7.88 & 2 & 2 & 1600 & 1500 & 450 \\
+16429   &               & O9.5 II((n))  & W76 & 7.67 & 2 & 2 & 2700 & 1500 & 300 \\
+30614   & $\alpha$ Cam	& O9.5 Ia       & W76 & 4.26 & 2 & 2 &  160 &  100 & 400 \\
+34078   & AE Aur 	& O9.5 V        & W73 & 5.81 & 2 & 2 &  420 &  350 & 300 \\
+36486   & $\delta$ Ori  & O9.5 II       & W76 & 2.20 & 3 & 2 &   30 &   10 & 350 \\
+37742   & $\zeta$ Ori   & O9.7 Ib       & W76 & 1.75 & 2 & 3 &   24 &   19 & 300 \\
+188209  & 		& O9.5 Iab      & W76 & 5.64 & 3 & 3 &  550 &  400 & 350 \\
+189957  &	        & O9.5 III      & W73 & 7.22 & 3 & 2 & 1200 & 1000 & 300 \\
+191781  & 	        & ON9.7 Iab     & W76 & 9.54 & 3 & 2 & 4500 & 2500 & 300 \\
+194280  &               & OC9.7 Iab     & W76 & 8.39 & 3 & 2 & 4500 & 3000 & 200 \\
+195592  &               & O9.7 Ia       & W76 & 7.08 & 2 & 2 & 2000 &  500 & 300 \\
+201345  &               & ON9 V         & W76 & 7.66 & 2 & 3 & 2000 & 3000 & 250 \\
+202124  &               & O9.5 Iab      & W76 & 7.80 & 2 & 2 & 1600 & 1000 & 400 \\
+207198  &               & O9 Ib-II      & W76 & 5.96 & 3 & 3 & 1300 &  600 & 350 \\
+209975  & 19 Cep	& O9.5 Ib       & W76 & 5.11 & 2 & 3 &  300 &  300 & 350 \\
+210809  &               & O9 Iab        & W76 & 7.55 & 3 & 2 & 2400 & 1000 & 400 \\
+214680  & 10 Lac	& O9 V          & W73 & 4.87 & 3 & 3 &  150 &  150 & 350 \\
+218195  &               & O9 III        & W76 & 8.34 & 2 & 2 & 1600 & 1400 & 300 \\
+218915  &               & O9.5 Iab      & W76 & 7.18 & 3 & 3 & 2600 & 3000 & 400 \\
+225160  &               & O8 Ib(f)      & W71 & 8.19 & 2 & 2 & 2400 & 2000 & 300 \\
++36 4063&               & ON9.7 I       & M89 & 9.71 & 5 & 2 & 6900 & 3000 & 150 \\
+\hline\hline
+\end{tabular}
+\label{tab:obs_targets}
+\end{center}
+\tnote{Columns three and four list classifications and published
+reference. Column 5 gives the V magnitude listed in Garmany's
+catalogue (see text). The wavelengths for columns 6 to 9 represent the
+central wavelength setting of the spectrograph (see
+text). Signal-to-noise (column 10) is calculated for a small spectral
+region between 4200\AA\ and 4300\AA\ and is not necessarily
+representative for the entire wavelength range.}
+\tref{W71, W73, W76 -- Walborn \cite*{wa:71supp,wa:73,wa:76}
+respectively, M89 -- \cite{ma:89}.}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{The Utrecht Echelle Spectrograph}
+
+The UES is a cross-dispersed echelle, used in our observations with
+the 31.6 grooves/mm echelle grating.  The slit was opened to 1.5$''$,
+which gave a resolution element of about 65 microns at the detector
+(approximately 3 pixels). This corresponds to a resolving power $R =
+\lambda /\Delta\lambda = 40000$ (about 8~\kms). The detector was the 
+Tektronix 5 (TEK5) with $1124\times1124$ pixels ($1024\times1024$
+usable imaging size).
+
+Several exposures with two spectrograph settings were obtained for all
+the target stars. Centering the grating at \lcen\ = 4190\AA\ in order
+136 and \lcen\ = 5426\AA\ in order 105 gave complete spectral coverage
+\label{spectral_coverage} from roughly $\lambda3780$\AA\ to
+$\lambda5670$\AA, and further coverage with inter-order gaps up to
+$\lambda6980$\AA. These wavelengths are in the rest-frame of the
+observer, and so the actually stellar wavelengths depend slightly on the 
+radial velocity of the stars observed and on heliocentric corrections.
+
+
+\subsection{Data reduction}
+
+The echelle data reduction was performed using the Starlink packages
+\echomop\ (\cite{sun:152}), \figaro\ (\cite{figaro}), and
+\dipso\ (\cite{dipso}). \echomop\ was originally developed to extract data
+from the UES' ``twin'' instrument, the UCL Echelle Spectrograph
+(UCLES) at the Anglo Australian Telescope (AAT). The 2-D images were
+first bias subtracted and cleaned of cosmic rays using the Starlink
+software \prog{bclean}. The data were then transfered to the \echomop\
+environment. \echomop\ is a multi-step reduction package that can
+either be run interactively or automated through shell scripts. For
+this project, \echomop\ was used interactively on the first
+exposure of each spectrograph setting of each star; the resulting
+`reduction data structure' was then used to automatically reduce the
+remaining spectra at the same settings. The data structure contains
+information about the extracted spectra, such as the order positions and
+shapes, the cross-dispersion profile and so on. It did, however,
+sometimes turn out to be necessary to reduce each exposure manually,
+usually because of slight changes to telescope positioning, or
+instrument setup.
+
+There is a good summary of the general properties of echelle
+spectra in \emph{Starlink Guide 9} (\cite{sg:9}). Below is a brief
+description of the steps involved in the reduction and extraction of
+these data.
+
+\subsubsection{Order identification and tracing}
+Before the stellar spectra can be extracted, the orders have to be
+identified. \echomop\ proved very good at locating the orders in the
+stellar frames, and no manual intervention was necessary. The orders
+were then traced using a centroid tracing routine, and polynomials of
+the 5th degree were fitted to the orders. For each order, the
+differences between the centroid trace and the fitted polynomial were
+plotted, and points that fell more than 0.3 pixels away from the
+polynomial were then removed and the order re-fitted. This was
+iterated until no points fell outside the 0.3 pixel limit.
+
+\subsubsection{Sky \& background fitting}
+An averaged flat-field frame was then used to determine the dekker
+limits, which mark the extent of each order in the spatial
+(cross-dispersed) direction. When the dekker limits had been
+determined, the orders were examined manually and each pixel along the
+slit was marked as either belonging to the star or sky. The mean (in
+the spatial direction) of the ``sky'' pixels was used to correct for
+sky emission/scattered light. From measuring the FWHM of the arc lines
+we can estimate the spectrograph resolution, $R = \lam /\Delta\lam$
+which we find to be about 40000 -- 50000 dependent on the wavelength.
+
+\subsubsection{Spectrum extraction}
+Finally, the object profile was calculated using the star mask created
+above, and the stellar and arc spectra were extracted using an optimal
+extraction routine. This routine weights each pixel by the product of
+the calculated profile, $P(i,j)$, and an estimate of the uncertainty
+of the pixel intensity (see next section). The star and arc spectra
+were extracted simultaneously to ensure that the same weights were
+used in both cases. Arc lines were identified using \prog{echarc} and
+the wavelength information mapped on to the extracted spectra.
+
+\subsection{Flat-fielding}
+\label{sec:flatfield}
+Flat-fielding of echelle spectra is far more complicated than for
+normal grating spectra. Although the flat-field frames should be quite
+sensitive to pixel-to-pixel variations in the detector, it is far more
+difficult to model the variations caused by the instrumental profile
+(see section \ref{sec:blaze}). Since both of these are present in the
+flat-field frames, it is difficult to extract any useful information
+from them.
+
+Several tests were performed using flat-field frames obtained in the
+afternoon before each night's observing. Cross-dispersion `drift' in
+the spectrograph (perhaps due to temperature changes in the
+spectrograph\footnote{The refractive index of the cross-dispersion
+prism is temperature sensitive, and although the UES is in a
+temperature controlled area, there does appear to be a drift in the
+cross-dispersion direction throughout the nights of observing.}) meant
+that a straight division of the flat-field frames into the data frames
+degraded rather than improved the quality of the extracted spectra. We
+also tried to extract the flat-field frames using the same object
+profile obtained during the spectrum extraction and several different
+\emph{weighting schemes}: simple, profile and optimal.
+\begin{itemize}
+\item	\textbf{Simple:} all object pixels are assigned equal weights.
+\item	\textbf{Profile:} Weights each pixel by $P(i,j)^2$ where $P(i,j)$ is
+	the calculated normalisation profile at spatial offset $j$ from the
+	trace centre, and $i$ is the column number.
+\item 	\textbf{Optimal:} Each pixel is weighted by the product of $P(i,j)$
+	and an estimate of the uncertainty of the pixel intensity.
+\end{itemize}
+However, none of these methods seemed to be able to correct
+satisfactorily for pixel defects in the detector or the echelle
+blaze. No flat-fielding was carried out, therefore. This was
+acceptable from the point of view of pixel-to-pixel sensitivity
+differences, which were small, but left the problem of correcting the
+echelle blaze.
+
+\subsection{Echelle blaze correction}
+\label{sec:blaze}
+The shape of the extracted spectra is dominated by the so-called
+echelle blaze function. This is just the angle (i.e. wavelength)
+dependence of the light reflected by the grating. There are several
+ways of correcting for the blaze, but none of them are
+straight-forward. One of the most common ways is to divide through by
+the normalised flat-field, but, as noted above, this method did not
+work well for these data -- possibly due to difference in the optical
+paths in the spectrograph between the flat-fields and the actual
+observations (see also section
+\ref{sec:flatfield}). However, several other methods of correcting for
+the echelle blaze were tried. In particular, two different routines
+were written in
+\prog{fortran 77} and incorporated into the \dipso\ environment.
+
+\subsubsection{Barker method}
+\label{sec:barker}
+The method of \ybcite{ba:blaze} involves dividing the spectral
+orders by a theoretical ripple function, $R(\lambda)$. For a plane
+grating used in near-Littrow mode (basically when the angle of
+incidence is not very different from the facet normal; see
+\cite{gray}), the blaze function is given by
+\begin{equation}
+R(\lambda) = \frac{\sin^2 \pi\alpha X}{(\pi\alpha X)^2}
+\end{equation}
+where $X = m[1-\lambda_c(m)/\lambda]$. The order number, $m$, and the
+central wavelength of order $m$, $\lambda_c(m)$, are related through
+the grating constant, $k = m\lambda_c(m)$, and $\alpha$ is another grating
+constant which depends on the facet width, the spatial frequency of
+facets, and the blaze angle (\cite{ba:blaze}).
+
+The above equation for the blaze function fits well, but not well
+enough to remove all the ripple. The Barker routine finds a correction
+to the grating constant, $k$, for each order -- allowing $k$ to vary
+as a function of the order, $m$. The correction is found by examining
+the overlap region between two orders after they have been de-blazed
+with an initial estimate of the value of $k$ (usually
+$m\lambda_c(m)$). For each overlap region, the orders should match
+up. The fluxes, $F_+$ and $F_-$, of the de-blazed orders, are then
+measured in the overlap region. $F_+$ and $F_-$ just denotes the flux
+of the order with the higher flux and lower flux respectively (see fig
+\ref{fig:barker}).
+
+A differential correction, $\Delta k$, to the grating constant is then calculated
+for each order from
+\begin{equation}
+\Delta k_m = \frac{\frac{F_+}{F_-} - 1}
+{
+\frac{1}{R_m}\frac{\partial R_m}{\partial k}
+- \frac{F_+}{F_-}\frac{1}{R_{m+1}}
+\frac{\partial R_{m+1}}{\partial k}
+}
+\end{equation} 
+The process is then repeated until $\Delta k$ is sufficiently small.
+
+The Barker routine works well when the correct value for $\alpha$ has
+been found, but the major problem is the need for order overlap. As
+mentioned in section \ref{spectral_coverage}, redwards of
+$\lambda$5670\AA\ there is only partial coverage of the full spectral
+range. It is possible that a function could be fitted to the corrected
+values of $k$ and extrapolated into the region without overlap. This
+has not been tried for this project, but \ybcite{ho:winds} smoothed
+the $k$ values and introduced a 2$\sigma$ rejection. They found that
+this greatly reduced the chance of erroneous values of $k$ caused by
+cosmic-rays and phosphor decay spikes.
+
+%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_obs/barker.eps}
+\caption[Schematic describing blaze-removal method of
+Barker]{\fcfont Schematic of three adjacent orders in an echelle spectrum with
+incorrect blaze removal. From Barker, 1984.}
+\label{fig:barker}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Splif}
+A very different approach was taken in a previously empirical method
+by Howarth (private communication), called \prog{splif}. The extracted
+echelle orders are treated as a surface in the spectral vs. spatial
+(order number) plane. This surface is then fitted using a very simple
+approach. Briefly, this involves:
+
+\begin{enumerate}
+
+\item 	Each order is ``normalised'' by dividing by the mean intensity
+of that order. This step removes the large order to order variations in
+intensity and allows the use of a simple fit surface. This step can
+also be slightly improved by fitting a polynomial to a plot of mean
+intensity against order and dividing through by the fitted values,
+since orders with strong lines, or many weak lines, will lower the
+mean intensity of that order.
+
+\item 	For each pixel in the dispersed direction, a straight line is
+fitted to a plot of intensity as a function of order number. This
+returns (for the TEK5) two arrays of 1024 elements, one holding the
+gradients of each fitted line, and the other the intercepts.
+
+\item	The two arrays are then optionally fitted with polynomials to create a
+smoothed surface.
+
+\item	The spectral data from step (1) are divided by this surface.
+
+\item	A linear `ramp' is applied to each order to ensure agreement
+in regions of order overlap.
+
+\item	Orders are merged with a ramped weighting function.
+
+\end{enumerate}
+
+\begin{figure} %%%%%%%% FIGURE
+
+\setlength{\cen}{\figwidth/2}
+
+\begin{tabular}{cc}
+\epsfxsize=\cen\epsfbox{fig_obs/splif_3D/orders_raw.eps}&
+\epsfxsize=\cen\epsfbox{fig_obs/splif_3D/orders_nor.eps}\\
+\epsfxsize=\cen\epsfbox{fig_obs/splif_3D/orders_splif.eps}&
+\epsfxsize=\cen\epsfbox{fig_obs/splif_3D/splif_spectra.eps}\\
+\end{tabular}
+
+\caption[Splifing]
+{\fcfont The four steps of \prog{splif}ing: \textbf{top left} --- raw
+extracted orders; \textbf{top right} --- `normalised' orders;
+\textbf{bottom left} --- \prog{splif}ed orders; \textbf{bottom right}
+--- almost done, spectral orders just need to be normalised before merging.}
+\end{figure} %%%%%%%
+
+Because of the several layers of smoothing, the method is fairly
+robust against spectral features, and does not require order overlap.
+As shown in figure \ref{fig:splif_wide}, even wide spectral features which
+span several orders are preserved in the fitting process.
+
+\begin{figure} %%%%%%%%%% FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_obs/splif_dib/hd218195_dib.eps}
+
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_obs/splif_ha/hd195592_ha.eps}
+
+\caption[Wide spectral features preserved by SPLIFing]{\fcfont The SPLIF method
+preserves wide spectral features that span several echelle orders. The
+\textbf{top panel} shows the strong diffuse interstellar band at \lam
+4430\AA\ in HD~218195.  The merged spectrum is shown with the
+individual orders offset underneath. The spectra have been clipped at
+a rectified intensity of 0.85 for clarity.  The \textbf{bottom panel}
+shows H$\alpha$ emission in HD~195592. In this wavelength region there
+is a large inter order gap. The strong emission meant that we had to
+saturate H$\alpha$ to get decent S/N for the rest of the
+spectrum. Scattered light from this strong emission might have caused
+the small features seen at approximately \lam\lam 6480 and 6640\AA\ in
+the adjacent orders.}
+\label{fig:splif_wide}
+\end{figure}
+%%%%%%%%%%%%
+
+All the UES data were de-blazed using \prog{splif} and all the orders
+containing lines used in the analysis were carefully inspected
+before they were merged to form a single, continuous
+spectrum. Neighbouring orders were usually in good agreement in the
+overlap region, but in a few cases there were differences of the order
+of a few per cent of the continuum intensity. The orders were merged
+using a gradient function in the overlap region. This would slope
+linearly from 1 to 0 and give less weight to the end points in each
+order.
+
+The \prog{splif}ed, merged and normalised WHT spectra are included on
+the attached CD-ROM. See appendix \ref{app:cdrom} for details.
+
+\section{\iue\ data}
+
+The second part of this thesis (chapter \ref{ch:xcorr}) investigates
+photospheric line broadening in UV spectra of O and B stars. The O
+(and some B) stars were initially analysed as part of an undergraduate project
+undertaken before starting this Ph.D. research, and subsequently
+published in \ybcite{ho:xcorr}. We have subsequently automated the analysis
+procedures and have expanded the sample to include later-type B
+supergiants than those investigated in \acite{ho:xcorr}, and also B
+main-sequence stars. 
+
+As before, UV spectra taken with the
+\emph{International Ultraviolet Explorer} (\iue)
+satellite's Short Wavelength Prime (SWP) camera were used for the
+analysis. \iue, launched in January 1978 by a collaboration of SERC,
+ESA and NASA, had four UV sensitive cameras. The Long Wavelength Prime
+and Redundant (LWP and LWR) cameras observed in the range
+1900-3200\AA, and the Short Wavelength Prime camera in the range
+1150-2000\AA\ (the Short Wavelength Redundant camera had a faulty
+readout section and was not used). 
+
+Each of the two spectrographs on board (LW \& SW) could operate in
+high or low-resolution mode. The low-resolution spherical gratings
+produced spectra with a resolution of about 6\AA, and the
+high-resolution echelle spectrographs produced spectra with a
+resolution of approximately 0.1\AA. Only high-resolution spectra have
+been used in this study.
+
+\subsection{The \iue\ sample}
+
+Using the electronic version of the Bright Star Catalogue
+(\cite{bsc5}), all stars classified as type B were extracted and
+cross-checked with the IUE catalogue. Where appropriate observations
+existed, these were downloaded from the IUE archives available at
+\texttt{http://ast.star.rl.ac.uk/iues/iues.html}. Some additional stars from
+\ybcite{ho:xcorr} were included to test the automatic analysis
+routines. The sample of stars is discussed in more detail in chapter
+\ref{ch:xcorr}.
+
+\subsection{Data extraction}
+
+The \iue\ data were extracted in a very similar manner to that
+described in \ybcite{ho:winds} using the Starlink \iue\ data reduction
+package \prog{iuedr} (\cite{iuedr}). A good review of \iue\ data
+reduction and analysis can be found in \emph{IUE Analysis --- A
+tutorial} (\cite{sg:7}). Briefly, the steps involved include:
+
+\begin{itemize}
+\item	Using the commands \comm{scan}\ and \comm{agshift}\ successively
+	to find the geometric shift used to trace the orders.
+
+\item	Performing centroid tracing and order extraction using
+	\comm{trak}.
+
+\item	Applying a wavelength correction of the form $m \Delta\lambda =
+	\mathrm{constant}$ to bring interstellar lines in the spectrum
+	to their laboratory wavelengths.
+
+\item 	Correcting for Echelle ripple using the method of Barker (see
+	section \ref{sec:barker}).
+
+\item	Subtracting inter-order background (approximately 12\% at
+	Ly$\alpha$ for the B stars and 15\% for the O stars).
+
+\item	Merging and mapping the orders onto a uniform wavelength grid.
+\end{itemize}
+
+The reduction process was greatly simplified by using modified
+procedures created by I. D. Howarth and M. Clayton (private
+communications) with some new additions, mainly to try to
+automatically detect if the archive images are both geometrically and
+photometrically corrected (GPHOT) or just photometrically\footnote{For
+the PI images, the photometric calibration frames were corrected to
+match the image geometry, not the other way around as for the GPHOTs}
+corrected (PHOT/PI). These corrections were necessary to transform the
+faceplate charge of the detectors to linear intensity units. Around
+the end of 1980, the correction type changed from GPHOT to the
+superior PI. Unfortunately the exact date of change depends on which
+ground station processed the images. Thus, for stars where there is
+doubt about the correction type, the spectra were extracted twice,
+trying both corrections (\prog{iuedr} needs to know the correction
+type to set default extraction parameters). In most cases it is very
+obvious when the wrong type has been used, as seen in figure
+\ref{fig:iue:red}. The spectra are tested by calculating the pixel
+intensity range over small areas of the spectrum around order overlap
+regions. The correction type that gives the smallest spread of
+intensities (i.e. less noisy) is assumed to be the correct one. This
+seemed to work well and only failed where there were problems with the
+data reduction (in some cases the wrong aperture was listed in the
+logs). Finally, all the spectra were visually examined to check for
+flaws.
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_obs/autoiue/autoiue_swp5652.eps}
+\caption[Example of IUE spectrum extracted assuming the wrong
+correction type] {\fcfont Example of IUE spectrum extracted assuming
+the wrong correction type. This spectrum is clearly of the older GPHOT
+type.}
+\label{fig:iue:red}
+\end{figure}   %%%%%%%%%%%%%%%
+
+
+

@@ -1,0 +1,34 @@
+#!/bin/csh -f
+
+foreach fname ($*) 
+
+set l1 = `grep -n ounding $fname | sed -e 's/:/ /g' | grep atend`
+if ($status) then
+  echo Could not find where to make changes
+  exit 1
+endif
+set l1 =  $l1[1]
+set p = `grep ounding $fname | grep -v atend`
+if ($status) then
+  echo Could not find where to make changes
+  exit 1
+endif
+
+set l2 = `grep -n ounding $fname | sed -e 's/:/ /g' | grep -v atend`
+set l2 = $l2[1]
+
+cat <<EOF >! tmp.$$.sed 
+$l1 c\
+$p
+$l2 d
+EOF
+
+sed -f tmp.$$.sed $fname >! $fname.new
+
+echo Replaced line $l1
+echo Removed $l2
+mv $fname.new $fname
+
+end
+
+rm tmp.$$*

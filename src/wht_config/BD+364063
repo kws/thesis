@@ -1,0 +1,46 @@
+set star = BD+364063
+set cat = "BD +36 4063"
+set title = "BD\\(0698)+36\\(0698)4063   ON9.7\\(0698)I"
+set sptype = ON9.7
+set lumcl = "I"
+
+# These are lists of values that will be used
+set v = (00 05 10 15)
+
+# Y can only have 4 members!!!!!
+set y = (10 12 14 16)
+
+# The y value to use for hydrogen in fig_ewd
+set hy = 11
+
+# Do we want to include the hydrogen chi maps (fig_ewd)
+set inc_h = yes
+
+# Tgkiel grid
+
+set tmin = 27000
+set tmax = 37000
+set gmin = 2.7
+set gmax = 3.7
+
+# And then a number of static variables for the star
+set rot = m84
+set rot_vel = -84
+
+
+# Add suport for model output
+
+set fit_v = 15
+set fit_y = .11
+set fit_t = 32000
+set fit_g = 3.1
+
+#Change to unset if model output disabled
+set fit_write 
+
+# The ewd window coordinates
+set window = "window 38 23 3.8 2.4"
+
+# The absolute magnitude 
+set Mv = -5.9
+

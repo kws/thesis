@@ -1,0 +1,160 @@
+#!/bin/csh -f
+
+######### CHANGE THIS FOR DIFFERENT DEVICE###
+set pgdev = epsf_p
+#############################################
+
+rm gks* >& /dev/null
+
+source /user/kcs/pgpixf3/pgpixf3_setup
+
+set conf = ../../wht_config
+
+#Create input file
+set files = `ls $conf/hd* $conf/BD*`
+
+rm teffplot*.dat
+
+foreach f ($files)
+  set type = ""
+  echo Reading config $f
+  source $f
+  echo $sptype | grep "ON" >& /dev/null
+  if (!($status)) set type = N
+  echo $sptype | grep "OC" >& /dev/null
+  if (!($status)) set type = C
+  set sptype = `echo $sptype | tr 'A-Z' ' '`
+  set lumcl  = `echo $lumcl  | tr 'a-z' ' '`
+  if ($#lumcl != 1) set lumcl=$lumcl[1]
+  set spect = `echo $sptype | sed -f spec2int.sed`
+  touch teffplot${lumcl}${type}.dat
+  echo $spect $fit_t >> teffplot${lumcl}${type}.dat
+end
+
+cat <<EOF >! idhteffI.dat
+1 33000
+2 32000
+3 31000
+4 30000
+5 29000
+EOF
+
+cat <<EOF >! idhteffIII.dat
+1 35000
+2 33500
+3 32500
+4 31500
+EOF
+
+cat <<EOF >! idhteffV.dat
+1 36500
+2 35000
+3 34000
+4 33000
+EOF
+
+cat <<EOF |pgpixf3
+begin $pgdev 1 3
+paper 1200 2700
+vport 0.1 0.9 0.1 0.9
+
+page
+window 0 6 25000 45000
+box bcst 0 0 bcnst 0 0
+mtext b 1 0.166 0.5 "O8"
+mtext b 1 0.333 0.5 "O8.5"
+mtext b 1 0.500 0.5 "O9"
+mtext b 1 0.666 0.5 "O9.5"
+mtext b 1 0.833 0.5 "O9.7"
+
+data teffplotI.dat
+xcol 1
+ycol 2
+kpoint 2 20
+data teffplotII.dat
+xcol 1
+ycol 2
+kpoint 2 20
+data teffplotIN.dat
+xcol 1
+ycol 2
+kpoint 1 3
+data teffplotIC.dat
+xcol 1
+ycol 2
+kpoint 1 4
+
+data idhteffI.dat
+xcol 1
+ycol 2
+conect
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+page
+window 0 6 25000 45000
+box bcst 0 0 bcnst 0 0
+mtext b 1 0.166 0.5 "O8"
+mtext b 1 0.333 0.5 "O8.5"
+mtext b 1 0.500 0.5 "O9"
+mtext b 1 0.666 0.5 "O9.5"
+mtext b 1 0.833 0.5 "O9.7"
+
+data teffplotIII.dat
+xcol 1
+ycol 2
+kpoint 2 20
+data teffplotIIIN.dat
+xcol 1
+ycol 2
+kpoint 1 3
+data teffplotIIIC.dat
+xcol 1
+ycol 2
+kpoint 1 4
+
+data idhteffIII.dat
+xcol 1
+ycol 2
+conect
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+page
+window 0 6 25000 45000
+box bcst 0 0 bcnst 0 0
+mtext b 1 0.166 0.5 "O8"
+mtext b 1 0.333 0.5 "O8.5"
+mtext b 1 0.500 0.5 "O9"
+mtext b 1 0.666 0.5 "O9.5"
+mtext b 1 0.833 0.5 "O9.7"
+
+data teffplotV.dat
+xcol 1
+ycol 2
+kpoint 2 20
+data teffplotIV.dat
+xcol 1
+ycol 2
+kpoint 2 20
+data teffplotVN.dat
+xcol 1
+ycol 2
+kpoint 1 3
+
+data idhteffV.dat
+xcol 1
+ycol 2
+conect
+
+end
+quit
+EOF
+
+if (-e gks74.ps) then
+  gks_convert gks74.ps
+  mv gks74.ps teffplot.eps
+endif
+
+
+
+
+

@@ -1,0 +1,1713 @@
+%hd000144_swp15936
+angle 0
+dot 94 91 1 20
+%hd000144_swp29402
+angle 0
+dot 103 97 1 20
+%hd000315_swp51670
+angle 0
+dot 81 51 1 20
+%hd000358_swp14954
+angle 0
+dot 47 31 1 20
+%hd000358_swp40448
+angle 0
+dot 32 26 1 20
+%hd000886_swp05260
+angle 0
+dot 49 46 1 3
+%hd000886_swp52777
+angle 0
+dot 46 38 1 3
+%hd000886_swp52783
+angle 0
+dot 48 43 1 3
+%hd001279_swp06756
+angle 0
+dot 10 -999 1 20
+%hd001909_swp23106
+angle 0
+dot -999 -999 1 20
+%hd001976_swp06250
+angle 0
+dot 124 110 1 20
+%hd002626_swp46894
+angle 0
+dot 243 223 1 20
+%hd002884_swp53043
+angle 0
+dot 142 118 1 20
+%hd003240_swp53240
+angle 0
+dot 56 47 1 20
+%hd003360_swp10057
+angle 0
+dot 49 45 1 3
+%hd003360_swp53874
+angle 0
+dot 53 39 1 3
+%hd003369_swp09141
+angle 0
+dot 63 45 1 20
+%hd003379_swp20584
+angle 0
+dot 70 48 1 3
+%hd003901_swp52659
+angle 0
+dot 140 126 1 20
+%hd004142_swp14612
+angle 0
+dot 165 134 1 3
+%hd004180_swp20436
+angle 0
+dot 187 156 1 20
+%hd004727_swp51960
+angle 0
+dot 26 -999 1 20
+%hd005737_swp14984
+angle 0
+dot 23 -999 1 20
+%hd005737_swp32137
+angle 0
+dot 24 -999 1 20
+%hd006811_swp20437
+angle 0
+dot 73 51 1 20
+%hd007374_swp18972
+angle 0
+dot 21 -999 1 20
+%hd009996_swp18437
+angle 0
+dot 24 -999 1 20
+%hd010390_swp18023
+angle 0
+dot 47 44 1 20
+%hd010982_swp06814
+angle 0
+dot 31 28 1 20
+%hd011415_swp32615
+angle 0
+dot 48 28 1 20
+%hd012301_swp04265
+angle 0
+dot 29 -999 1 20
+%hd012767_swp51130
+angle 0
+dot 39 13 1 20
+%hd013267_swp51892
+angle 0
+dot 42 31 1 20
+%hd013294_swp40511
+angle 0
+dot 129 117 1 20
+%hd013709_swp55256
+angle 0
+dot 231 191 1 20
+%hd014228_swp51597
+angle 0
+dot 225 184 1 20
+%hd014951_swp05605
+angle 0
+dot 123 110 1 20
+%hd015130_swp18007
+angle 0
+dot 195 164 1 20
+%hd015318_swp48525
+angle 0
+dot 47 43 1 20
+%hd015371_swp21046
+angle 0
+dot 11 -999 1 20
+%hd016582_swp04492
+angle 0
+dot 58 29 1 3
+%hd016978_swp24455
+angle 0
+dot 86 76 1 20
+%hd017036_swp46700
+angle 0
+dot 189 148 1 20
+%hd017081_swp16256
+angle 0
+dot 10 -999 1 20
+%hd017081_swp32303
+angle 0
+dot 10 -999 1 20
+%hd017081_swp32304
+angle 0
+dot 11 -999 1 20
+%hd017543_swp42210
+angle 0
+dot 59 43 1 20
+%hd017573_swp40510
+angle 0
+dot 184 143 1 20
+%hd017769_swp18008
+angle 0
+dot 132 125 1 20
+%hd018296_swp03154
+angle 0
+dot 27 -999 1 20
+%hd018537_swp48527
+angle 0
+dot 82 70 1 20
+%hd019356_swp37021
+angle 0
+dot 48 37 1 20
+%hd019374_swp20594
+angle 0
+dot 60 87 1 3
+%hd019400_swp04415
+angle 0
+dot 19 -999 1 20
+%hd019832_swp39685
+angle 0
+dot 176 139 1 20
+%hd020315_swp18024
+angle 0
+dot 222 189 1 20
+%hd020319_swp07840
+angle 0
+dot 127 104 1 20
+%hd020336_swp29401
+angle 0
+dot 270 237 1 3
+%hd020809_swp49124
+angle 0
+dot 167 165 1 20
+%hd021291_swp10612
+angle 0
+dot 29 17 1 20
+%hd021362_swp18027
+angle 0
+dot 230 229 1 20
+%hd021428_swp49532
+angle 0
+dot 135 101 1 3
+%hd021551_swp26895
+angle 0
+dot 300 252 1 20
+%hd021699_swp04377
+angle 0
+dot 41 28 1 3
+%hd021699_swp32136
+angle 0
+dot 29 -999 1 20
+%hd021790_swp24553
+angle 0
+dot 75 59 1 20
+%hd022192_swp04558
+angle 0
+dot 212 152 1 20
+%hd022192_swp42673
+angle 0
+dot 193 152 1 20
+%hd022316_swp49775
+angle 0
+dot -999 -999 1 20
+%hd022316_swp49777
+angle 0
+dot -999 -999 1 20
+%hd022470_swp04542
+angle 0
+dot 55 39 1 20
+%hd022780_swp29392
+angle 0
+dot 274 226 1 20
+%hd022920_swp14506
+angle 0
+dot 35 -999 1 20
+%hd022928_swp47041
+angle 0
+dot 177 162 1 20
+%hd023016_swp40509
+angle 0
+dot 251 208 1 20
+%hd023227_swp40256
+angle 0
+dot 181 182 1 3
+%hd023302_swp07920
+angle 0
+dot 139 121 1 20
+%hd023302_swp27514
+angle 0
+dot 155 133 1 20
+%hd023324_swp07923
+angle 0
+dot 187 147 1 20
+%hd023338_swp40508
+angle 0
+dot 98 78 1 20
+%hd023383_swp19342
+angle 0
+dot 311 212 1 20
+%hd023408_swp05985
+angle 0
+dot 27 10 1 20
+%hd023466_swp20582
+angle 0
+dot 111 89 1 20
+%hd023480_swp05944
+angle 0
+dot 199 189 1 20
+%hd023480_swp27666
+angle 0
+dot 243 186 1 20
+%hd023552_swp10046
+angle 0
+dot 192 161 1 20
+%hd023630_swp08021
+angle 0
+dot 137 110 1 20
+%hd023793_swp20583
+angle 0
+dot 51 28 1 20
+%hd023850_swp05977
+angle 0
+dot 163 140 1 20
+%hd023862_swp53233
+angle 0
+dot 267 204 1 20
+%hd023862_swp54080
+angle 0
+dot 251 206 1 20
+%hd024072_swp40455
+angle 0
+dot 219 152 1 20
+%hd024072_swp48345
+angle 0
+dot 38 50 1 20
+%hd024388_swp40456
+angle 0
+dot 113 101 1 20
+%hd024479_swp20434
+angle 0
+dot 68 56 1 20
+%hd024504_swp18025
+angle 0
+dot 187 168 1 20
+%hd024626_swp04788
+angle 0
+dot 44 26 1 20
+%hd025204_swp03297
+angle 0
+dot 103 76 1 3
+%hd025267_swp07540
+angle 0
+dot 28 -999 1 20
+%hd025340_swp18020
+angle 0
+dot 79 60 1 20
+%hd025558_swp20595
+angle 0
+dot 56 39 1 20
+%hd025940_swp54081
+angle 0
+dot 176 151 1 3
+%hd026326_swp20586
+angle 0
+dot 26 -999 1 20
+%hd026356_swp29400
+angle 0
+dot 230 227 1 20
+%hd026571_swp19628
+angle 0
+dot 25 43 1 20
+%hd026670_swp20435
+angle 0
+dot 270 222 1 20
+%hd026676_swp34223
+angle 0
+dot 218 182 1 20
+%hd026912_swp22280
+angle 0
+dot 64 49 1 20
+%hd027295_swp49761
+angle 0
+dot 24 -999 1 20
+%hd027376_swp53040
+angle 0
+dot 16 -999 1 20
+%hd027742_swp46672
+angle 0
+dot 182 139 1 20
+%hd027778_swp21298
+angle 0
+dot 106 95 1 20
+%hd028149_swp45496
+angle 0
+dot 123 105 1 20
+%hd028459_swp18022
+angle 0
+dot 359 252 1 20
+%hd028843_swp07522
+angle 0
+dot 91 65 1 20
+%hd028843_swp21098
+angle 0
+dot 106 79 1 20
+%hd028867_swp49847
+angle 0
+dot 241 246 1 20
+%hd028873_swp53193
+angle 0
+dot 37 28 1 3
+%hd029335_swp39767
+angle 0
+dot 79 53 1 20
+%hd029763_swp02637
+angle 0
+dot 105 82 1 3
+%hd029763_swp45931
+angle 0
+dot 92 72 1 3
+%hd029866_swp10047
+angle 0
+dot 251 216 1 20
+%hd030836_swp02358
+angle 0
+dot 65 47 1 3
+%hd031237_swp21998
+angle 0
+dot 104 82 1 3
+%hd031327_swp21280
+angle 0
+dot 52 31 1 3
+%hd031331_swp40502
+angle 0
+dot 161 125 1 20
+%hd032249_swp48993
+angle 0
+dot 78 46 1 3
+%hd032309_swp40454
+angle 0
+dot 340 254 1 20
+%hd032343_swp06932
+angle 0
+dot 83 66 1 3
+%hd032343_swp32558
+angle 0
+dot 82 62 1 20
+%hd032612_swp20588
+angle 0
+dot 75 58 1 3
+%hd032630_swp44004
+angle 0
+dot 102 81 1 20
+%hd032990_swp14842
+angle 0
+dot 88 79 1 3
+%hd032990_swp21489
+angle 0
+dot 86 70 1 3
+%hd032991_swp14840
+angle 0
+dot 201 244 1 3
+%hd033328_swp55944
+angle 0
+dot 247 214 1 3
+%hd033904_swp40118
+angle 0
+dot -999 -999 1 20
+%hd034085_swp15001
+angle 0
+dot 33 26 1 20
+%hd034085_swp41077
+angle 0
+dot 35 18 1 20
+%hd034310_swp40255
+angle 0
+dot 134 112 1 20
+%hd034759_swp10389
+angle 0
+dot 62 48 1 20
+%hd034759_swp38308
+angle 0
+dot 77 57 1 20
+%hd034797_swp24995
+angle 0
+dot 53 44 1 20
+%hd034798_swp21787
+angle 0
+dot 58 49 1 20
+%hd034863_swp40254
+angle 0
+dot 296 248 1 20
+%hd034959_swp35918
+angle 0
+dot 222 152 1 20
+%hd035337_swp49749
+angle 0
+dot 53 71 1 3
+%hd035407_swp22663
+angle 0
+dot 297 274 1 3
+%hd035468_swp44092
+angle 0
+dot 76 76 1 3
+%hd035497_swp31878
+angle 0
+dot 48 29 1 20
+%hd035532_swp35853
+angle 0
+dot 293 327 1 3
+%hd035588_swp35893
+angle 0
+dot 166 165 1 3
+%hd035600_swp52723
+angle 0
+dot 24 -999 1 20
+%hd035640_swp40253
+angle 0
+dot 213 179 1 20
+%hd036267_swp35943
+angle 0
+dot 144 125 1 20
+%hd036285_swp50056
+angle 0
+dot 53 -999 1 3
+%hd036351_swp49065
+angle 0
+dot 93 97 1 3
+%hd036371_swp02945
+angle 0
+dot 46 43 1 3
+%hd036408_swp29394
+angle 0
+dot 62 49 1 20
+%hd036653_swp35897
+angle 0
+dot 175 165 1 3
+%hd036819_swp46138
+angle 0
+dot 99 75 1 3
+%hd037017_swp15816
+angle 0
+dot 147 132 1 3
+%hd037021_swp53178
+angle 0
+dot 195 240 1 3
+%hd037055_swp32216
+angle 0
+dot 112 94 1 3
+%hd037098_swp46843
+angle 0
+dot 63 48 1 20
+%hd037202_swp03138
+angle 0
+dot 97 59 1 20
+%hd037202_swp54067
+angle 0
+dot 152 66 1 20
+%hd037356_swp22114
+angle 0
+dot 73 75 1 3
+%hd037367_swp21013
+angle 0
+dot 47 33 1 3
+%hd037438_swp53869
+angle 0
+dot 56 30 1 3
+%hd037519_swp46851
+angle 0
+dot 235 169 1 20
+%hd037752_swp14987
+angle 0
+dot 29 10 1 20
+%hd037756_swp32293
+angle 0
+dot 101 85 1 3
+%hd037795_swp55941
+angle 0
+dot 213 197 1 3
+%hd037967_swp21491
+angle 0
+dot 171 156 1 3
+%hd038899_swp16641
+angle 0
+dot 27 15 1 20
+%hd039777_swp16881
+angle 0
+dot 54 55 1 3
+%hd039844_swp04298
+angle 0
+dot 11 -999 1 20
+%hd040494_swp53044
+angle 0
+dot 67 48 1 3
+%hd040967_swp50278
+angle 0
+dot 69 75 1 3
+%hd041040_swp04709
+angle 0
+dot 64 53 1 20
+%hd041040_swp04710
+angle 0
+dot 66 51 1 20
+%hd041534_swp10021
+angle 0
+dot 102 86 1 3
+%hd041753_swp09934
+angle 0
+dot 60 45 1 3
+%hd042054_swp29370
+angle 0
+dot 181 177 1 20
+%hd042545_swp09896
+angle 0
+dot 229 277 1 3
+%hd042560_swp09932
+angle 0
+dot 158 292 1 3
+%hd043317_swp09949
+angle 0
+dot 128 107 1 3
+%hd043384_swp04656
+angle 0
+dot 55 50 1 20
+%hd043445_swp40504
+angle 0
+dot 237 196 1 20
+%hd043544_swp21911
+angle 0
+dot 315 281 1 3
+%hd044112_swp49490
+angle 0
+dot 159 198 1 3
+%hd044173_swp06803
+angle 0
+dot 190 238 1 3
+%hd044402_swp22111
+angle 0
+dot 97 56 1 3
+%hd044700_swp09948
+angle 0
+dot 29 -999 1 3
+%hd044953_swp14979
+angle 0
+dot 29 10 1 20
+%hd045542_swp27663
+angle 0
+dot 174 136 1 20
+%hd045546_swp22112
+angle 0
+dot 99 103 1 3
+%hd045789_swp09884
+angle 0
+dot 117 123 1 3
+%hd045813_swp20783
+angle 0
+dot 130 98 1 20
+%hd045911_swp09885
+angle 0
+dot 48 15 1 3
+%hd046487_swp18037
+angle 0
+dot 262 233 1 20
+%hd046769_swp06341
+angle 0
+dot 61 42 1 20
+%hd046885_swp30298
+angle 0
+dot 36 28 1 20
+%hd047054_swp21909
+angle 0
+dot 208 185 1 20
+%hd047152_swp14957
+angle 0
+dot 174 188 1 20
+%hd047431_swp11011
+angle 0
+dot 103 88 1 20
+%hd047670_swp33338
+angle 0
+dot 181 124 1 20
+%hd047964_swp09887
+angle 0
+dot 47 29 1 20
+%hd048879_swp50256
+angle 0
+dot 106 86 1 20
+%hd048977_swp09893
+angle 0
+dot 47 28 1 3
+%hd049319_swp52923
+angle 0
+dot 236 194 1 20
+%hd049333_swp04613
+angle 0
+dot 70 43 1 3
+%hd049567_swp09888
+angle 0
+dot 82 64 1 3
+%hd049591_swp40505
+angle 0
+dot 113 107 1 20
+%hd049606_swp14966
+angle 0
+dot 25 11 1 20
+%hd050123_swp56825
+angle 0
+dot 170 122 1 20
+%hd050820_swp21027
+angle 0
+dot 77 50 1 20
+%hd051309_swp13937
+angle 0
+dot 42 28 1 3
+%hd053138_swp30169
+angle 0
+dot 44 28 1 3
+%hd053929_swp18961
+angle 0
+dot 17 -999 1 20
+%hd054031_swp41438
+angle 0
+dot 29 11 1 20
+%hd054893_swp53220
+angle 0
+dot 43 10 1 3
+%hd056139_swp15980
+angle 0
+dot 104 96 1 3
+%hd056456_swp34188
+angle 0
+dot 298 228 1 20
+%hd058343_swp16264
+angle 0
+dot 58 32 1 20
+%hd058350_swp07704
+angle 0
+dot 47 34 1 3
+%hd058350_swp30198
+angle 0
+dot 43 28 1 20
+%hd058661_swp18985
+angle 0
+dot 28 -999 1 20
+%hd058715_swp31890
+angle 0
+dot 207 180 1 20
+%hd059635_swp52272
+angle 0
+dot 44 19 1 20
+%hd060606_swp29375
+angle 0
+dot 206 196 1 3
+%hd060855_swp53906
+angle 0
+dot 253 296 1 3
+%hd061429_swp04611
+angle 0
+dot 97 81 1 20
+%hd062226_swp39770
+angle 0
+dot 111 30 1 20
+%hd064503_swp21950
+angle 0
+dot 163 273 1 3
+%hd064802_swp46848
+angle 0
+dot 68 49 1 3
+%hd065575_swp21952
+angle 0
+dot 60 41 1 3
+%hd065904_swp46849
+angle 0
+dot 163 143 1 20
+%hd067880_swp53222
+angle 0
+dot 50 37 1 3
+%hd067888_swp31233
+angle 0
+dot 43 29 1 20
+%hd068217_swp24913
+angle 0
+dot 141 144 1 3
+%hd068351_swp18969
+angle 0
+dot 32 -999 1 20
+%hd068520_swp24456
+angle 0
+dot 19 -999 1 20
+%hd069082_swp07926
+angle 0
+dot 43 47 1 3
+%hd070556_swp51420
+angle 0
+dot 77 59 1 3
+%hd072067_swp29376
+angle 0
+dot 182 164 1 3
+%hd072350_swp44774
+angle 0
+dot 180 158 1 20
+%hd074195_swp21415
+angle 0
+dot 28 -999 1 20
+%hd074196_swp07908
+angle 0
+dot 305 249 1 20
+%hd074280_swp54052
+angle 0
+dot 112 81 1 3
+%hd074371_swp37494
+angle 0
+dot 48 39 1 20
+%hd074535_swp48065
+angle 0
+dot 38 13 1 20
+%hd074560_swp53219
+angle 0
+dot 29 -999 1 20
+%hd075311_swp21953
+angle 0
+dot 287 284 1 3
+%hd075387_swp07911
+angle 0
+dot 48 26 1 3
+%hd076161_swp14122
+angle 0
+dot 278 250 1 3
+%hd076566_swp14121
+angle 0
+dot 29 -999 1 3
+%hd076805_swp32421
+angle 0
+dot 67 51 1 20
+%hd079158_swp32947
+angle 0
+dot 42 31 1 20
+%hd079186_swp37499
+angle 0
+dot 48 35 1 3
+%hd079447_swp53231
+angle 0
+dot 18 -999 1 3
+%hd079469_swp21401
+angle 0
+dot 83 66 1 20
+%hd079694_swp46931
+angle 0
+dot 177 152 1 20
+%hd079931_swp04630
+angle 0
+dot 54 48 1 20
+%hd081188_swp02081
+angle 0
+dot 102 54 1 3
+%hd083754_swp54740
+angle 0
+dot 143 110 1 20
+%hd083953_swp56848
+angle 0
+dot 246 244 1 20
+%hd086360_swp09038
+angle 0
+dot 92 87 1 20
+%hd086440_swp06323
+angle 0
+dot 27 -999 1 20
+%hd086612_swp54628
+angle 0
+dot 174 144 1 3
+%hd087015_swp21988
+angle 0
+dot 208 262 1 3
+%hd087504_swp50698
+angle 0
+dot 50 42 1 20
+%hd087543_swp33318
+angle 0
+dot 232 186 1 20
+%hd087901_swp08648
+angle 0
+dot 277 225 1 20
+%hd087901_swp08649
+angle 0
+dot 250 281 1 20
+%hd087901_swp10379
+angle 0
+dot 224 232 1 20
+%hd087901_swp54284
+angle 0
+dot 287 251 1 20
+%hd088825_swp31231
+angle 0
+dot 122 98 1 20
+%hd089080_swp32560
+angle 0
+dot 193 156 1 20
+%hd089688_swp10472
+angle 0
+dot 188 223 1 3
+%hd089688_swp21987
+angle 0
+dot 185 217 1 3
+%hd089890_swp33319
+angle 0
+dot 78 56 1 20
+%hd090264_swp07362
+angle 0
+dot 51 42 1 20
+%hd090994_swp09220
+angle 0
+dot 85 61 1 20
+%hd091120_swp30911
+angle 0
+dot 234 190 1 20
+%hd091465_swp54082
+angle 0
+dot 237 231 1 3
+%hd091619_swp06324
+angle 0
+dot 45 27 1 20
+%hd092664_swp07905
+angle 0
+dot 51 28 1 20
+%hd093563_swp33317
+angle 0
+dot 212 156 1 20
+%hd093845_swp53883
+angle 0
+dot 50 30 1 3
+%hd096919_swp48010
+angle 0
+dot 30 24 1 20
+%hd098718_swp20793
+angle 0
+dot 325 245 1 3
+%hd100600_swp09209
+angle 0
+dot 154 131 1 3
+%hd100673_swp36404
+angle 0
+dot 131 117 1 20
+%hd100889_swp46757
+angle 0
+dot 152 146 1 20
+%hd101431_swp54190
+angle 0
+dot 109 99 1 20
+%hd102232_swp04628
+angle 0
+dot 30 -999 1 20
+%hd103192_swp54240
+angle 0
+dot 64 48 1 20
+%hd104174_swp54669
+angle 0
+dot 241 212 1 20
+%hd105382_swp36403
+angle 0
+dot 78 50 1 20
+%hd105937_swp44211
+angle 0
+dot 108 87 1 3
+%hd106231_swp05658
+angle 0
+dot 136 142 1 3
+%hd106625_swp19063
+angle 0
+dot 28 10 1 20
+%hd106911_swp21957
+angle 0
+dot 246 217 1 20
+%hd106983_swp46634
+angle 0
+dot 82 50 1 3
+%hd107348_swp53833
+angle 0
+dot 203 182 1 20
+%hd108257_swp19345
+angle 0
+dot 305 191 1 3
+%hd108483_swp20792
+angle 0
+dot 199 216 1 3
+%hd109026_swp51268
+angle 0
+dot 159 125 1 20
+%hd109387_swp15056
+angle 0
+dot 176 170 1 20
+%hd109387_swp39973
+angle 0
+dot 161 122 1 20
+%hd109668_swp20873
+angle 0
+dot 146 119 1 3
+%hd109857_swp36405
+angle 0
+dot 264 186 1 20
+%hd110073_swp54182
+angle 0
+dot -999 -999 1 20
+%hd110335_swp44487
+angle 0
+dot 188 155 1 20
+%hd110879_swp45089
+angle 0
+dot 164 189 1 3
+%hd111226_swp20277
+angle 0
+dot 76 69 1 20
+%hd111904_swp46883
+angle 0
+dot 28 10 1 20
+%hd111973_swp46847
+angle 0
+dot 48 45 1 3
+%hd112078_swp21965
+angle 0
+dot 336 290 1 20
+%hd112091_swp40675
+angle 0
+dot 183 159 1 20
+%hd112092_swp21955
+angle 0
+dot 53 43 1 3
+%hd113791_swp44645
+angle 0
+dot 47 28 1 3
+%hd113797_swp22295
+angle 0
+dot 132 116 1 20
+%hd116072_swp20362
+angle 0
+dot 223 193 1 3
+%hd116084_swp44795
+angle 0
+dot 49 31 1 3
+%hd116087_swp20791
+angle 0
+dot 208 179 1 20
+%hd118991_swp30072
+angle 0
+dot 297 247 1 20
+%hd120315_swp10894
+angle 0
+dot 136 119 1 3
+%hd120315_swp55240
+angle 0
+dot 132 101 1 3
+%hd120324_swp51095
+angle 0
+dot 152 146 1 3
+%hd120640_swp14685
+angle 0
+dot 42 28 1 3
+%hd120709_swp30546
+angle 0
+dot -999 -999 1 20
+%hd121743_swp21956
+angle 0
+dot 96 73 1 3
+%hd121790_swp45209
+angle 0
+dot 138 108 1 3
+%hd122980_swp42106
+angle 0
+dot 36 25 1 3
+%hd125238_swp20891
+angle 0
+dot 288 328 1 3
+%hd125288_swp06321
+angle 0
+dot 28 -999 1 20
+%hd125823_swp14088
+angle 0
+dot 39 26 1 3
+%hd126341_swp05208
+angle 0
+dot 46 47 1 3
+%hd127381_swp48225
+angle 0
+dot 107 86 1 3
+%hd127971_swp50485
+angle 0
+dot 133 118 1 20
+%hd128345_swp20786
+angle 0
+dot 177 147 1 20
+%hd129116_swp45090
+angle 0
+dot 154 132 1 3
+%hd132200_swp17459
+angle 0
+dot 48 27 1 3
+%hd132742_swp45452
+angle 0
+dot 64 62 1 20
+%hd133029_swp06102
+angle 0
+dot 12 -999 1 20
+%hd133242_swp20364
+angle 0
+dot 167 149 1 20
+%hd134481_swp36776
+angle 0
+dot 144 124 1 20
+%hd134687_swp20219
+angle 0
+dot 29 -999 1 3
+%hd135348_swp07685
+angle 0
+dot 89 72 1 3
+%hd136504_swp33285
+angle 0
+dot 115 107 1 3
+%hd136664_swp20789
+angle 0
+dot 177 164 1 3
+%hd137432_swp07689
+angle 0
+dot 67 52 1 20
+%hd138485_swp20597
+angle 0
+dot 267 260 1 3
+%hd138749_swp13588
+angle 0
+dot 308 248 1 20
+%hd138749_swp17096
+angle 0
+dot 321 248 1 20
+%hd138749_swp50410
+angle 0
+dot 313 288 1 20
+%hd138769_swp50593
+angle 0
+dot 74 47 1 3
+%hd139365_swp40902
+angle 0
+dot 191 192 1 3
+%hd140008_swp22093
+angle 0
+dot 118 101 1 20
+%hd140436_swp50595
+angle 0
+dot 113 100 1 20
+%hd141318_swp39022
+angle 0
+dot 57 43 1 3
+%hd141556_swp48509
+angle 0
+dot 10 -999 1 20
+%hd142184_swp34217
+angle 0
+dot 316 231 1 3
+%hd142301_swp07899
+angle 0
+dot 81 52 1 20
+%hd142301_swp51414
+angle 0
+dot 79 48 1 20
+%hd142514_swp23434
+angle 0
+dot 72 53 1 20
+%hd142669_swp55200
+angle 0
+dot 114 77 1 3
+%hd142926_swp44981
+angle 0
+dot 262 201 1 20
+%hd142983_swp08810
+angle 0
+dot 45 21 1 20
+%hd142983_swp54091
+angle 0
+dot 29 18 1 20
+%hd142990_swp51412
+angle 0
+dot 111 86 1 3
+%hd143699_swp51385
+angle 0
+dot 85 66 1 20
+%hd144206_swp40560
+angle 0
+dot -999 -999 1 20
+%hd144294_swp22090
+angle 0
+dot 278 277 1 3
+%hd144334_swp09224
+angle 0
+dot 53 38 1 20
+%hd144334_swp51411
+angle 0
+dot 55 29 1 20
+%hd144661_swp13953
+angle 0
+dot 31 20 1 20
+%hd144844_swp51322
+angle 0
+dot -999 -999 1 20
+%hd145482_swp19351
+angle 0
+dot 175 204 1 3
+%hd145483_swp16306
+angle 0
+dot 183 157 1 20
+%hd145502_swp29140
+angle 0
+dot 147 161 1 3
+%hd145842_swp50530
+angle 0
+dot 102 87 1 20
+%hd146001_swp51399
+angle 0
+dot 83 60 1 20
+%hd147152_swp19346
+angle 0
+dot 105 81 1 20
+%hd147628_swp50531
+angle 0
+dot 121 107 1 20
+%hd148112_swp02726
+angle 0
+dot 36 10 1 20
+%hd148199_swp04561
+angle 0
+dot -999 -999 1 20
+%hd148605_swp39506
+angle 0
+dot 181 193 1 3
+%hd148703_swp39707
+angle 0
+dot 103 138 1 3
+%hd149121_swp19757
+angle 0
+dot -999 -999 1 20
+%hd149485_swp22216
+angle 0
+dot 292 260 1 20
+%hd149630_swp29408
+angle 0
+dot 227 196 1 20
+%hd149822_swp18973
+angle 0
+dot 43 30 1 20
+%hd150745_swp22218
+angle 0
+dot 132 126 1 3
+%hd152478_swp36197
+angle 0
+dot 342 278 1 20
+%hd152614_swp06987
+angle 0
+dot 98 84 1 20
+%hd153613_swp51847
+angle 0
+dot 136 118 1 20
+%hd155763_swp04577
+angle 0
+dot 36 25 1 20
+%hd156247_swp14864
+angle 0
+dot 476 95 1 20
+%hd156633_swp20596
+angle 0
+dot 184 395 1 3
+%hd157038_swp30759
+angle 0
+dot 47 89 1 3
+%hd157056_swp04430
+angle 0
+dot 50 48 1 3
+%hd157741_swp17999
+angle 0
+dot 284 260 1 20
+%hd158408_swp31685
+angle 0
+dot 110 86 1 3
+%hd158427_swp50432
+angle 0
+dot 247 212 1 3
+%hd158643_swp54144
+angle 0
+dot 159 152 1 20
+%hd159975_swp02724
+angle 0
+dot 91 77 1 20
+%hd160762_swp05720
+angle 0
+dot 25 -999 1 3
+%hd160762_swp29958
+angle 0
+dot 27 -999 1 3
+%hd162374_swp14091
+angle 0
+dot 52 29 1 3
+%hd162732_swp44980
+angle 0
+dot 47 27 1 20
+%hd163955_swp48332
+angle 0
+dot 126 110 1 20
+%hd164353_swp04267
+angle 0
+dot 36 26 1 20
+%hd164852_swp29534
+angle 0
+dot 157 135 1 3
+%hd166014_swp20852
+angle 0
+dot 136 117 1 20
+%hd166182_swp41861
+angle 0
+dot 60 37 1 3
+%hd166469_swp48396
+angle 0
+dot -999 -999 1 20
+%hd166937_swp07080
+angle 0
+dot 46 37 1 20
+%hd166937_swp26610
+angle 0
+dot 38 29 1 20
+%hd167128_swp31220
+angle 0
+dot 87 68 1 3
+%hd168905_swp57019
+angle 0
+dot 223 224 1 3
+%hd169022_swp44754
+angle 0
+dot 155 135 1 20
+%hd169033_swp19929
+angle 0
+dot 152 139 1 20
+%hd169467_swp39861
+angle 0
+dot 35 13 1 20
+%hd170235_swp36202
+angle 0
+dot 167 193 1 3
+%hd170740_swp18314
+angle 0
+dot 76 55 1 3
+%hd171406_swp54738
+angle 0
+dot 222 206 1 20
+%hd171961_swp45848
+angle 0
+dot 48 34 1 20
+%hd172044_swp03013
+angle 0
+dot 27 -999 1 20
+%hd172167_swp42521
+angle 180
+dot 15 -999 1 3
+%hd172167_swp45285
+angle 0
+dot 15 21 1 20
+%hd172910_swp54739
+angle 0
+dot 29 -999 1 3
+%hd173300_swp34012
+angle 0
+dot 28 10 1 20
+%hd174237_swp14703
+angle 0
+dot 156 133 1 3
+%hd174237_swp51040
+angle 0
+dot 167 159 1 3
+%hd174632_swp44787
+angle 0
+dot 69 64 1 20
+%hd175156_swp04479
+angle 0
+dot -999 -999 1 20
+%hd175156_swp23985
+angle 0
+dot 20 -999 1 20
+%hd175362_swp44757
+angle 0
+dot 18 -999 1 20
+%hd175640_swp13510
+angle 0
+dot 10 -999 1 20
+%hd176162_swp21008
+angle 0
+dot 32 -999 1 20
+%hd176437_swp24358
+angle 0
+dot 61 53 1 20
+%hd177003_swp54674
+angle 0
+dot 26 -999 1 3
+%hd177756_swp18018
+angle 0
+dot 162 137 1 20
+%hd177863_swp48407
+angle 0
+dot 61 52 1 20
+%hd178125_swp14866
+angle 0
+dot 54 45 1 20
+%hd178175_swp15058
+angle 0
+dot 151 161 1 3
+%hd178175_swp19928
+angle 0
+dot 128 125 1 3
+%hd178475_swp20851
+angle 0
+dot 230 184 1 20
+%hd179406_swp13865
+angle 0
+dot 145 123 1 3
+%hd179406_swp36940
+angle 0
+dot 180 140 1 3
+%hd179761_swp20176
+angle 0
+dot 10 -999 1 20
+%hd180163_swp50600
+angle 0
+dot 28 -999 1 3
+%hd180554_swp55228
+angle 0
+dot 88 63 1 20
+%hd181182_swp51044
+angle 0
+dot 118 90 1 20
+%hd181558_swp47819
+angle 0
+dot 20 -999 1 20
+%hd181615_swp26881
+angle 0
+dot 59 45 1 20
+%hd181858_swp06037
+angle 0
+dot 29 -999 1 3
+%hd181869_swp44759
+angle 0
+dot 60 52 1 20
+%hd182180_swp39596
+angle 0
+dot 276 235 1 3
+%hd182308_swp13512
+angle 0
+dot -999 -999 1 20
+%hd183056_swp14982
+angle 0
+dot 81 52 1 20
+%hd183362_swp31218
+angle 0
+dot 263 236 1 3
+%hd184171_swp48876
+angle 0
+dot 27 -999 1 20
+%hd184279_swp06034
+angle 0
+dot 67 45 1 3
+%hd184606_swp04559
+angle 0
+dot 212 222 1 20
+%hd185037_swp26897
+angle 0
+dot 257 273 1 20
+%hd185330_swp18992
+angle 0
+dot -999 -999 1 20
+%hd185915_swp14208
+angle 0
+dot 68 52 1 20
+%hd186122_swp09528
+angle 0
+dot -999 -999 1 20
+%hd186500_swp50991
+angle 0
+dot 101 90 1 20
+%hd186882_swp09597
+angle 0
+dot 141 130 1 20
+%hd186882_swp14844
+angle 0
+dot 134 128 1 20
+%hd187235_swp26896
+angle 0
+dot 319 274 1 20
+%hd187811_swp21488
+angle 0
+dot 243 239 1 3
+%hd188665_swp08919
+angle 0
+dot 111 100 1 20
+%hd188892_swp20974
+angle 0
+dot 38 28 1 20
+%hd189103_swp52095
+angle 0
+dot 32 -999 1 3
+%hd189395_swp04966
+angle 0
+dot 159 137 1 20
+%hd189687_swp19936
+angle 0
+dot 200 169 1 3
+%hd190229_swp04962
+angle 0
+dot -999 -999 1 20
+%hd190993_swp09960
+angle 0
+dot 132 106 1 3
+%hd191610_swp08600
+angle 0
+dot 273 277 1 3
+%hd191610_swp37154
+angle 0
+dot 254 237 1 3
+%hd192907_swp05719
+angle 0
+dot 15 -999 1 20
+%hd193911_swp29406
+angle 0
+dot 156 140 1 20
+%hd194636_swp47832
+angle 0
+dot 28 10 1 20
+%hd195810_swp52067
+angle 0
+dot 47 31 1 20
+%hd196426_swp19759
+angle 0
+dot -999 -999 1 20
+%hd196519_swp48309
+angle 0
+dot 163 128 1 20
+%hd196740_swp18017
+angle 0
+dot 285 238 1 3
+%hd196867_swp24451
+angle 0
+dot 118 101 1 20
+%hd197018_swp14051
+angle 0
+dot 42 28 1 20
+%hd197511_swp10844
+angle 0
+dot 57 33 1 3
+%hd198174_swp51082
+angle 0
+dot 43 29 1 20
+%hd198183_swp14209
+angle 0
+dot 110 99 1 20
+%hd198183_swp25780
+angle 0
+dot 106 89 1 20
+%hd198478_swp13907
+angle 0
+dot 49 42 1 3
+%hd198478_swp38688
+angle 0
+dot 41 42 1 3
+%hd198625_swp36195
+angle 0
+dot 244 199 1 3
+%hd198667_swp14045
+angle 0
+dot 22 -999 1 20
+%hd198820_swp08331
+angle 0
+dot 28 21 1 20
+%hd198820_swp19872
+angle 0
+dot 44 28 1 20
+%hd199081_swp10841
+angle 0
+dot 154 160 1 3
+%hd199218_swp30071
+angle 0
+dot 289 216 1 20
+%hd199478_swp15552
+angle 0
+dot 46 29 1 20
+%hd199661_swp10845
+angle 0
+dot 133 339 1 3
+%hd199955_swp10862
+angle 0
+dot 104 95 1 20
+%hd201908_swp45273
+angle 0
+dot 87 85 1 20
+%hd202654_swp22646
+angle 0
+dot 134 96 1 3
+%hd202753_swp52920
+angle 0
+dot 36 11 1 20
+%hd202904_swp08601
+angle 0
+dot 186 179 1 3
+%hd203245_swp22755
+angle 0
+dot 70 54 1 20
+%hd203467_swp42020
+angle 0
+dot 160 135 1 20
+%hd203532_swp16399
+angle 0
+dot 67 45 1 20
+%hd204770_swp08922
+angle 0
+dot 181 152 1 20
+%hd205637_swp34400
+angle 0
+dot 146 111 1 20
+%hd206540_swp14023
+angle 0
+dot 15 -999 1 20
+%hd206672_swp24332
+angle 0
+dot 97 68 1 3
+%hd207330_swp09210
+angle 0
+dot 53 35 1 3
+%hd207971_swp44768
+angle 0
+dot 44 30 1 20
+%hd208057_swp05909
+angle 0
+dot 103 92 1 3
+%hd208057_swp33664
+angle 0
+dot 99 76 1 3
+%hd208501_swp04217
+angle 0
+dot 35 37 1 20
+%hd209008_swp20593
+angle 0
+dot 28 -999 1 20
+%hd209014_swp31219
+angle 0
+dot 277 208 1 20
+%hd209409_swp05912
+angle 0
+dot 195 188 1 20
+%hd209409_swp39200
+angle 0
+dot 194 141 1 20
+%hd209419_swp08921
+angle 0
+dot 28 -999 1 20
+%hd209459_swp21398
+angle 0
+dot -999 -999 1 20
+%hd209522_swp52358
+angle 0
+dot 300 335 1 3
+%hd209952_swp48408
+angle 0
+dot 202 188 1 20
+%hd210129_swp44770
+angle 0
+dot 112 108 1 20
+%hd210191_swp23304
+angle 0
+dot 25 -999 1 3
+%hd210424_swp09041
+angle 0
+dot 10 -999 1 20
+%hd211924_swp15217
+angle 0
+dot 47 28 1 20
+%hd212120_swp26322
+angle 0
+dot 67 54 1 20
+%hd212454_swp14974
+angle 0
+dot 33 28 1 20
+%hd212581_swp26185
+angle 0
+dot 209 177 1 20
+%hd212978_swp06237
+angle 0
+dot 127 128 1 3
+%hd213420_swp20267
+angle 0
+dot 90 75 1 3
+%hd214240_swp44796
+angle 0
+dot 57 44 1 20
+%hd214923_swp42071
+angle 0
+dot 136 122 1 20
+%hd215573_swp29817
+angle 0
+dot 15 -999 1 20
+%hd216200_swp09205
+angle 0
+dot 186 177 1 3
+%hd216494_swp55266
+angle 0
+dot 68 55 1 20
+%hd217101_swp18309
+angle 0
+dot 134 142 1 3
+%hd217543_swp33666
+angle 0
+dot 257 177 1 3
+%hd217675_swp52943
+angle 0
+dot 172 148 1 20
+%hd217833_swp14972
+angle 0
+dot 27 -999 1 20
+%hd217891_swp15512
+angle 0
+dot 87 66 1 3
+%hd218045_swp41819
+angle 0
+dot 105 98 1 20
+%hd219688_swp10385
+angle 0
+dot 228 264 1 3
+%hd219749_swp06095
+angle 0
+dot 77 56 1 20
+%hd220885_swp14970
+angle 0
+dot 56 43 1 20
+%hd221253_swp51974
+angle 0
+dot 134 121 1 3
+%hd221507_swp18991
+angle 0
+dot 22 -999 1 20
+%hd222173_swp10376
+angle 0
+dot 54 47 1 20
+%hd222439_swp52658
+angle 0
+dot 152 130 1 20
+%hd222661_swp24450
+angle 0
+dot 138 118 1 20
+%hd223640_swp05723
+angle 0
+dot 28 -999 1 20
+%hd224112_swp05718
+angle 0
+dot 55 28 1 20
+%hd224113_swp05738
+angle 0
+dot 67 52 1 20
+%hd224686_swp22848
+angle 0
+dot 252 189 1 20
+%hd225094_swp09415
+angle 0
+dot 66 58 1 3
+%hd225094_swp18688
+angle 0
+dot 55 47 1 3
+%hd225253_swp04413
+angle 0
+dot -999 -999 1 20
+%hd269128_swp07138
+angle 0
+dot 147 84 1 20

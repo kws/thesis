@@ -1,0 +1,206 @@
+%% Thesis submitted for the degree of Doctor of Philosophy
+%% of the University of London.
+%%
+%% Title:	Spectroscopic Analyses of Hot Stars
+%% By:		Kaj Wik Siebert
+%% 		Department of Physics ands Astronomy
+%%		University College London
+%%		Gower Street
+%%		London, WC1E 6BT
+%%
+%% Email:      	kws@star.ucl.ac.uk
+%%
+%% Main latex file, copied without permission from 
+%% Rich Townsend
+
+%% Set up the document class (hacked report)
+
+\documentclass[fleqn,11pt,oneside,openright,a4paper]{ereport}
+
+\usepackage{supertabular}
+\usepackage{tabularx}
+\usepackage{ifthen}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epsf}
+\usepackage{uclogo}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{kajastron}
+\usepackage{longtable}
+\usepackage{bib/aas_macros}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author notes
+\newboolean{shownotes}
+\setboolean{shownotes}{true} % set to ``true'' or ``false''
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Bibliography
+\bibliographystyle{kajastron}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Page style stuff
+
+% Set up the text width and margins in terms of the binding and outer
+% margin lengths - here assigned the values dictated by UCL regulations
+
+\newlength{\bindingmargin}
+\newlength{\outermargin}
+
+\setlength{\bindingmargin}{40mm}
+\setlength{\outermargin}{20mm}
+
+% Work out the text width from these margins and the page size
+
+\setlength{\textwidth}{\paperwidth-\outermargin-\bindingmargin}
+
+% Now work out the LaTeX odd side and even side margins, taking into
+% account the automatic 1in h offset which is included.
+
+\setlength{\oddsidemargin}{\bindingmargin-1in}
+\setlength{\evensidemargin}{\paperwidth-\textwidth-\bindingmargin-1in}
+% Set up all of the other page style stuff
+
+\setlength{\textheight}{235mm}
+\setlength{\topmargin}{-0.25in}            
+\setlength{\headheight}{7mm}           
+\setlength{\headsep}{8mm}              
+\setlength{\footnotesep}{1.5ex}
+%\setlength{\textfloatsep}{14pt plus 6pt minus 2pt}
+\renewcommand{\baselinestretch}{1.5}
+
+\newcommand{\clearemptydoublepage}
+           {\newpage\thispagestyle{empty}\cleardoublepage}
+
+\pagestyle{headings}
+
+\newcommand{\longpage}{\enlargethispage{\baselineskip}}
+\newcommand{\shortpage}{\enlargethispage{-\baselineskip}}
+\newcommand{\longpagef}{\enlargethispage*{\baselineskip}}
+\newcommand{\shortpagef}{\enlargethispage*{-\baselineskip}}
+
+\newlength{\figwidth}
+\setlength{\figwidth}{\textwidth-1.5cm}
+%\setcounter{totalnumber}{5}
+
+\setlength{\unitlength}{2em} % for the picture environment
+
+
+%%%%%%%%%%% My own definitions %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{defs/general}
+
+\newlength{\cen}
+%\includeonly{chap_xcorr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% THIS IS IT %%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\include{thesis_title}
+\clearemptydoublepage
+
+\include{thesis_dedication}
+\clearemptydoublepage
+
+\include{chap_abstract}
+\clearemptydoublepage
+
+%%%%%%%%%% TOC
+\addcontentsline{toc}{chapter}{Table of Contents}
+\tableofcontents
+\clearemptydoublepage
+
+%%%%%%%%%% LOF
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+\clearemptydoublepage
+
+
+%%%%%%%%%% LOT
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+\clearemptydoublepage
+
+%%%%%%%%%% ACK
+%\include{thesis_preface}
+%\clearemptydoublepage
+%
+\markboth{ACKNOWLEDGEMENTS}{ACKNOWLEDGEMENTS}
+\include{chap_acknowledge}
+\clearemptydoublepage
+
+%%%%%%%%%% CHAPTERS
+\include{chap_intro}
+\clearemptydoublepage
+
+\include{chap_obs}
+\clearemptydoublepage
+
+\include{chap_models}
+\clearemptydoublepage
+
+\include{chap_casestudy}
+\clearemptydoublepage
+
+\include{chap_analyses}
+\clearemptydoublepage
+
+\include{chap_odiscuss}
+\clearemptydoublepage
+
+\include{chap_xcorr}
+\clearemptydoublepage
+
+\include{chap_conc}
+\clearemptydoublepage
+
+\nocite{*}
+
+%%%%%%%%%% APPENDICES
+\appendix 
+\include{app_10lac}
+\clearemptydoublepage
+
+\include{app_ocn}
+\clearemptydoublepage
+
+\include{app_osumm}
+\clearemptydoublepage
+
+\include{app_xcorr}
+\clearemptydoublepage
+
+\include{app_cdrom}
+\clearemptydoublepage
+
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{bib/mnemonic,bib/books,bib/main,bib/other}
+\clearemptydoublepage
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

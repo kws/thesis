@@ -1,0 +1,12 @@
+# Directory with fits
+set fitd = /mnt/fits
+
+# Dir with all bstars catalogues etc.
+set bsdir = /mnt/bstars
+
+# Pgpixf setup file
+set pgpsetup = /user/kcs/pgpixf3/pgpixf3_setup
+#set pgpsetup = /user4/kcs/pgpixf/pgpixf3_setup
+#alias pgpixf3 pgpixf
+
+#alias gks_convert /laura/kws/tex/thesis/programs/gks_convert

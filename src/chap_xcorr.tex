@@ -1,0 +1,749 @@
+\chapter{A survey of rotational velocities}
+\label{ch:xcorr}
+
+There is a small mystery about the rotational properties of
+early-type stars. The apparent deficit of narrow-lined O stars
+suggests that some type of `turbulence' might be contributing to the
+overall line broadening (e.g. \cite{co:vii}). The exact nature of this
+turbulence is unknown, although it appears that it is more important in
+evolved stars (\cite{pe:xcorr}; \cite{ho:xcorr} and chapters
+\ref{ch:casestudy} to \ref{ch:odiscuss} in this thesis).
+
+Recent evolutionary models show that rotation is important not only
+for the stars' physical properties, in terms of temperature and
+luminosity, but also for the surface element abundances (\cite{la:98};
+\cite{ma:98}; \cite{me:98}). This could help solve many discrepancies
+between observations and evolutionary models (e.g. the \emph{mass
+discrepancy} discussed in section
+\ref{sec:mass_discrepancy}) and the chemical anomalies seen in the
+OBC/OBN stars (section \ref{sec:cno_anomalies}). A better
+understanding of the rotational properties of early-type stars would
+indicate if rotation is important in the evolution of most
+OB-stars.
+
+Rotation has also been connected with several types of variability in
+early-type stars. Rapidly rotating OB stars appear to be particularly
+prone to absorption-line variability (\cite{fu:96}) and rotation is
+expected to be related to the emission mechanism in Be stars (see
+section \ref{sec:intro:be}).
+
+A cross-correlation analysis of line widths in O and supergiant B
+stars was performed by \ybcite{ho:xcorr}. The cross-correlation
+routines developed for that project have since been automated to the
+point where large scale surveys are possible. To test the routines,
+and expand the sample from
+\acite{ho:xcorr}, we measured a large sample of B stars of all
+luminosity classes.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% SAMPLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The sample}
+
+To obtain an unbiased sample of stars, all the B stars from the Bright
+Star Catalogue (\cite{bsc5}) were cross-checked with the IUE observing
+logs. Usually, the newest observations of a given star were used,
+unless these were noted to be of poor quality or to have a low number
+of peak counts. Because we initially did not have access to the
+complete IUE logs, some stars were observed more recently than we were
+first aware of. In these cases, we have also tried to include analyses of
+the new observations. Also, when the quality of the observations was
+questionable, several spectra were analysed. Some stars from
+\ybcite{ho:xcorr} were included to test the accuracy of the automatic
+measurements. 
+
+Little or no care was taken to exclude peculiar or non-related objects
+(e.g. mis-identified stars in the observing logs or stars with
+erroneous spectral types in the Bright Star Catalogue) from the
+analysis. We expect some of these objects to reveal themselves
+subsequently by failing to give a strong cross-correlation peak with
+the template stars used.
+
+Since Bright Star Catalogue (hereafter BSC) spectral types are
+sometimes inaccurate and are usually of uncertain provenance, better
+documented spectral types were adopted from 
+the references listed in appendix \ref{app:xcorr}. The data were
+reduced as explained in chapter \ref{ch:obs}, using essentially the
+same routines as those described in \ybcite{ho:winds}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% XCORR
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cross-correlation analysis}
+\label{sec:xcorr:analysis}
+
+The analyses were performed by using a C-shell wrapper for \dipso. The
+wrapper script would launch \dipso, select an appropriate template and
+mask (see below), perform the cross-correlation, gaussian fitting,
+and then extract the fit-data and the cross-correlation functions
+(CCFs) for future reference. All the information was stored in a
+machine readable format%
+%
+\footnote{The cross-correlation script would
+itself create another script for each star with the analysis results
+in it. Thus all that is required to access the data is to `source'
+this data-script. A relatively slow and arguably inefficient, but very
+flexible and easy to use, way of storing data.}
+%
+to simplify the statistical analysis.
+
+The cross-correlation was performed by first masking out P~Cygni
+profiles, very strong photospheric lines (dependent on spectral type), and
+interstellar lines in the target and template spectra. The very
+strong photospheric lines will dominate the cross-correlation function
+and may be significantly Stark broadened in addition to being
+rotationally broadened; any irregular effects in these lines will
+dilute the influence of the many weaker lines. More reliable results
+are obtained by masking out these lines.
+
+Next, the spectra were normalised to a zero-level continuum by
+dividing by polynomial fits and subtracting unity. The masked out
+regions were then filled with zeros to make sure they would not give
+false correlations, and finally the spectra were cross-correlated.
+
+The cross-correlation functions (CCFs) could then be measured. This is
+slightly complicated by random correlations (which will always occur)
+giving `background noise'. This causes the CCF peak to sit on top of a
+`shoulder' caused by these random correlations (which are dependent on
+the template used).  To simplify the measurements of the CCFs this
+shoulder was removed by fitting a polynomial to the CCF (see figure
+\ref{fig:xcorr:example})%
+%
+\footnote{Including the cross-correlation
+functions for all the analysed stars would unfortunately take up far
+too much space to be included in the printed version of this thesis,
+but they are available in HTML format on the attached CD-ROM (see
+appendix \ref{app:cdrom}).}
+%
+in the regions with a velocity-shift of more than $\pm500$~\kms. This
+`flattens' most of the CCF caused by random correlations but
+still leaves the peak. The cross-correlation functions were then fitted
+with gaussians (by the \dipso\ subroutine \elf) using a least-squares
+fitting method in order to obtain the widths and strengths
+(the latter represented by the peak intensity and integrated area of the CCF).
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_xcorr/ccfs/example.eps}
+\caption[Typical CCF and fit]
+{\fcfont Figure shows a typical CCF (HD~144 cross-correlated against
+\picet) and the fits. Left panel shows polynomial fitting to
+low-level background correlations, and right panel shows the gaussian
+fit used to find values of full-width half-maximum (FWHM).
+}
+\label{fig:xcorr:example}
+\end{figure}   %%%%%%%%%%%%%%%
+
+Every star was cross-correlated against four different template
+spectra, as listed in table \ref{ta:templates}, to ensure that at
+least one strong CCF was obtained across the entire spectral range
+investigated. Although it is more 
+customary to use the area to represent the strength of a CCF, the CCF
+with the strongest peak intensity was picked as the one best
+representing the star. Since all the template stars are narrow-lined,
+there should be very small width variations when a single star is
+cross-correlated against the four templates. However, the polynomial
+flattening of the CCF discussed above is not perfect, and can
+sometimes leave a significant bump around the base of the CCF
+peak. This bump can `fool' the gaussian fitting routines into using a
+much broader function. This will increase the area of the function
+but leave the peak intensity relatively unchanged.
+
+\begin{table} %%%%%%%%%%%%%%%%%%%
+\begin{center}
+\label{ta:templates}
+\caption{Template Stars}
+\begin{tabular}{lrlc}
+\hline\hline
+\multicolumn{1}{c}{Name} &
+\multicolumn{1}{c}{HD} &
+\multicolumn{1}{c}{Spectral Type} &
+\multicolumn{1}{c}{\vsini\ (\kms)} \\
+\hline
+\tausco	& 149438	& B0.2~IV $^{(1)}$	& $< 10$ $^{(3)}$; 13 $^{(4)}$ 	\\
+\iother	& 160762	& B3~IV $^{(2)}$	& 17 $^{(4)}$      	\\
+\picet	&  17081	& B7~V $^{(2)}$		& 18 $^{(4)}$    	\\
+\alplyr & 172167	& A0~V $^{(3)}$		& 23 $^{(3)}$		\\
+\hline\hline
+\end{tabular}
+\end{center}
+
+\tref{
+(1)~--~\ybcite{wa:71supp}; (2)~--~\ybcite{l68};
+(3)~--~\ybcite{hs}; (4)~--~\ybcite{da:75}
+}
+\end{table}
+
+In this preliminary, automated run of the routines, no other quality
+control was performed (apart from visual inspection to check for
+obvious binaries). However work is underway to develop automatic
+detection of possible double lined spectroscopic binaries, and a
+measure of the `goodness-of-fit' of the gaussians. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% CALIBRATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Calibration}
+\label{sec:xcorr:cal}
+
+This chapter is titled a survey of rotational velocities; however,
+what we measure is the line width and not the rotational
+velocity. This chapter is based on the assumption that these two
+parameters are the same, although as seen in \ybcite{pe:xcorr},
+\ybcite{ho:xcorr} and also chapters
+\ref{ch:casestudy}--\ref{ch:odiscuss} in this thesis, this assumption
+is probably not correct. There is now extensive evidence to suggest
+that rotation is not the only process contributing to absorption-line
+broadening in early type stars. We will, however, still work on the
+assumption that the quantity \vsini\ is closely related to the true
+projected equatorial rotation velocity.
+
+The usual way of determining rotational velocities
+(e.g. \cite{sl:75} and \cite{co:vii}) is by comparing observations
+with rotationally broadened synthetic spectra. Unfortunately models
+are not yet up to accurately reproducing the line-blanketed UV spectra of
+hot stars, and we need a different approach of constructing a FWHM to
+\vsini\ calibration. As shown in \ybcite{ho:xcorr}, reliable
+calibrations can be found by creating artificially `spun up' versions
+of the template spectra (created by convolving the template spectra
+with the rotational broadening function given by \cite{gray}) and
+measuring these in the same way as for the sample stars. These
+calibrations are shown in figures \ref{fig:xcorr:fwhm} and
+\ref{fig:xcorr:cal} together with a comparisons of CCF peak widths
+(FWHM) and velocities measured using different templates.
+
+There appear to be some systematic differences between measured
+widths (and derived velocities) found using different templates. This
+is almost certainly caused by the CCF background correlations
+discussed in section \ref{sec:xcorr:analysis}. Although the actual
+width of the CCF peak should not change, the gaussian fits might be
+slightly different. Since the background correlations are dependent on the
+spectral type of the template used (and also on the spectral type of
+the target star, but since we only usually consider stars that are
+within a couple of subtypes of the template it is relatively
+unaffected by the target star) the effect is fairly systematic and can
+be corrected for.
+
+We thus want to `force' all the templates to follow the same velocity
+scale. One way to do this would be to quantify the differences in measured widths
+found by using the different templates. However, since the background
+CCF `shoulder' also appears to be a function of velocity (as can be
+seen by the variations in FWHM--\vsini\ calibrations for the different
+templates), the correction would also have to be a function of velocity.
+
+It appears, though, that after applying the ``raw'' velocity calibrations
+(which remove the principal dependence on velocity) the problem reduces to an
+approximately linear relation. We fit (by least-squares) straight lines of the
+form $y = bx$ to the plots as shown in figure \ref{fig:xcorr:cal}. This gives
+us (from the gradients) the typical ratios between
+measured velocities found from the different templates. If we assume
+that the smallest and largest velocities are off by approximately the
+same factors we can adopt the `best' velocity as the geometric mean of the
+`typical' velocities:
+\begin{equation*}
+v_\mathrm{best} = \sqrt[4]{v_\tau \times v_\iota \times v_\pi \times v_\alpha}
+\end{equation*}
+where $v_\tau$, $v_\iota$, $v_\pi$, $v_\alpha$ are the velocities
+found by using the \tausco, \iother, \picet\ and \alplyr\ templates
+respectively. For any given star, we only need to have measured one of
+these velocities, which can then be corrected to the common
+scale. Table \ref{ta:xcorr:funcs} lists the velocity corrections
+applied to bring the velocities to the common scale, and figure
+\ref{fig:xcorr:cor} shows the plots of measured velocities after
+applying the velocity corrections and the `corrected' FWHM--\vsini\
+calibrations.
+
+\begin{table} %%%%%%%%%TABLE
+\begin{center}
+\caption{Velocity corrections}
+\label{ta:xcorr:funcs}
+\vspace{\abovecaptionskip}
+\begin{tabular}{c@{ = }l}
+\hline\hline
+$v_\mathrm{best}$ & $1.094 \times v_\tau$   \\ 
+$v_\mathrm{best}$ & $0.871 \times v_\iota$  \\
+$v_\mathrm{best}$ & $0.954 \times v_\pi$    \\
+$v_\mathrm{best}$ & $1.100 \times v_\alpha$ \\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table}   %%%%%%%%%%%%%%%
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_xcorr/fwhm/fwhm.eps}
+\caption[Measured FWHMs and \vsini\ calibrations]
+{\fcfont The top left-hand panel shows calibrations between the
+linewidth parameter \vsini\ and the width of the CCFs for the
+different template spectra. The other panels compare full-width
+half-maxima measured for each star using the different templates. The
+different symbols represents the ratio of CCF strengths (the strengths
+of the abscissa star CCF divided by the ordinate star CFF). A ratio
+close to one is indicated by circles, whereas ratios larger than
+$\frac{3}{2}$ is shown as triangles pointing upwards, and ratios less
+than $\frac{2}{3}$ by triangles pointing downwards.
+}
+\label{fig:xcorr:fwhm}
+\end{figure}   %%%%%%%%%%%%%%%
+ 
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_xcorr/cal/cal.eps}
+\caption[\vsini\ comparisons for different templates]
+{\fcfont Comparisons of cross-correlation width measurements after
+applying velocity calibrations (shown in upper left-hand corner; same
+as in previous figure but shown on a different scale). Also shown are
+straight-line fits discussed in text (dotted lines). This diagram shows
+fewer stars than in the previous figure, since some have been filtered
+out by the velocity calibrations if the CCF peak intensity is too low.
+}
+\label{fig:xcorr:cal}
+\end{figure}   %%%%%%%%%%%%%%%
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_xcorr/cor/cor.eps}
+\caption[Velocity corrections]
+{\fcfont Velocity comparisons after applying linear velocity
+corrections. Symbols are the same as in the previous figures. Velocity
+calibrations are also shown with `corrected' velocities.
+}
+\label{fig:xcorr:cor}
+\end{figure}   %%%%%%%%%%%%%%%
+
+So, just to summarise briefly, the steps involved in finding the
+adopted velocities are:
+%
+\begin{itemize}
+\item	Convert FWHM to \vsini\ using `theoretical' calibration for
+	each template
+\item	Find template-to-template differences
+\item	Apply linear correction
+\end{itemize}
+%
+If more than one spectrum for any given star is measured, we adopt the
+median of the corrected velocities for each spectrum.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% PREVIOUS WORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Comparison with previous work}
+
+Using the FWHM -- \vsini\ calibrations discussed above we can now
+derive values of \vsini\ for each star. The corrected velocities for
+each star and template are listed in appendix \ref{app:xcorr}. The
+table there also lists the adopted velocity, which is the velocity
+obtained from the `strongest' cross-correlation function. Where more
+than one spectrum for a given star has been analysed, the adopted
+velocity is the mean of the velocities from the strongest CCFs.
+
+Since our approach is fully automatic, and because the decision of
+what is the ``best'' \vsini\ was ad hoc, it is important to compare it
+to previous measurements to see if there are any systematic
+differences. Figure \ref{fig:idhcomp} shows the values derived in this
+thesis compared to those published in \ybcite{ho:xcorr} (these values
+are also presented in table \ref{ta:xcorr:idh}). Indeed there does
+appear to be some systematic differences. Plotting the ratio of the
+MNRAS results to the new values (lower panel) it appears that the the
+current \tausco\ velocities come out slightly higher than before, and
+the \iother\ results are lower. This is exactly what is expected
+taking into consideration the new velocity corrections applied to each
+template's measured velocities. Also shown on the figure are the
+velocities for
+\tausco\ and \iother, and it appears that the measured velocities
+scatter evenly around these lines, with a couple of exceptions.
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_xcorr/idh_comp/idhcomp.eps}
+\caption[Comparison of \vsini\ from Howarth et al. (MNRAS) and this work]
+{\fcfont Comparison of \vsini\ from Howarth et al. (MNRAS) and this
+work using the automatic routines discussed in the text (Auto). Filled
+circles are cross-correlated using $\tau$Sco as the template, open
+circles using $\iota$Her. The dotted and dashed-dotted lines are the
+velocity corrections applied to the \tausco\ and \iother\ velocities respectively.}
+\label{fig:idhcomp}
+\end{figure}   %%%%%%%%%%%%%%%
+
+The most notable of these exceptions is HD~75759. Looking at the CCF
+for this star, it appears to have a double peak (see figure
+\ref{fig:ccf:hd75759}). This star is listed as a double-lined
+spectroscopic binary in \ybcite{mason:98}. In the case of the other
+discrepant star, HD~219188, it is not so clear why the results are in
+disagreement. The CCF for this star is single-peaked, although it
+appears to be weak and slightly irregular in shape (figure
+\ref{fig:ccf:hd219188}). The spectrum appears very noisy, and it could
+be the case of a low S/N exposure or problems during data reduction.
+
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=9cm
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_xcorr/ccfs/hd075759_swp54009.eps}
+\caption[The CCF of HD~75759]
+{\fcfont The cross-correlation function (CCF) of HD~75759. This is a
+double-lined spectroscopic binary, and the CCF appears to have
+two peaks separated by about 100~\kms.}
+\label{fig:ccf:hd75759}
+% Line Profile    Centre   Width       Peak Flux   Line Flux
+%   1     1       -59.180   87.659     4.768E-01   4.449E+01
+%       +/-         4.156    8.196     2.303E-02   4.942E+00
+%   2     1        38.100   87.692     3.380E-01   3.155E+01
+%       +/-         5.703   12.596     2.217E-02   5.060E+00
+\end{figure}   %%%%%%%%%%%%%%%
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=9cm
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+%\fnote{CCF of HD~219188}
+\hspace{\cen}\epsfbox{fig_xcorr/ccfs/hd219188_swp07711.eps}
+\caption[The CCF of HD~219188]
+{\fcfont The cross-correlation function of HD~219188.}
+\label{fig:ccf:hd219188}
+\end{figure}   %%%%%%%%%%%%%%%
+
+The comparison above only covers the early-type B supergiants (and a
+couple of O stars) since these were the only stars covered in
+\acite{ho:xcorr} To investigate the full range of spectral types
+covered, we compare with the list of standard velocity stars by
+\acite{sl:75} (figure
+\ref{fig:sletcomp}). Here the velocities are in good agreement. The
+rms dispersion about the mean offset is only 11.3~\kms (9 per cent of
+the cross-correlation velocities).%
+%
+% Found from the awk scrip 0average.awk in fig_xcorr/slettebak/
+% awk -f 0average.awk *.dat
+%
+These values exclude the only star for which the velocity estimates
+are in clear disagreement. \acite{sl:75} found a velocity of 400~kms
+for HD~142983 (48~Lib), whereas the cross-correlation analysis
+suggests a relatively narrow-lined star with a velocity of only about
+40~\kms\ (see figure \ref{fig:ccf:hd142983}). 48~Lib is a well known
+shell star (e.g. \cite{un:48lib}) and the narrow cross-correlation
+function is probably from correlations with the narrow shell
+absorption lines present in the UV spectrum of this star
+(e.g. \cite{1981A&A...100...79R}) rather than from photospheric lines.
+
+%801130644SWP  8810LHUK242H 1429831555231-1408124.8002700440601
+%950692312SWP 54091LHASRKB142983  1555231-1408114.9002600330C=201,B=32     
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_xcorr/slettebak/sletcomp.eps}
+\caption[Comparison of \vsini\ from Slettebak et al. (1975) and this work]
+{\fcfont Comparison of \vsini\ from Slettebak et al. (1975) and this
+work using the automatic routines discussed in the text (Auto). The
+template used is indicated by the different symbols (see key).}
+\label{fig:sletcomp}
+\end{figure}   %%%%%%%%%%%%%%%
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_xcorr/ccfs/hd142983_swp08810.eps}
+
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_xcorr/ccfs/hd142983_swp54091.eps}
+\caption[The CCFs of HD~142983]
+{\fcfont The cross-correlation functions of HD~142983. Two spectra
+were examined: SWP~8810 (top) and SWP~54091 (bottom).}
+\label{fig:ccf:hd142983}
+\end{figure}   %%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% SEC = DISCUSSION %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+
+Figure \ref{fig:veldist} show velocity distributions for the B
+stars. It is fairly clear from the diagrams that there are very
+different distributions of velocities for main-sequence stars
+(luminosity classes IV and V) and supergiants (I and II), and also
+that there appears to be some difference between the early-type
+supergiants and late-type supergiants. The lower panel in this figure
+shows the velocity distributions for the stars grouped by their BSC
+catalogue spectral types, while the stars in the top panel have
+spectral types from the references listed in appendix
+\ref{app:xcorr} (most of these stars also have BSC spectral
+types).
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_xcorr/vsini/dist.eps}
+
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_xcorr/vsini_bscspec/dist_bsc.eps}
+
+\caption[Velocity distributions]
+{\fcfont Velocity distributions (binned and cumulative) showing the
+distributions for early (earlier than B5) types and late (later than
+B5 inclusive) with spectral types from individually referenced sources
+(\textbf{top} panels) and from the Bright Star Catalogue
+(\textbf{bottom} panels).}
+\label{fig:veldist}
+\end{figure}   %%%%%%%%%%%%%%%
+
+%%%%%%%%% SUBSECTION S-G %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Supergiant velocity distributions}
+
+Comparing the cumulative distributions with those in \acite{ho:xcorr},
+it appears there is a sequence of increasing \vsini\ with spectral
+type for the supergiants. In fact, extending table 4 from
+\acite{ho:xcorr} (table \ref{ta:vsini:median}) we see the median
+velocities for each spectral subtype slowly increase from about 40~\kms\
+at B9.5 to approximately 90~\kms\ at B0 and further to more than 100~\kms\ for
+the early O-stars. Similarly the lowest \vsini\ in each group also
+seems to increase uniformly with spectral type. The only exceptions to
+this are HD~202124 (B0~II) with a \vsini~=~38~\kms and HD~44743
+(B1~II-III; \vsini~=~38~\kms). The second slowest rotators in the same
+group as each of these stars have rotational velocities of 72 and
+55~\kms respectively. This is in good agreement with \ybcite{co:vii}
+who suggest that the observed line broadening in O stars is caused
+both by rotation and by some other broadening factor (some sort of
+`turbulence') which might contribute to the broadening with about
+50~\kms\ for a late O-star and even more for earlier types. It appears
+that this effect is less important for the B stars, and trails off
+towards the late-Bs.
+%Rosendahl, 1970 ApJ 159, 107?
+
+\begin{table} %%%%%%%%% TABLE
+\begin{center}
+\caption{Supergiant \vsini\ distribution}
+\label{ta:vsini:median}
+\vspace{\abovecaptionskip}
+\begin{tabular}{l|rrlrl|rrl}
+\hline\hline
+&\multicolumn{3}{c}{MNRAS} & \multicolumn{2}{c|}{MNRAS corrected} & 
+\multicolumn{3}{c}{Auto} \\
+\multicolumn{1}{c|}{Spectral} & $N$ & Median & Range & 
+Median & Range &
+$N$ & Median & Range \\
+\multicolumn{1}{c|}{Type} & & \multicolumn{4}{c|}{(\kms)} &&
+\multicolumn{2}{c}{(\kms)} \\
+\hline
+\input{tab_xcorr/median_vsini/median.tex}
+\hline\hline
+\end{tabular}
+\end{center}
+\tnote{$^*$ -- The Bright Star Catalogue does not use the B0.7
+subtype.\\
+Columns 2--4 list the results from \ybcite{ho:xcorr}, and columns 5
+and 6 show these values `corrected' using the \tausco\ correction
+discussed in the text. Columns 7--9 show the results from this work.
+}
+\end{table} %%%%%%
+
+%%%%%%%%% SUBSECTION K-S %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Kolmogorov-Smirnoff test}
+\label{sec:ks}
+
+The Kolmogorov-Smirnoff (or K-S) test allows us to compare two
+data sets and find the statistical probability that they are drawn
+from the same distribution. The test works by finding the maximum
+distance between two cumulative probability distributions (like our
+velocity distributions):
+\begin{equation*}
+D = \underset{-\infty < x < \infty}{\mathrm{max}} |S_{N_1}(x) -
+S_{N_2}(x)|
+\end{equation*}
+where $S_{N_1}(x)$ and $S_{N_2}(x)$ are the respective cumulative
+distribution functions to be compared. See Numerical Recipes
+(\cite{nr}) for a more general discussion about the K-S test and how
+to find the probability $P$ that the two data sets are drawn from the
+same distribution.
+
+We can use the K-S test, first to check if our two sources of spectral
+types can be used to split the complete sample into subgroups which
+are in good agreement. Table \ref{ta:ks:spectypes} compare samples of
+stars, grouped by their individually references spectral types, or the
+BSC spectral types (figure \ref{fig:veldist}). Although there are
+differences between the two samples, each of the subgroups%
+%
+\footnote{The stellar sample was divided into early-type (earlier than
+B5) and late-type (later than B5 inclusive) stars. These were then
+divided into supergiants (SG; luminosity classes I and II) and
+main-sequence (MS; luminosity classes III--V) stars.}
+%
+does appear to be drawn from the
+same distributions.
+
+Next we want to see how the subgroups compare with each other (table
+\ref{ta:ks:inter}). The only groups that appear to be at all similar
+are the early and late type main-sequence stars (although at a very
+low probability; but see section \ref{sec:ms_vdist}). The two
+supergiant groups vary significantly in their distributions, and it is
+unlikely that these are part of a common distribution of rotational
+velocities.
+
+\begin{table} %%%%%%%%% TABLE
+\begin{center}
+\caption{K-S test of velocity distributions using different spectral type 
+\label{ta:ks:spectypes}
+sources}
+\vspace{\abovecaptionskip}
+\begin{tabular}{llrrrr}
+\hline\hline
+\multicolumn{2}{c}{Type} & \multicolumn{1}{c}{$N_\mathrm{ind}$} &
+\multicolumn{1}{c}{$N_\mathrm{BSC}$} & \multicolumn{1}{c}{$D$} &
+\multicolumn{1}{c}{$P$} \\
+\hline
+\input{tab_xcorr/ks/spectypes.tex}
+\hline\hline
+\end{tabular}
+\end{center}
+\tnote{Group one (ind) contains the stars with individual spectral
+types from reliable references, and group two (BSC) are the stars with
+BSC spectral types. $D$ is the K-S statistic, and $P$ is the
+significance level. There are no large differences between the two
+groups.}
+\end{table} %%%%%%
+
+\begin{table} %%%%%%%%% TABLE
+\begin{center}
+\caption{K-S test highlighting differences between different groups}
+\label{ta:ks:inter}
+\vspace{\abovecaptionskip}
+\begin{tabular}{l|cccc}
+\multicolumn{5}{c}{Individual referenced spectral types}\\
+\hline\hline
+%&&\multicolumn{4}{c}{K-S d} \\
+\input{tab_xcorr/ks/goodspec.tex}
+\hline\hline
+\multicolumn{5}{c}{}\\
+\multicolumn{5}{c}{BSC spectral types}\\
+\hline\hline
+\input{tab_xcorr/ks/bscspec.tex}
+\hline\hline
+\end{tabular}
+\end{center}
+\tnote{This table summarises the K-S test applied to the groups of
+stars shown in figure \ref{fig:veldist}. For each comparison between two
+groups, both the K-S statistic $D$ and its significance level $P$ are
+shown. A value of $P$ close to zero signifies a low probability that
+the two data sets are drawn from the same distribution.
+}
+\end{table} %%%%%%
+
+%%%%%%%%% SUBSECTION M-S %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Main-sequence velocity distributions and Be stars}
+\label{sec:ms_vdist}
+
+The main-sequence distributions (figures \ref{fig:veldist} and
+\ref{fig:veldist_gr}) show a much larger spread in velocities than
+the supergiants.
+The distribution for all luminosity class IV and V objects, including
+Be stars (figure \ref{fig:veldist}) shows an almost linear cumulative
+distribution, meaning there is an almost identical number of stars at
+all velocities up to a maximum of just above 300~\kms. However,
+plotting the Be stars separately (figure \ref{fig:veldist_gr}), there
+appears to be a significantly different distribution of velocities for
+the two groups, with the Be stars appearing to belong to a group with
+high rotational velocities, peaking at about 250~\kms. This fits in
+well with the theories that the emission mechanism in Be stars is
+somehow connected to rotation, e.g. through the formation of a
+`disk'-like dense wind around the equator (see section \ref{sec:intro:be}).
+
+The trend of increasing \vsini\ with spectral type, seen for the
+supergiants, is not evident for the main-sequence stars. Although there
+do appear to be some differences between the different groups
+(because of the larger sample of main-sequence stars, split
+into four groups in figure \ref{fig:veldist_gr}), there do not
+appear to be any clear trends. The group containing stars of spectral
+types B2--B3 appears to rotate slightly slower than the other stars,
+and the latest-type stars (B7--B9) appear to be rotating slightly
+faster. However, it is probably more likely that these represent the
+extremes of a random distribution of errors in the measurements. Even
+small errors in the measurements are quite visible when plotted as a
+cumulative distribution, since they tend to shift the entire
+distribution one way or the other. Applying the K-S test to these
+datasets, we get a probability of one that groups 1 and 3 (B0--B1.5
+and B4--B6) are drawn from the same distribution, and a probability of
+0.1 that group 1 or 3 is drawn from the same distributions as both
+group 2 and 4 (B2--B3 and B7--B9). This probably means that they all
+belong to the same distribution.
+
+
+\begin{figure} %%%%%%%%%FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_xcorr/msgroups/fig_gr.eps}
+
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_xcorr/msgroups/fig_allgr.eps}
+
+\caption[Main-sequence and Be velocity distributions]
+{\fcfont Main-sequence and Be velocity distributions. Top figure shows
+velocity distributions for main-sequence (luminosity classes V and IV)
+B subtypes as indicated (not including Be). Lower figure compares all
+the `normal' main-sequence stars to main-sequence Be stars. The Be
+stars clearly belong to a group that is, on average, rotating
+faster. Note that the figures show the normalised distributions and
+there that are far more stars in the group not showing emission.
+}
+\label{fig:veldist_gr}
+\end{figure}   %%%%%%%%%%%%%%%
+
+
+\newpage
+
+\begin{longtable}{rl rr rrrrr}
+\caption{Broadening parameters from Howarth et al. (1997)}
+\label{ta:xcorr:idh}\\
+\hline\hline
+& \multicolumn{2}{c}{Howarth et al.} & &
+\multicolumn{5}{c}{\vsini\ (this thesis)} \\
+\multicolumn{1}{c}{HD} & \multicolumn{1}{c}{Spectral Type} &
+\multicolumn{1}{c}{\vsini} & \multicolumn{1}{c}{SWP} &
+\multicolumn{1}{c}{$\tau$Sco} & \multicolumn{1}{c}{$\iota$Her} &
+\multicolumn{1}{c}{$\pi$Cet} & \multicolumn{1}{c}{$\alpha$Lyr} &
+Adopted\\
+\hline
+\endfirsthead
+\multicolumn{9}{c}{Table \ref{ta:xcorr:idh}: \emph{continued}}
+\vspace{\abovecaptionskip}\\
+\hline\hline
+& \multicolumn{2}{c}{Howarth et al.} & & 
+\multicolumn{5}{c}{\vsini\ (this thesis)} \\
+\multicolumn{1}{c}{HD} & \multicolumn{1}{c}{Spectral Type} &
+\multicolumn{1}{c}{\vsini} & \multicolumn{1}{c}{SWP} &
+\multicolumn{1}{c}{$\tau$Sco} & \multicolumn{1}{c}{$\iota$Her} &
+\multicolumn{1}{c}{$\pi$Cet} & \multicolumn{1}{c}{$\alpha$Lyr} &
+Adopted\\
+\hline
+\endhead
+\multicolumn{9}{r}{\emph{continues next page\ldots}}
+\endfoot
+\hline\hline
+\multicolumn{9}{p{14cm}}{
+\textsc{Notes: }\slshape Column 3 shows the results from
+\ybcite{ho:xcorr}, columns 5--8 show the uncorrected measurements for
+each star and template, and column 9 shows the adopted velocity. This
+adopted velocity is the corrected velocity from the `strongest' CCF 
+(indicated in \textbf{bold}). When there several analysed spectra, the
+adopted velocity is taken to be the mean of the individual velocities. 
+All velocities are in \kms.
+}
+\endlastfoot
+\input{tab_xcorr/idh/tab.tex}
+\end{longtable}
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+#!/bin/csh -f
+
+source ../00bsconfig
+
+set vsinid = $bsdir/vsini
+set specd  = $bsdir/spec
+make -C $vsinid vsini.op
+
+set catfile = $bsdir/cats/idh/catalog.dat
+
+set lines = `wc $catfile`
+set lines = $lines[1]
+
+set c = 1
+
+set op = tab.tex
+echo -n "" >! $op
+while ($c <= $lines)
+  set inp   = `sed -ne "$c p" $catfile`
+  set cat   = `echo "$inp" | cut -d\| -f1`
+  set spec  = `echo "$inp" | cut -d\| -f2`
+  set vsini = `echo "$inp" | cut -d\| -f4`
+
+  set cat = `echo $cat | tr -d 'A-z'`
+  set vidh = `echo $vsini| tr -d ':'`
+
+  if ($vidh == "") goto next
+
+  set star = `printf 'hd%6i' $cat|tr ' ' '0'`
+
+  echo Star: $star
+
+  set swps = `grep $star $vsinid/vsini.op | cut -d' ' -f1`
+  echo Found $#swps swps
+
+  foreach sw ($swps)
+    set swp = `echo $sw | cut -d_ -f2 | tr -d 'a-z'`
+    if ("$sw" == "$swps[1]") then
+      printf "%5.0f & %10s & %5.0f &" $cat "$spec" $vidh >> $op
+    else 
+      printf "%5s & %10s & %5s &" >> $op
+    endif
+
+    printf "%5.0f " $swp >>$op
+
+    set vsinis = `grep $sw $vsinid/vsini.op`
+    foreach n (2 3 4 5)
+      set vs = $vsinis[$n]
+      if ("$vs" == "-999") then
+        set vs = "\ldots"
+      endif
+      if ("$vs" == "+999") then
+        set vs = "\ldots"
+      endif
+      if ("$vs" == "0") then
+        set vs = "\ldots"
+      endif
+
+      printf "& {" >> $op
+      @ nplus = $n - 1
+      if ($vsinis[6] == $nplus) printf "\\bfseries" >> $op
+      printf "%5s } " $vs >> $op
+    end
+
+    printf '\\\\ \n' >> $op
+  end
+next:
+  @ c++
+end
+
+
+
+
+
+

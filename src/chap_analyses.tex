@@ -1,0 +1,1290 @@
+\chapter{O Star Analyses}
+\label{ch:analyses}
+
+In this chapter, we apply the methods described in chapter
+\ref{ch:casestudy} to all of the WHT O stars. Briefly, this 
+involves estimating  \teff\ and \logg. Using model spectra
+computed for these parameters, we can find the line broadening velocity for
+each star. These results are discussed in section
+\ref{sec:broadening}. Next, we measure equivalent widths and fit the
+hydrogen line wings using a $\chi^2$ fitting procedure to construct
+fit-diagrams in the \teff ~--~\logg\ plane. Series of these diagrams,
+constructed for different values of the helium number fraction, $y$,
+and the microturbulence, $\xi$, are used to find the values of these
+parameters that best fit all the measured lines. The appearance of the
+fit diagrams, model spectra and peculiarities of each star are
+briefly discussed in section \ref{sec:analyses}. The fit diagrams for
+all the sample stars are shown in figure \ref{fig:allewd} at the end
+of this chapter.
+
+As explained in chapter \ref{ch:casestudy}, the stellar parameters are
+found by using an automated routine to find the point of closest
+approach to all the lines in the fit diagrams. This routine sets up a
+grid surrounding the intersection zone, and calculates the sum of
+impact parameters for each grid point. This method works well when the
+intersection zone is close to the centre of the
+diagrams. Unfortunately, quite often the stellar parameters are
+towards one of the edges of the grid of models. At these points unfortunate
+`edge effects' can occur. Notably, lines that fall outside the grid
+(for higher values of \logg) are treated as horizontal lines at the
+bottom of the diagrams. These lines are, however, easy to identify and
+remove from the analysis. Worse is the tendency of lines to cluster
+towards the low \logg\ end of the diagrams. The grid of models goes as
+close to the Eddington limit as was computationally possible, and at
+these low values for \logg\ the equivalent width changes rapidly with
+$g$. This effect is clearly apparent in the fit diagrams for the star
+BD+36~4063 (figure \ref{fig:ewd:bd+36}).
+
+\begin{figure} %%%%%%%%%%%%%%%%%%% FIGURE
+%\fnote{Flowchart demonstrating the general method for fixing parameters}
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_app_osumm/ewd/BD+364063.eps}
+\caption[Fit diagrams for BD+36~4063]
+{\fcfont Series of fit diagrams for BD+36~4063 for varying values of
+the helium number fraction, $y$, and the microturbulence, $\xi$. Note
+the tendency for the \hei\ lines to cluster towards the lower \logg\
+(top) end of the grid as $y$ increases. This can confuse the impact
+parameter calculating routines.}
+\label{fig:ewd:bd+36}
+\end{figure} %%%%%%%%%%%%%%%%%%% END FIGURE
+
+The impact parameter routines are also fairly sensitive to outlier
+lines, so they do include some automatic rejection routines. These
+routines work by first finding the point closest to all the lines,
+then rejecting those lines that are further than some arbitrary value
+from that point and re-calculating. If the first point is close to the
+`correct' value, then this method usually works well. However, if the
+starting point is wrong, rejecting the outliers often rejects reliable
+lines, and the solution gets even worse. Because of this sensitivity
+to outliers, the lines that are more or less consistently in
+disagreement with the other lines, like \hei~$\lambda$4471\AA\ and
+\heii~$\lambda$4686\AA, have manually been excluded from
+the analyses where necessary.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SECTION = Line broadening profiles %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Line broadening functions}
+\label{sec:broadening}
+
+The velocity characterising the best-fit line-broadening function in
+each star was found, as described in chapter \ref{ch:casestudy}, by
+creating a synthetically broadened model spectrum and using
+statistical methods to find the best-fit broadening function and
+velocity parameter. The median of the velocities found from the \hei\
+lines was adopted as the broadening velocity of the star.
+
+\begin{table} %%%%%%% TABLE %%%%%%%%%%%%%%%
+\begin{center}
+\caption{Example of line broadening analysis.}
+\label{ta:broadening}
+\vspace{\abovecaptionskip}
+\small
+\begin{tabular}{c !{\hspace{18pt}} ccc !{\hspace{18pt}} ccc}
+\multicolumn{7}{c}{HD~12323 -- ON9~V}\\
+\hline\hline
+\hei\ $\lambda$ & \multicolumn{3}{c}{\vsini}   & \multicolumn{3}{c}{macroturb.} \\
+(\AA) & $v$ (\kms) & $y$ & $\chi^2$ & $v$ (\kms) & $y$ & $\chi^2$ \\
+\hline
+4009    & 153	& 0.12	& 0.491	& 124	& 0.13	& 0.491 \\
+4026    & 118	& 0.13	& 0.424	& 88	& 0.14	& 0.586 \\
+4143    & 142	& 0.17	& 0.191	& 115	& 0.20	& 0.179 \\
+4388    & 117	& 0.10	& 0.459	& 90	& 0.11	& 0.521 \\
+4922    & 128	& 0.13	& 0.373	& 95	& 0.14	& 0.498 \\
+5047    & 134	& 0.11	& 0.231	& 117	& 0.14	& 0.253 \\
+\hline
+Median:	& 131   &      	& 0.399 & 105   &       & 0.495 \\
+\hline\hline
+&\\
+
+\multicolumn{7}{c}{HD 218195 -- O9~III}\\
+\hline\hline
+\hei\ $\lambda$ & \multicolumn{3}{c}{\vsini} & \multicolumn{3}{c}{macroturb.} \\
+(\AA)   & $v$ (\kms) & $y$ & $\chi^2$ & $v$ (\kms) & $y$ & $\chi^2$ \\
+\hline
+4009    & 132	& 0.13	& 0.500	& 104 	& 0.14 & 0.318 \\
+4026    & 72 	& 0.10 	& 1.011 & 53	& 0.10 & 0.986 \\
+4143    & 85 	& 0.08 	& 0.320 & 70 	& 0.09 & 0.184 \\
+4388    & 78 	& 0.08	& 0.493	& 62 	& 0.08	& 0.391 \\
+4922    & 70 	& 0.11	& 0.321	& 56 	& 0.11 & 0.216 \\
+5047    & 65 	& 0.07	& 0.201	& 54 	& 0.07	& 0.181 \\
+\hline
+Median:	& 75 	&       & 0.407	& 59	&       & 0.267 \\
+\hline\hline
+&\\
+
+\multicolumn{7}{c}{HD~30614 -- O9.5~Ia}\\
+\hline\hline
+\hei\ $\lambda$ & \multicolumn{3}{c}{\vsini} & \multicolumn{3}{c}{macroturb.} \\
+(\AA)   & $v$ (\kms) & $y$ & $\chi^2$ & $v$ (\kms) & $y$ & $\chi^2$ \\
+\hline
+4009    & 110	& 0.11	& 0.232	& 94	& 0.12	& 0.190 \\
+4026    & 103	& 0.22	& 0.468	& 76	& 0.22	& 0.411 \\
+4143    & 108	& 0.11	& 0.249	& 92	& 0.12	& 0.168 \\
+4388    & 120	& 0.15	& 0.216	& 95	& 0.16	& 0.124 \\
+4922    & 107	& 0.22	& 0.310	& 88	& 0.24	& 0.199 \\
+5047    & 105	& 0.12	& 0.268	& 80	& 0.13  & 0.173 \\ 
+\hline
+Median:	& 108	&       & 0.259	& 90    &       & 0.182 \\
+\hline\hline
+\end{tabular}
+\end{center}
+\end{table} %%%%%%%%%%% END TABLE %%%%%%%%%%%
+
+Table \ref{ta:broadening} shows the results of the line broadening
+analyses for three `typical' stars. They are representative of the
+complete sample, in the sense that the inferred rotational velocities
+are always higher than the inferred macroturbulent velocities. This
+effect is intrinsic to these functions; the macroturbulent function is
+shallower and broader than a rotational function with the same
+velocity (see chapter \ref{ch:mod}).
+
+The stars in table \ref{ta:broadening} are also `typical' in that the
+rotational broadening function fits better for the main-sequence star, and
+the macroturbulent broadening function fits better for all the other
+stars (see table
+\ref{ta:sample_vsini} for results for the complete sample). This is
+true for all the stars, except AE~Aur (HD~34078; O9.5~V), 10~Lac
+(HD~214680; O9~V) and the two stars with the broadest lines: HD~13745
+(O9.7~II) and HD~16429 (O9.5 II). For the two main-sequence stars there is
+no real difference in the reduced $\chi^2$ values for the two fits,
+and neither broadening function fits the observations particularly
+well. Unfortunately there are only 4 main-sequence stars in the
+dataset, so the sample is too small to draw any firm
+conclusions. However, it is not unreasonable to assume that the
+dominating line-broadening effect in main-sequence stars is rotation,
+whereas in the giants and supergiants, with their large, extended
+atmospheres, there could be other velocity fields contributing to the
+line broadening.
+
+There are several theoretical reasons why an O star should slow down
+as it ages. \ybcite{co:vii} have outlined several such
+theories. Firstly, as a star evolves, its radius increases, and from
+conservation of angular momentum, it should slow down. Secondly, a
+star may also lose angular moment because of its stellar
+wind.\footnote{This is only the case if the material remains somehow
+bound to the photosphere, for example through a magnetic field. See
+discussions in \ybcite{la:98}, \ybcite{ma:98} and \ybcite{me:98}.}
+\ybcite{pe:xcorr} has calculated the wind-related ``spin-down'' time
+of a O9 main sequence star. It turns out that this is more or less six
+times longer than the star's H-burning lifetime. However, there is
+observational and theoretical evidence that as a star evolves away
+from the main sequence, its mass-loss rate might increase and thus the
+rate of spin-down from this process should also increase.
+
+There is also a lack of narrow-lined O supergiants. In the
+comprehensive survey of O stars by \ybcite{ho:xcorr} the
+slowest-rotating O supergiant had a \vsini~=~68~\kms. The
+narrowest-lined O supergiant in the present sample (HD~195592) has a
+macroturbulent velocity of 54~\kms\ (the best-fit rotational profile
+for this star is 70~\kms, in reasonable agreement with the published
+values shown in table \ref{ta:sample_vsini}). This clearly indicates
+that there must be some other effect apart from rotation which
+contributes to the line broadening in evolved O stars. We have
+therefore chosen to adopt rotational profiles for all main-sequence
+stars and macroturbulent profiles for the rest of the sample, except
+for the two stars with the broadest lines where it appears that rotation
+is dominating. 
+
+Such a generalisation might however be dangerous. Since there appears
+to be a total lack of zero-velocity O stars (main-sequence and
+evolved; see discussions in \cite{pe:xcorr} and \acite{ho:xcorr}), and
+10~Lac and AE~Aur are both among the narrowest-lined O stars known, it
+is not unreasonable to assume that these stars might be rotating, but
+that they are seen pole-on. If this is the case, then the observed
+broadening can only be caused by some other broadening mechanism. It
+is also not unreasonable to assume that this is the same mechanism as
+seen in the evolved stars, only not as strong. In this case, at least
+for these two stars, the lines should have the shape of the
+macroturbulent broadening function. However, since neither profile
+fits well, we will use the rotational broadening functions for all
+main-sequence stars as discussed above. In any case, the broadening
+functions do not affect our derived parameters since these rely on
+equivalent widths for the helium lines, and the broadening in the
+hydrogen lines is dominated by the intrinsic line-width.
+
+Estimating an uncertainty on our adopted broadening-velocities is
+complicated due to the lack of published velocities to compare
+with. No other measurements using the macroturbulent profile are
+available for comparison. However, several of the sample stars have a
+\vsini\ between 90 -- 95~\kms\ listed in \ybcite{ho:xcorr}. The range in
+our adopted macroturbulent velocities for the same stars is 65 -
+85~\kms (only one of these stars has a macroturbulent velocity higher
+than 70~\kms). Computing a synthetic line profile with a \vsini\ of
+93~\kms\ and then fitting this synthetic line with a macroturbulent
+profile, yields a macroturbulent velocity of 73~\kms, which is in very
+good agreement with our adopted velocities. An estimate of the errors
+on the macroturbulent velocities is then about $\pm$~10~\kms\ (and
+probably the same for the rotational velocities). This spread in
+velocities is slightly smaller than seen in the variations between the
+individual lines in each spectrum, and might as such be a slightly
+conservative estimate.
+
+\begin{table} %%%%%%% TABLE %%%%%%%%%%%%%%%
+\begin{center}
+\caption{Line broadening velocities}
+\label{ta:sample_vsini}
+\vspace{\abovecaptionskip}
+\begin{tabular}{llccccrr}
+\hline\hline
+HD/BD & \multicolumn{1}{c}{Spectral} & \multicolumn{4}{c}{\vsini\
+        (\kms)} & \multicolumn{2}{c}{this thesis} \\ &
+        \multicolumn{1}{c}{Type} & UF & CE & P96 & H97 & rot. $v$ & mac. $v$ \\
+\hline
+10125 	& O9.7 II 	&  95 	& ...	& ...	& ...	& 161	& {\bf 132} \\
+12323	& ON9 V		& 130	& 100	& 113	& 131	& {\bf 131} &  105 \\
+13745 	& O9.7 II((n))	& 185	& ...	& 168	& 169	& {\bf 176} &  151 \\
+16429 	& O9.5 II((n))	& 165	& 140	& ...	& ...	& {\bf 216} &  175 \\
+30614 	& O9.5 Ia  	&  80	&  85	& 115	& 129	& 108	& {\bf  90} \\
+34078	& O9.5 V	&  25	&  27	&  25	&  30	& {\bf 30} 	&  41 \\
+36486 	& O9.5 II	& 145	& 109	& ...	& 144	& 153	& {\bf 126} \\
+37742	& O9.7 Ib	& 135	& 110	& 123	& 124	& 120	& {\bf 109} \\
+188209	& O9.5 Iab	&  80	&  70	&  87	&  92	&  79	& {\bf  65} \\
+189957	& O9.5 III	&  90	& ...	&  89	&  92	& 106	& {\bf  85} \\
+191781	& ON9.7 Iab	&  80	& ...	& ...	& ...	& 110	& {\bf  89} \\
+194280	& OC9.7 Iab	& ...	& ...	& ...	& ...	& 120	& {\bf 101} \\
+195592	& O9.7 Ia	&  85	&  60	& ...	& ...	&  68	& {\bf  54} \\
+201345	& ON9 V		&  95	&  54	&  87	&  91	& {\bf 109}	&  82\\
+202124	& O9.5 Iab	&  95	&  60	& 137	& 115	& 111	& {\bf 93} \\
+207198	& O9 Ib-II	&  80	&  70	&  91	&  91	&  78	& {\bf 67} \\
+209975	& O9.5 Ib	&  40	& ...	&  90	&  95	&  86	& {\bf 69} \\
+210809	& O9 Iab	& 120	& 101	& 118	& 117	& 112	& {\bf 89} \\
+214680	& O9 V		&  30	&  32	&  31	&  35	& {\bf 30}	&  22\\
+218195	& O9 III	&  85	& ...	& ...	&  70	&  75	& {\bf 59} \\
+218915 	& O9.5 Iab	& 115	& 110	&  74	&  94	&  81	& {\bf 68} \\
+225160	& O8 Ib(f)	& 105	&  95	& ...	& ...	& 124	& {\bf 109} \\
++36 4063& ON9.7 I	& ...	& ...	& ...	& ...	& 106	& {\bf 84} \\
+\hline\hline 
+\end{tabular}
+\end{center}
+\tnote{The adopted broadening velocities are indicated by
+\textbf{bold} text.}
+\tref{UF -- \ybcite{uesugi}, CE -- \ybcite{co:vii}, P96 --
+\ybcite{pe:xcorr}, H97 -- \ybcite{ho:xcorr}}
+\end{table} %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SECTION = Individual analyses %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Notes on individual stars}
+\label{sec:analyses}
+
+This section contains brief summaries of the properties of the
+individual stars in the sample. As mentioned earlier, the fit diagrams
+for all the stars are shown in figure \ref{fig:allewd}, and fit
+diagrams, results, and selected regions of the optical spectra are
+shown in appendix~\ref{app:osumm}.
+
+\subsection{HD 10125} %%%%%%%%%%%%%%
+\label{analysis:hd010125}
+This star was classified O9.7~II by \ybcite{wa:76}.  The spectrum of
+this star appears normal, with a moderate wind contamination of the
+\hi\ lines typical of its spectral type. There appears to be some weak
+emission in the unidentified $\lambda\lambda$4465, 4505\AA\ doublet
+(this doublet is briefly discussed in section
+\ref{analysis:hd195592}). The fit diagram shows little scatter of the
+lines, and gives \teff~=~32.5~kK,
+\logg~=~3.3 for $y$~=~0.15. None of the \hei\ triplet lines
+($\lambda\lambda$4026,~4471,~4713\AA) are in very good agreement with
+the other lines on the fit diagrams, but the only two lines that are
+in great disagreement are \hei~$\lambda$4471\AA\ and
+\hei~$\lambda$4713\AA. \hei~$\lambda$4713\AA, as discussed in
+section \ref{sec:ews}, is very insensitive to changes in \teff\ and
+\logg, and the model spectrum fits the observations for this line
+well. For \hei~$\lambda$4471\AA\ the synthetic spectrum is
+consistently too weak for most of the stars in the sample. This is
+undoubtedly due to the `generalized dilution effect' which was shown
+by \ybcite{vo:89} to be very strong for this line (see also discussion
+in section \ref{sec:ews}).
+
+
+\subsection{HD 12323}  %%%%%%%%%%%%%%
+\label{analysis:hd012323}
+HD~12323 is among the ON main-sequence (ON9~V) stars classified by
+\ybcite{wa:76}. The line profiles in this star are best fitted with a
+rotational broadening function, and we have derived a rotational
+velocity of 131~\kms. This corresponds well with the velocities found
+by other authors (see table \ref{ta:sample_vsini}). The fit diagrams
+show a fairly large scatter in the parameters predicted by the \hei\
+lines. At surface gravities higher than \logg~=~3.7 there are models
+calculated only for \logg~=~4.0 and 4.5 (below \logg~=~3.7 the grid is
+calculated with a step size of 0.1~dex). This increased step-size,
+coupled with the fact that the lines get more sensitive to changes in
+equivalent width (see figures \ref{fig:cont:he1} and
+\ref{fig:cont:he2}) is probably the cause of the large scatter. The
+solution, however, is well constrained by the \hi\ and
+\heii\ lines.
+
+In this case, the impact parameter analysis has to be applied very
+carefully, since the automatic procedures can very easily be fooled by
+the horizontal appearance of lines that predict surface gravities
+higher than the scope of the model grid. These lines have to be
+removed before running the impact parameter routines. The smallest
+scatter is found for $y$~=~0.17, and the predicted parameters are
+\teff~=~36~kK and
+\logg~=~4.1. The synthetic spectrum fits the observations well,
+although the \hi\ line cores are consistently predicted too weak. This
+is the opposite of what is observed for most stars in the sample,
+where the observed cores are filled in by emission from the stellar wind. The
+only ways of matching the observed \hi\ line profiles are by either
+lowering the temperature and surface gravity of the models until they
+fall well outside the O star range, or by lowering the rotational
+velocity. Neither of these options is likely to give realistic
+results, and they fail to reproduce the observed profiles of the \hei\
+and \heii\ lines. Lowering the helium abundance to a solar value
+($y$~=~0.09) has only a negligible effect on the \hi\ lines.
+
+The \heii\ line strengths are well matched by the models, but in the
+case of \heii~$\lambda$4200\AA\ the blend with N\scr{3} as discussed
+in chapter \ref{ch:casestudy} is very obvious. \heii~$\lambda$4686\AA\
+is also, unlike what is noted for most other stars in the sample,
+predicted too weak.
+
+\subsection{HD 13745}  %%%%%%%%%%%%%%
+\label{analysis:hd013745}
+
+This star is of spectral type O9.7 II((n)) (\cite{wa:76}), where `((n))'
+indicates that the star has broad lines. The exact criterion used by
+\ybcite{wa:71supp} and by the same author in subsequent papers, was that
+the lines $\lambda\lambda$4116 and 4121\AA\ (see appendix
+\ref{app:osumm}) are just merged (using spectra with a spectral
+dispersion of 63~\AA~mm$^{-1}$). This star has, in fact, the second
+highest broadening velocity of the sample, with a rotational velocity
+of 176~\kms. It has also the highest helium abundance of the
+sample. The impact parameter analysis indicates a helium abundance as
+high as $y$~=~0.20, and also \teff~=~33~kK and \logg~=~3.3. The fit
+diagram is fairly well constrained, with only the \hei\ triplet lines
+$\lambda\lambda$4471,~4713\AA\ in serious disagreement. Comparisons of
+synthetic and observed spectra are complicated by the fast rotation of
+this star. At these high velocities the lines are very broad and it is
+difficult to identify a continuum. Of the `problem' \hei\ lines,
+$\lambda$4471\AA\ is predicted too weak, whereas $\lambda$4713\AA\
+fits well. This line probably only appears to disagree with the other
+lines in the fit diagram, due to its low sensitivy to \teff\ and \logg.
+
+Of the other lines, the \heii\ lines fit moderately well, although
+$\lambda$4686\AA\ is predicted too strong. This could be due to wind
+emission contaminating this line. This is quite commonly observed in
+giants and supergiants in this region of the H--R diagram.
+
+
+\subsection{HD 16429}  %%%%%%%%%%%%%%
+\label{analysis:hd016429}
+
+HD~16429 was noted by \ybcite{wa:76} to be nitrogen deficient. He
+classified it as O9.5~II((n)) where again ((n)) denotes very broad
+lines. It has the broadest lines the sample with a
+\vsini~=~216~\kms. The \hi\ lines show clearly asymmetric line
+profiles (see plots on page
+\pageref{sec:summary_hd016429} in appendix
+\ref{app:osumm}) where the red wing is much steeper than the blue wing, 
+probably caused by filling-in by emission in the stellar wind.
+
+The fit diagrams for this star shows a large scatter in the \teff\ --
+\logg\ plane. The helium abundance appears to be high, and the impact
+parameter analysis indicates that the inferred value can be higher
+than 0.15; however, this is probably caused by the tendency for lines
+to cluster by the edge of the grid -- in this case the lower limit for
+\logg\ which is closely related to the Eddington limit. The best
+estimate of $y$ is approximately 0.12. At this value, only a few of
+the plots for the \hei\ lines have reached the edge of the grid and
+the intersection between the \hi\ and \heii\ lines is centered between
+the \hei\ lines. For this helium abundance, the parameters predicted
+by the models are \teff~=~35~kK and \logg~=~3.4.
+
+The model spectrum reproduces the observations well. Most of the \hei\
+lines fit, with only \hei~$\lambda$4026\AA\ and $\lambda$4471\AA\
+being predicted too strong and too weak respectively.  It is not
+unusual for the triplet lines not to fit well, and $\lambda$4471\AA\
+is almost always predicted too weak.
+
+The \heii\ lines all fit resonably well. \heii~$\lambda$4200\AA\ fits
+poorly in the blue wing. The $\lambda$4541\AA\ model appears too
+strong. However, continuum placement is difficult with such broad
+lines, and $\lambda$4541\AA\ is in a very `crowded' part of the
+spectrum. \heii~$\lambda$4686\AA\ could possibly show some signs of
+wind contamination, although it also possible that, like
+$\lambda$4541\AA\, the rectification could be imperfect.
+
+The \hi\ lines fit very well, although they are all badly blended at
+these high line-broadening velocities.
+
+\subsection{HD 30614}  %%%%%%%%%%%%%%
+\label{analysis:hd030614}
+
+\ybcite{wa:76} classified $\alpha$~Camelopardalis (HD~30614) as O9.5~Ia, and
+included it in his list of stars with morphologically normal CNO spectra.  
+However,
+\ybcite{bi:82} proposed that it might be an ON star. From the line
+broadening analysis, we have adopted a macroturbulent broadening
+velocity of 90~\kms\ for this star, a value which falls more or less
+in the middle of the distribution of \vsini\ values published by other
+authors (see table \ref{ta:sample_vsini}). The spectrum is typical of
+a luminous star, with strong H$\alpha$ emission;
+C\scr{3}~$\lambda$5696\AA\ and the unidentified lines at
+$\lambda\lambda$4486, 4504\AA\ are also in emission. The 4630 -- 4640
+-- 4650\AA\ CNO complex appears normal with no indication of unusually
+strong nitrogen lines.
+
+The fit diagram clusters very tightly with only
+\hei~$\lambda\lambda$4471, 4713\AA\ and \heii~$\lambda$4686\AA\ giving
+discrepant results. \heii~$\lambda$4686\AA\ is probably contaminated
+by emission from the wind. The fit diagrams indicate a moderately high
+helium fraction of 0.13. The physical parameters predicted by the
+models for this value of $y$ are \teff~=~33~kK and \logg~=~3.1. The
+resulting model spectra fit the observations well for most
+lines. \hei~$\lambda$4471\AA\ is predicted too weak, and
+\heii~$\lambda$4686\AA\ is predicted too strong, in agreement with the
+assumption that it is contaminated by wind
+emission. \heii~$\lambda$4200\AA\ appears to be predicted too weak,
+but this is probably due to the blend with N\scr{3}.
+
+\subsection{HD 34078}  %%%%%%%%%%%%%%
+\label{analysis:hd034078}
+
+HD~34078 (AE~Aurigae), is an O9.5~V star (\cite{wa:73}) with a
+spectrum that appears very similar to that of 10~Lac (see chapter
+\ref{ch:casestudy}). It has a rotational broadening velocity similar
+to that of 10~Lac (30~\kms) and consequently the problems with
+measuring and fitting the lines for 10~Lac discussed in chapter
+\ref{ch:casestudy} apply to AE~Aur as well. 
+
+The fit diagram shows even a bit more scatter in the predicted
+parameters than those for 10~Lac, although the \hi\ lines are all in
+fairly good agreement. The maximum deviation in \logg\ predicted by
+the \hi\ lines is about $\pm 0.15$, and the spread in \teff\ from the
+\hei\ lines at the adopted value of \logg~=~4.2 is about 6~kK. This is
+greatly reduced by the \heii\ lines, where the spread is only
+3~kK. \heii~$\lambda$4200\AA\ predicts a slightly higher temperature
+than the other \heii\ lines. This is probably because the equivalent
+width has been overestimated as a result of the blend with
+N\scr{3}. Figure \ref{fig:ew_errors:he2} shows that an increase in
+equivalent width gives a higher temperature for the \heii\ lines, so
+the error on the temperature estimate caused by the spread of the
+lines is probably less than $\pm 1$~kK.
+
+For a helium fraction of $y$~=~0.09 we find \teff~=~37~kK and
+\logg~=~4.2. For these values the model spectrum fits the observed
+spectrum reasonably well, and matches the observed equivalent widths
+more or less within the errors on the measurements, which are probably
+similar to those of 10~Lac (see chapter \ref{ch:casestudy}).
+
+For the \hei\ lines, most of the cores of the lines appear to
+weak. This could be due to a too high value for the rotational
+broadening velocity, or possibly due to use of a wrong broadening
+function. The model reproduces the \heii\ line profiles well, with the
+exception of \heii~$\lambda$4686\AA\ for which, like in 10~Lac, the
+model profile appears too narrow. The \hi\ lines also have the same
+problems as in 10~Lac, where the model profile fits the wings very
+well, but the cores are too weak.
+
+%\note{Voels et al. 1989, p1082, refers to Herrero 1987: consistently
+%poor fits at the centres of hydrogen lines for stars with low
+%rotational veolicty, arise because pressure broadening is ignored in
+%the statsitcal equilibrium calculations. I presume this is the case
+%for our models as well?}
+
+\subsection{HD 36486}  %%%%%%%%%%%%%%
+\label{analysis:hd036486}
+$\delta$ Orionis (HD~36486), one of the Orion Belt stars, is
+classified as O9.5 II by \ybcite{wa:76} with a note that it shows
+signs of moderate morphological nitrogen deficiency. It has quite a
+high macroturbulent broadening velocity of 126~\kms.
+
+The fit diagrams show an unusually large spread in the plots of the
+\hi\ lines. In particular, H10~$\lambda$3797\AA\ predicts a far higher
+value of the surface gravity than the rest of the \hi\ lines. The fit
+diagrams suggest a helium fraction of 0.10, with \teff~=~34~kK and
+\logg~=~3.4. The model spectrum for these parameters fits well, with
+the notable exception of the \hi\ lines. The red wing of these lines
+all have a very broad shape, with the wings far weaker than what is
+predicted by the models. This is probably also the reason why
+H10~$\lambda$3797\AA, the line with the strongest blend in the blue
+wing, predicts a very different surface gravity than the rest of the
+\hi\ lines. The blend makes the area that is suitable for fitting very
+small. It also appears that the red-wing asymmetry also could be
+present in some of the \hei\ lines. The \heii~$\lambda$4200\AA\ line
+fits far better than what is observed for most of the other stars. If
+we assume that this line normally appears to be stronger than the
+model predictions because of the nitrogen blends, then this supports
+Walborn's (\citeyear{wa:76}) classification of this star as nitrogen
+deficient.
+% Could asymmetry be caused by binary contamination?
+
+
+\subsection{HD 37742}  %%%%%%%%%%%%%%
+\label{analysis:hd037742}
+$\zeta$ Orionis (HD~37742) is the second Orion Belt star of the
+sample. The third, $\epsilon$~Orionis (HD~37128), is a B0~Ia
+star, and falls outside the scope of this thesis. $\zeta$~Ori has,
+like $\delta$~Ori, relatively broad lines, and we adopt a
+macroturbulent velocity of 109~\kms\ for this star. This star is
+classified O9.7~Ib, and it and the other Orion Belt stars were
+classified and discussed in \ybcite{wa:76}. Walborn also noted that
+all three stars were moderately nitrogen deficient.
+
+The fit diagram is well confined, with only \heii~$\lambda$4686\AA\
+diverging from the other lines. The closest clustering of the plotted
+lines is found for $y$~=~0.10, with \teff~=~34~kK and \logg~=~3.3. The
+model spectra fit well. Some asymmetries like in $\delta$~Ori are 
+possibly present in the \hi\ lines, although they do not appear as
+strong. \hei~$\lambda$4713\AA\ appears to have a `bump' in the red
+wing, which is also possibly present in some of the other \hei\
+lines. This star shows very little absorption in
+\heii~$\lambda$4200\AA\ from the blend with N\scr{3}, consistent
+with Walborn's N-deficient classification.
+
+
+\subsection{HD 188209}  %%%%%%%%%%%%%%
+\label{analysis:hd188209}
+
+HD~188209 was classified O9.5 Iab by \ybcite{wa:76}, and we have
+adopted a macroturbulent broadening velocity of 65~\kms. The fit diagrams
+for this star are very tight, and the impact parameter solution is at
+the point where the \heii\ lines turn over from being temperature to
+gravity sensitive. The adopted solution for $y$~=~0.14 is
+\teff~=~33.0~kK and \logg~=~3.1. The model spectrum fits the
+observations very well, with only a very few
+exceptions. \hei~$\lambda$4471\AA\ is, as usual, predicted too weak,
+\heii~$\lambda$4200\AA\ shows signs of blending and
+\heii~$\lambda$4686\AA\ is probably contaminated by
+emission. H$\alpha$ is not in emission (above the continuum), but it
+is almost entirely filled in. The model \hi\ lines fit the
+observations well, with the exception of \hi~$\lambda$3935\AA\ which
+has broader wings than predicted by the models. Usually this would be
+indicative of a higher surface gravity, but in this case could be
+caused by blends.
+
+\subsection{HD 189957}  %%%%%%%%%%%%%%
+\label{analysis:hd189957}
+This star is an O9.5~III (\cite{wa:73}), and the line profiles show
+very clearly the macroturbulent v-shape. We derived a
+macroturbulent broadening velocity of 85~\kms.
+% Check that v-shape is discussed somewhere
+
+The fit diagrams show some scatter, especially H9~\lam3835\AA\
+which predicts a higher \logg\ than the other \hi\ lines. The model profiles
+confirm this, showing that the wings of this line are predicted too
+narrow. The impact parameter analysis suggests that $y$~=~0.11 with
+\teff~=~33~kK and \logg~=~3.5 is the best solution for this star. The
+model profiles are not very good, however. All the \heii\ lines are
+predicted too weak, something that usually suggests that the
+temperature is estimated slightly too low. The equivalent widths match
+well, so it could be a matter of using a slightly too high
+line-broadening velocity or even that the data rectification is
+slightly off.
+
+
+\subsection{HD 191781}  %%%%%%%%%%%%%%
+\label{analysis:hd191781}
+Classified ON9.7~Iab by \ybcite{wa:76}, this star shows all the signs
+of a `typical' ON star. N\scr{3}~$\lambda$4640\AA\ is clearly much
+stronger than the C blends at 4650\AA\ (see figure \ref{fig:on_oc}). We
+find a macroturbulent broadening of 89~\kms\ for this star.
+
+The fit diagrams are very tight with all lines in good agreement, with
+the exception of the \hei\ triplet lines and the blended
+$\lambda$4009\AA\ line. We find a high helium fraction of $y$~=~0.16
+for this star, with \teff=~31~kK and \logg~=~3.1. The model profiles
+fit the observations well, and, after carefully using \elf\ to fit and
+remove the blends from \hei~$\lambda$4009\AA, this line also
+fits. \hei~$\lambda$4143\AA\ is, as usual, modelled too weak. For
+\heii~$\lambda$4200\AA\ the model appears too weak, but this line is
+blended with a N\scr{3} line, which we can expect to be quite strong
+in this star. The \hi\ lines all appear weaker than the model
+profiles. This star has clear emission in H$\alpha$ and the
+discrepancies between the model and observations are probably due to
+wind effects in these lines.
+
+\subsection{HD 194280}  %%%%%%%%%%%%%%
+\label{analysis:hd194280}
+HD~194280 is the only OC star in the sample. It was classified
+OC9.7~Iab by \ybcite{wa:76}. Comparing the spectra of HD~191781 and
+HD~194280 (figure \ref{fig:on_oc}) we can see some clear differences.
+The N\scr{3} lines at \lam\lam4634.2, 4640.6 and 4641.9\AA\ (and
+possibly also the N\scr{2} \lam4630.5\AA\ line) are much stronger in
+the ON star HD~191781, whereas the C\scr{3} lines at \lam\lam4647.4
+and 4650.3\AA\ are much stronger in the OC star. Most of the other
+lines appear to be of similar strenght in the two spectra. The spectra
+of these two stars in the range 3800 -- 6200\AA\ are included in
+appendix \ref{app:ocn}.
+
+\begin{figure}
+\epsfxsize=15cm
+\epsfbox{fig_analyses/on_oc/on_oc.eps}
+\caption[The spectra of the ON star HD~191781 and the OC star
+HD~194280]{\fcfont The \lam4650\AA\ spectra of the ON star HD~191781 and the OC
+star HD~194280}
+\label{fig:on_oc}
+\end{figure}
+
+The fit diagrams for this star show a well defined solution for $y$=0.09 with
+\teff~=~32~kK and \logg~=~3.2.
+
+
+\subsection{HD 195592}  %%%%%%%%%%%%%%
+\label{analysis:hd195592}
+This star is undoubtedly  very luminous. The spectrum shows a
+large number of emission lines, including
+Si\scr{3}~$\lambda$3806.5\AA, the unidentified lines at
+$\lambda\lambda$4486, 4504\AA, C\scr{3}~$\lambda$5695.9\AA, and of
+course several of the \hi\ lines, including H$\alpha$. There also
+appear to be several other weak emission lines, some of which are
+shown in figure \ref{fig:hd195592_emission}.
+
+\begin{figure} %%%%% FIGURE
+\epsfxsize=15cm
+\epsfbox{fig_analyses/hd195592/hd195592.eps}
+\caption[Emission lines in HD~195592]
+{\fcfont Some lines in the optical spectrum of HD~195592. H$\alpha$ has been
+plotted on a different scale than the other lines. To obtain good S/N
+we had to saturate this line (see also fig \ref{fig:splif_wide}).}
+\label{fig:hd195592_emission}
+\end{figure} %%%%%%
+
+This star has relatively narrow lines (see also table
+\ref{ta:elf_vs_ew} in chapter \ref{ch:casestudy}), and 
+we have adopted a macroturbulent broadening profile of 54~\kms. The
+fit diagrams show a very tight clustering of the lines, and the impact
+parameter analysis yields a best estimate at $y$~=~0.12 with
+\teff~=~31~kK and \logg~=~3.0. The model profiles fit well, but the
+\hi\ lines show clear effects of emission filling in the cores, and
+\heii~$\lambda$4686\AA\ is not visible as an absorption feature (there
+is some slight emission at the centre of the line).
+
+\subsection{HD 201345}  %%%%%%%%%%%%%%
+\label{analysis:hd201345}
+
+This is the second ON main-sequence star in the sample. It was
+classified as ON9~V by \ybcite{wa:76}, and shows the same
+characteristic strong nitrogen and weak carbon and oxygen lines as
+HD~12323.  It is a relatively fast rotator, with a \vsini\ of
+109~\kms.
+
+The fit diagrams show quite large scatter for the lines, possibly due
+to errors introduced into the measurements of the equivalent widths
+because of the fast rotation (like unidentified blends etc.). The
+impact parameter analysis suggests a helium fraction $y$~=~0.14, with
+\teff~=~36~kK and \logg~=~3.9. For these parameters, the model
+profiles fit well, with a few exceptions. As usual, the 
+\hei~$\lambda$4471\AA\ model line is too weak, and so is, very unusually,
+\heii~$\lambda$4686\AA. This line is only modelled too weak for the
+main-sequence stars, and it is possible this is due to shortcomings in
+the models.
+
+
+\subsection{HD 202124}  %%%%%%%%%%%%%%
+\label{analysis:hd202124}
+For HD~202124, classified O9.5~Iab by \ybcite{wa:76}, we have adopted
+a macroturbulent broadening velocity of 93~\kms. The lines on the fit
+diagrams are all in good agreement, apart from
+\heii~$\lambda$4686\AA. However, this star shows emission in H$\alpha$
+and it is thus likely that also \heii~$\lambda$4686\AA\ will be
+contaminated by emission. Indeed, by comparing with models for our
+adopted parameters of $y$~=~0.13, \teff~=~34~kK and \logg~=~3.2, it is
+clear that this line is clearly filled-in. All other lines fit well,
+with the usual exception of \hei~$\lambda$4471\AA. The \hi\ line cores
+are all predicted too strong, probably due to wind contamination in
+these lines.
+
+
+\subsection{HD 207198}  %%%%%%%%%%%%%%
+\label{analysis:hd207198}
+HD~207198 (O9~Ib--II; \cite{wa:76}) has an interesting spectrum,
+showing emission in several lines, including the unidentified doublet
+at $\lambda\lambda$4486, 4505\AA\ and
+C\scr{3}~$\lambda$5695.9\AA. There also seems to be some emission in
+the 4630 -- 4640\AA\ region. We find \teff~=~36~kK and
+\logg~=~3.4 for $y$~=~0.12. Comparing the model with the observed
+spectrum of this star, it looks like there is a wavelength shift in
+\heii~$\lambda$4686\AA\ between the model and the observations;
+however it is more likely that it just appears that way due to wind
+contamination in this line (figure \ref{fig:hd207198}).
+
+\begin{figure} %%%%% FIGURE
+\epsfxsize=\figwidth
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_analyses/hd207198/hd207198.eps}
+\caption[Unusual wavelength shift of \heii~\lam4686\AA\ in HD~207198]
+{\fcfont The \heii\ lines with model fits for HD~207198. The unusual
+apparent wavelength shift of \heii~\lam4686\AA\ is probably caused by
+wind contamination (see text).}
+\label{fig:hd207198}
+\end{figure} %%%%%%
+
+\subsection{HD 209975}  %%%%%%%%%%%%%%
+\label{analysis:hd209975}
+HD~209975 was classified O9.5~Ib by \ybcite{wa:76}. It has a
+macroturbulent broadening velocity of 69~\kms, and from the fit
+diagrams appears to have a solar helium abundance. The fit diagrams are
+well confined, and most lines are in good agreement.
+\heii~$\lambda$4686\AA\ predicts a temperature a few thousand Kelvin
+colder than the other \heii\ lines. The model spectrum for $y$~=~0.09,
+\teff~=~35~kK and \logg~=~3.4 fits well, with only
+\hei~$\lambda$4471\AA\ and \heii~$\lambda$4686\AA\ predicted too weak
+and too strong respectively. Some of the \hi\ lines show signs of weak
+filling-in in the red wing.
+
+\subsection{HD 210809}  %%%%%%%%%%%%%%
+\label{analysis:hd210809}
+
+The fit diagrams for this star show a small amount of scatter. Most of
+the \hei\ singlets are in good agreement, with the exception of
+\hei~$\lambda$4009\AA\ which predicts a slightly lower
+temperature/higher surface gravity. This is most likely due to an
+overestimation of this line's equivalent width resulting from a
+blend. \heii~$\lambda$4686\AA\ fits at a temperature several thousand
+K colder than the other \heii\ lines, which is not unexpected for a
+O9~Iab star. The spectrum shows clear emission in H$\alpha$ and it is
+likely that \heii~$\lambda$4686\AA\ is also contaminated by stellar
+wind emission. The impact parameter suggests a helium fraction of
+0.13, but the results are inconclusive for the temperature and
+gravity. With the inclusion of \heii~$\lambda$4686\AA\ we get
+\teff~=~35~kK and
+\logg~=~3.4. The model spectrum for these parameters fits reasonably
+well, but the \heii\ lines are all predicted too weak. By ignoring
+$\lambda$4686\AA\ in the analysis, we find a temperature of
+\teff~=~36~kK and \logg~=~3.3. This solves the problem with the weak
+\heii\ lines and the overall fit is much better, althought the adopted
+uncertainties encompass both solutions. 
+% (if that is true)
+
+\subsection{HD 214680}  %%%%%%%%%%%%%%
+\label{analysis:hd214680}
+
+This is 10~Lac, and the analysis of this star is discussed in detail
+in chapter \ref{ch:casestudy}.
+
+\subsection{HD 218195}  %%%%%%%%%%%%%%
+\label{analysis:hd218195} 
+
+This star was classified O9~III by \ybcite{wa:76}, and he also noted
+that the spectrum, although not an ON spectrum, shows signs of
+moderate nitrogen enhancement.
+
+The fit diagram for this star is fairly well defined, and the impact
+parameter analysis suggests a helium number fraction, $y$~=~0.12 with
+\teff~=~37~kK and \logg~=~3.6. The model spectrum fits the
+observations well, with the usual exception of
+\hei~$\lambda$4471\AA. The N\scr{3} blend in \heii~$\lambda$4200\AA\
+appears strong, in agreement with Walborn's classification of the star
+as nitrogen enhanced. \heii~$\lambda$4686\AA\ shows no signs of
+filling-in, but appears to have some extra absorption in the red wing.
+
+\subsection{HD 218915}  %%%%%%%%%%%%%%
+\label{analysis:hd218915}
+
+HD~218195 was classified O9.5~Iab by \ybcite{wa:76}. The fit diagram
+appears tight, but shows quite a large scatter in the \heii\ lines. We
+have adopted $y$~=~0.10, \teff~=~34.0 and \logg~=~3.2 as the
+parameters for this stars. The model spectrum fits the observations
+well, although \heii~$\lambda$4686\AA\ show signs of filling-in. 
+
+\subsection{HD 225160}  %%%%%%%%%%%%%%
+\label{analysis:hd225160}
+
+HD~225160 is the only O8 star in the sample (O8 Ib(f) --
+\cite{wa:76}). The fit diagram is fairly tight, but the weak \hei\
+lines are in disagreement with the other lines. Both
+\hei~$\lambda$4009\AA\ and $\lambda$5047\AA\ predict lower \teff\
+(models underestimate the equivalent width) than the rest of the
+\hei\ lines (with the exception of \hei\ \lam4471\AA which
+consistently is predicted too weak). This star has very broad lines
+and we have adopted a macroturbulent broadening velocity of 109~\kms.
+
+The model spectrum for the adopted parameters of $y$~=~0.15,
+\teff~=~38~kK and \logg~=~3.4 appears to fit well with the exception of
+\heii~$\lambda$4686\AA\ which is completely filled in. All the \hi\
+lines also show clear signs of filling-in, and the star has several
+strong emission lines. There also appears to be some emission in the
+4630~--~4640\AA\ region, possibly due to N\scr{3}.
+
+\subsection{BD +36 4063}  %%%%%%%%%%%%%%
+\label{analysis:bd+364063}
+
+This star is the only star in the sample that was not originally
+classified by Walborn. It was first classified as ON by \ybcite{ma:89}
+(ON9.7~I), and appears similar to that of HD~191781 only with even
+weaker carbon lines. This star is also a binary (Howarth, private
+communication), and unfortunately the spectrum is of quite low S/N
+compared to the other stars in the sample because the star is much
+fainter. However, the fit diagrams appear quite well confined,
+although the \heii\ and \hi\ lines show slightly larger scatter than
+the norm.
+
+The model spectrum for $y$~=~0.11, \teff~=~32~kK and
+\logg~=~3.1 fits the observations fairly well, although there appears
+to be some absorption in the red wing of most lines. \hi\ lines fit
+poorly, although this could be due to wind contamination. This
+star has strong H$\alpha$ emission, and \heii~$\lambda$4686\AA\
+is too weak in the model spectrum.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SECTION = Microturbulence %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Microturbulence}
+\label{sec:analyses:mturb}
+
+In chapter \ref{ch:mod} we saw how the inclusion of microturbulence in
+the line formation calculations increases the equivalent width of most
+\hei\ lines, especially at low surface gravities. The effects of this on the
+fit diagrams can clearly been seen in figure \ref{fig:mturb}. The
+strengthening of the \hei\ lines mean that we can get consistent fits
+at lower $y$ than we would for zero microturbulence. This has another
+interesting effect. The \heii\ lines are relatively unaffected by
+microturbulence in our grid (in more recent calculations by
+\cite{sm:98}, this is not necessarily the case). Since we have to
+lower the helium abundance to match equivalent widths for the \hei\
+lines, we have to increase the temperature to get consistent fits for
+the \heii\ lines. From figure \ref{fig:mturb} (and also appendix
+\ref{app:osumm}) it appears that the temperatures are about 1~--~2~kK
+higher%
+\footnote{All temperatures quoted previously in this chapter \emph{do}
+include microturbulence unless otherwise stated}
+%
+when including a microturbulence of 15~\kms.
+
+\begin{sidewaysfigure} %%%%%%%%%% FIGURE
+\epsfysize=13cm
+\epsfbox{fig_analyses/hd218915_4ew.eps}
+\caption[Fit diagrams showing dependence on microturbulence]
+{\fcfont Series of fit diagrams for HD~218915 (O9.5 Iab) showing
+dependence on microturbulence, $\xi$, and helium abundance,
+$y$. Microturbulence increases from left to right (0, 5, 10, 15~\kms)
+and helium abundance from top to bottom (0.08, 0.10, 0.12).}
+\label{fig:mturb}
+\end{sidewaysfigure} %%%%%%%%%% END FIGURE
+
+The microturbulence is also relatively more important for the \hei\
+triplet lines \lam\lam4471 and 4713\AA\ than the other \hei\
+lines. These two lines are typically predicted too weak in standard
+analyses not taking microturbulence into account
+(cf. the \emph{generalized dilution effect}, see section \ref{sec:ews}).
+Including a microturbulence of 15~\kms\ does increase the strength of
+this line, but not enough to fit the observations. However,
+\ybcite{sm:98} have shown that this line is
+strengthened further by treating microturbulence in both the
+statistical equilibrium and line formation calculations, and that this
+could be enough to solve the discrepancy.
+
+The results of the impact-parameter analyses described earlier
+favour a microturbulent velocity, $\xi$, of 15~\kms\ for all stars
+except HD~207198 (O9 Ib-II; $\xi = 0$~\kms) and HD~218195 (O9 III;
+$\xi = 10$~\kms). However, in both of these cases this is probably caused by a
+slight `defect' in the way we perform the impact-parameter
+calculations. As mentioned previously in this chapter, outliers are
+rejected before re-calculating the impact parameters. For both of these
+stars, more lines were included in the $\xi = 15$~\kms\ fits, and
+these probably do represent the most consistent fits. For these
+reasons we have chosen to adopt a microturbulent velocity of 15~\kms\
+for all the stars in the sample, including the main-sequence stars,
+although microturbulence is relatively unimportant for these stars
+(see also chapter \ref{ch:mod}).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SECTION = Summary of results %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Physical parameters of the O stars}
+
+The adopted parameters for the WHT sample stars are summarised in
+table \ref{ta:ostars}, and the observed and modelled equivalent widths
+(and their ratios) are shown in table \ref{ta:ostars_ews}. There are
+two trends of particular interest in this table:
+
+\begin{itemize}
+\item	The \hei\ line \lam4009\AA\ is consistently predicted too
+	weak. The median ratio of $W_\mathrm{obs}/W_\mathrm{mod}$ for
+	this line is over 1.4. This is probably due to some
+	unidentified blending.
+
+\item	The median of $W_\mathrm{obs}/W_\mathrm{mod}$ for the \hei\
+	lines in each star is almost consistently larger than 1. This
+	can probably be attributed to the impact-parameter analysis
+	introducing a systematic bias. The effect seems to be
+	particularly strong in stars where the fit-diagram
+	intersection zone is close to the point where the \heii\ lines
+	go from being temperature sensitive to gravity sensitive
+	(e.g. HD~188209, HD~210809 and HD~218915). It is possible that
+	this `pulls' the solution towards a slightly lower gravity
+	causing an underestimation of the equivalent width of the
+	\hei\ lines. However this effect is likely to be small, and
+	within the uncertainty of the results.
+\end{itemize}
+
+For HD~12323 the ratio of the \hei\ lines to the models seem to be
+particularly large; the median value is 1.153. This star has a helium
+abundance which is very high, and the lines show a large scatter on
+the fit-diagrams. It is possible that we have slightly underestimated
+the helium abundance ($y = 0.17$), but increasing the helium abundance
+results in a larger scatter of the lines on the fit-diagrams. The
+solution for this star lies very close to the high-gravity limit of
+our grid of models, and it is therefore possible that unwanted
+`edge-effects' caused by interpolating the models causes a higher
+uncertainty for all determined parameters for this star (see below).
+
+
+\subsection{Uncertainties}
+\label{sec:analyses:err}
+
+It is possible to obtain an estimate of the uncertainties on the
+results from the impact-parameter analyses. When finding the
+point of closest approach to all the measured lines, the scatter of
+the lines will be related to the internal error on our measurements
+and models (not taking into account systematic effects caused by
+missing physics in the models etc.). Typically the RMS scatter of the
+lines is of the order 0.5~--~1.0~kK in effective temperature, and
+0.05~--~0.09~dex in surface gravity. However, these values are only
+valid if we only fit on 2-D grid, i.e. have fixed values of the helium
+abundance and microturbulence. As discussed above, it appears that all
+the stars show microturbulent velocities of the order 15~\kms, and
+that neglecting microturbulence altogether will only lower the
+temperatures by 1~--~2~kK. This probably means that the uncertainty on
+the choice of microturbulence is likely to have only a negligible effect
+on the temperatures and gravities. The helium abundance, however, will
+probably be more important. The analyses vary the helium abundance
+from subsolar $y = 0.08$ to about $y = 0.20$ in steps of 0.01. It
+appears that the impact-parameter analysis is able to distinguish the
+best-fit model from its `neighbours', so the precision of the
+measured helium abundance will be about $\pm 0.01$. The implied uncertainty
+on temperatures and gravities (from impact-parameter solution on the
+neighbouring $y$ fit-diagrams) appear to be of the order 0.5~kK in
+\teff\ and 0.05 dex for \logg. 
+
+Within the context of the adopted models, good estimates of the
+uncertainties on the four fitted parameters are then $\pm 1$~kK and
+0.1~dex for \teff\ and \logg\ respectively, $\pm 0.01$ for the helium
+number fraction, and $\pm 5$~\kms\ for the microturbulence. Of course,
+the results may be wrong by much larger amounts. This will not be
+clear until dynamical, spherically extended, line-blanketed nLTE
+models are available for comparison (but see section \ref{sec:comp}).
+
+\subsection{Masses and radii}
+
+Using absolute visual magnitudes, $M_V$, from Garmany's unpublished
+catalogue of O stars,%
+\footnote{For HD~34078 Garmany gives $M_V = -5.0$ (probably from
+\cite{hu:78}). However \acite{hu:78} based this number on the
+assumption that HD~34078 belongs to the Ori OB1 association. According
+to \ybcite{gi:87} this might not be the case. Like
+\ybcite{he:92}, we therefore adopt a value of $M_V = -4.0$, which approximately
+corresponds to a main-sequence star of this spectral type
+(\cite{co:83}).}
+%
+(cf. \cite{ga:imf}) we can calculate radii and spectroscopic masses
+for the sample. We can find the bolometric correction using:
+%
+\begin{equation}
+\mathrm{BC} = K - 0.08(\teff/\mathrm{kK})
+\end{equation}
+%
+where the constant $K$ is weakly dependent on surface gravity. We
+adopt the values from \ybcite{ho:winds} with $K = -0.6$ for supergiants,
+and $K = -0.5$ for all other luminosity classes. We can now calculate
+luminosities and radii from:
+%
+\begin{equation}
+\log(L_\star / L_\odot) = -0.4 (M_\mathrm{BOL} - 4.75)
+\end{equation}
+%
+and
+%
+\begin{equation}
+\log(R_\star / R_\odot) = 0.5 \log(L_\star / L_\odot) - 2 \log(\teff/T_\odot) 
+\end{equation}
+%
+These derived parameters are listed in table \ref{ta:ostars:derived}
+with internal error estimates using the uncertainties discussed in
+section \ref{sec:analyses:err} and $\pm$~0.3 for $M_V$ (see \cite{he:92}).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% SECTION = Other Sources  %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Comparisons with published work}
+\label{sec:comp}
+
+Plotting the effective temperatures against `typical' temperatures
+from \ybcite{ho:winds} reveals a systematic difference (figure
+\ref{fig:teffplot}). The temperatures are clearly seen to increase
+with spectral type, and the slope of the relation appears to be the
+similar for our adopted values and those listed in Howarth and Prinja,
+however our temperatures come out systematically higher by about
+2~--~5~kK for all luminosity classes.
+
+The same plot for surface gravities (fig \ref{fig:loggplot}), reveals
+a much closer correlation between the values in Howarth and Prinja and
+those adopted here, although for the giants and supergiants there
+might be a slight tendency for our adopted gravities to be slightly
+lower than those in Howarth and Prinja.
+
+Tables \ref{ta:comp:voels} -- \ref{ta:comp:herrero} compare our
+results to those of other authors. The results compare well within the
+uncertainties given above, except with the results of \ybcite{gr:92}
+shown in table \ref{ta:comp:grigsby}. \acite{gr:92} consistently
+predict effective temperatures 6~--~8~kK lower than our adopted
+values. This discrepancy was also noted earlier for 10~Lac, and is
+discussed in section \ref{sec:casestudy:discussion}.
+
+There appears to be a trend for our results to systematically come out
+slightly (about 2~kK) higher than those adopted by other authors. Most
+likely this is due to the inclusion of microturbulence in our study
+and/or the use of an objective impact parameter routine to find the
+best-fit solution. As discussed in section \ref{sec:analyses:mturb},
+using microturbulent velocities of about 15~\kms\ will increase the
+adopted effective temperatures with 1~--~2~kK, which is comparable to
+the systematic differences seen in tables \ref{ta:comp:voels} and
+\ref{ta:comp:herrero}, and could also partly explain the disagreement
+with \acite{ho:winds}. The surface gravities and helium abundances
+generally agree well.
+
+\begin{table} %%%%%%% TABLE %%%%%%%%%%%%%%%
+\begin{center}
+\caption{Observed parameters of the WHT O stars}
+\vspace{\abovecaptionskip}
+\begin{tabular}{lllrccccc}
+\hline\hline
+HD/BD & \multicolumn{1}{c}{Name} & \multicolumn{2}{c}{Spectral Type} &
+\teff (kK) & \logg & $y$ & L. broadening & $v$ \\
+\hline
+10125 	&		& O9.7 II      	& W76	& 32.5	& 3.3	& 0.15	& mac & 132 \\
+12323 	&		& ON9 V        	& W76 	& 36.0	& 4.1	& 0.17	& rot & 131 \\
+13745 	&		& O9.7 II((n))	& W76	& 33.0	& 3.3	& 0.20	& rot & 176 \\
+16429 	&		& O9.5 II((n))	& W76	& 35.0	& 3.4	& 0.12	& rot & 216 \\
+30614 	& $\alpha$ Cam	& O9.5 Ia  	& W76	& 33.0	& 3.1	& 0.13	& mac & 90  \\
+34078	& AE Aur	& O9.5 V	& W73	& 37.0	& 4.2	& 0.09	& rot & 30  \\
+36486 	& $\delta$ Ori	& O9.5 II	& W76	& 34.0	& 3.4	& 0.10	& mac & 126 \\
+37742	& $\zeta$ Ori	& O9.7 Ib	& W76 	& 34.0	& 3.3	& 0.10	& mac & 109 \\
+188209	& 		& O9.5 Iab	& W76	& 33.0	& 3.1	& 0.14	& mac & 65 \\	
+189957	& 		& O9.5 III	& W73	& 33.0	& 3.5	& 0.11	& mac & 85 \\
+191781	& 		& ON9.7 Iab	& W76	& 31.0	& 3.1	& 0.16	& mac & 89 \\
+194280	& 		& OC9.7 Iab	& W76 	& 32.0	& 3.2	& 0.09	& mac & 101 \\
+195592	& 		& O9.7 Ia	& W76	& 31.0	& 3.0	& 0.12	& mac & 54 \\
+201345	& 		& ON9 V		& W76	& 36.0	& 3.9	& 0.14	& rot & 109 \\
+202124	& 		& O9.5 Iab	& W76	& 34.0	& 3.2	& 0.13	& mac & 93 \\
+207198	& 		& O9 Ib-II	& W76	& 36.0	& 3.4	& 0.12	& mac & 67 \\
+209975	& 19 Cep	& O9.5 Ib	& W76	& 35.0	& 3.4	& 0.09	& mac & 69 \\
+210809	& 		& O9 Iab	& W76	& 36.0	& 3.3	& 0.13	& mac & 89 \\
+214680	&10 Lac		& O9 V		& W73	& 38.0	& 4.2	& 0.09	& rot & 30 \\
+218195	& 		& O9 III	& W76	& 37.0	& 3.6	& 0.12	& mac & 59 \\
+218915 	& 		& O9.5 Iab	& W76	& 34.0	& 3.2	& 0.10	& mac & 68 \\
+225160	& 		& O8 Ib(f)	& W71	& 38.0	& 3.4	& 0.15	& mac & 109 \\
++36 4063& 		& ON9.7 I	& M89	& 32.0	& 3.1	& 0.11	& mac & 84 \\
+\hline\hline
+\end{tabular}
+\label{ta:ostars}
+\end{center}
+\end{table} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%% SIDEWAYS LONG TABLE %%%%%%%%%%%%%%%
+\newcommand{\tabhead}{
+\multicolumn{1}{c}{HD/BD} & \multicolumn{1}{c}{} & 
+\multicolumn{8}{c}{\hei\ equivalent widths (m\AA)} &
+\multicolumn{4}{c}{\heii\ equivalent widths (m\AA)} &
+\multicolumn{2}{c}{Median} \\
+\multicolumn{2}{c}{} & \lam4009\AA & \lam4026\AA & \lam4143\AA & 
+\lam4388\AA & \lam4471\AA & \lam4713\AA & \lam4922\AA &
+\multicolumn{1}{c}{\lam5047\AA} &
+\lam4200\AA & \lam4541\AA & \lam4686\AA &
+\multicolumn{1}{c}{\lam5411\AA} & \hei & \heii \\
+}
+\begin{sidewaystable}
+\scriptsize
+\begin{center}
+\caption{Measured and calculated equivalent widths}
+\vspace{\abovecaptionskip}
+\begin{tabular}{lc|cccccccc|cccc|cc}
+\hline\hline
+\tabhead
+\hline
+\input{tab_analyses/ewtable_1.tex}
+\end{tabular}
+\label{ta:ostars_ews}
+\end{center}
+\end{sidewaystable} 
+
+\begin{sidewaystable} 
+\scriptsize
+\begin{center}
+Table \ref{ta:ostars_ews}: \emph{continued}\\
+\vspace{\abovecaptionskip}
+\begin{tabular}{lc|cccccccc|cccc|cc}
+\hline\hline
+\tabhead
+\hline
+\input{tab_analyses/ewtable_2.tex}
+\end{tabular}
+\end{center}
+\end{sidewaystable} 
+
+\begin{sidewaystable} 
+\scriptsize
+\begin{center}
+Table \ref{ta:ostars_ews}: \emph{continued}\\
+\vspace{\abovecaptionskip}
+\begin{tabular}{lc|cccccccc|cccc|cc}
+\hline\hline
+\tabhead
+\hline
+\input{tab_analyses/ewtable_3.tex}
+\hline\hline
+\end{tabular}
+\end{center}
+\end{sidewaystable} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table} %%%%%%% TABLE %%%%%%%%%%%%%%%
+\begin{center}
+\caption{Derived parameters for the WHT O stars}
+\vspace{\abovecaptionskip}
+\begin{tabular}{llccc r@{~$\pm$~}l r@{~$\pm$~}l r@{~$\pm$~}l}
+\hline\hline
+HD/BD & \multicolumn{1}{c}{Sp. Type} &
+\teff (kK) & \logg & $M_V$ & 
+\multicolumn{2}{c}{$\log_{10}L/L_\odot$} & 
+\multicolumn{2}{c}{$R/R_\odot$} &
+\multicolumn{2}{c}{ $M/M_\odot$}  \\
+\hline
+\input{tab_analyses/derived_params/params.tex}
+\hline\hline
+\end{tabular}
+\label{ta:ostars:derived}
+\end{center}
+\tnote{* -- See discussion in text}
+\end{table} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[p] %%%%%%% TABLE %%%%%%%%%%%%%%%
+\begin{center}
+\caption{Physical parameters in Voels et al. (1989)}
+\vspace{\abovecaptionskip}
+\begin{tabular}{lcccccc}
+\hline\hline
+&
+\multicolumn{3}{c}{This thesis} &
+\multicolumn{3}{c}{Voels et al.} \\
+\multicolumn{1}{c}{HD} &
+ \teff (kK) & \logg & $y$ & \teff (kK) & \logg & $y$ \\
+\hline
+30614	& 33.0 & 3.1 & 0.13 & 30.0 & 2.90 & 0.18 \\
+34078 	& 37.0 & 4.2 & 0.09 & 35.5 & 3.95 & 0.10 \\
+36486	& 34.0 & 3.4 & 0.10 & 33.0 & 3.45 & 0.10 \\
+37742	& 34.0 & 3.3 & 0.10 & 32.0 & 3.20 & 0.10 \\
+\hline\hline
+\end{tabular}
+\label{ta:comp:voels}
+\end{center}
+\end{table} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table} %%%%%%% TABLE %%%%%%%%%%%%%%%
+\begin{center}
+\caption{Physical parameters in Grigsby et al. (1992)}
+\vspace{\abovecaptionskip}
+\begin{tabular}{lccccc}
+\hline\hline
+&
+\multicolumn{3}{c}{This thesis} &
+\multicolumn{2}{c}{Grigsby et al.} \\
+\multicolumn{1}{c}{HD} &
+ \teff (kK) & \logg & $y$ & \teff (kK) & \logg \\
+\hline
+12323	& 36.0 & 4.1 & 0.17 & 29.0 & 4.00 \\
+201345	& 36.0 & 3.9 & 0.14 & 29.0 & 4.00 \\
+214680	& 38.0 & 4.2 & 0.09 & 30.0 & 4.00 \\
+218195	& 37.0 & 3.6 & 0.12 & 31.5 & 3.60 \\
+\hline\hline
+\end{tabular}
+\label{ta:comp:grigsby}
+\end{center}
+\end{table} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table} %%%%%%% TABLE %%%%%%%%%%%%%%%
+\begin{center}
+\caption{Physical parameters in Herrero et al. (1992)}
+\vspace{\abovecaptionskip}
+\begin{tabular}{lcccccc}
+\hline\hline
+&
+\multicolumn{3}{c}{This thesis} &
+\multicolumn{3}{c}{Herrero et al.} \\
+\multicolumn{1}{c}{HD} &
+ \teff (kK) & \logg & $y$ & \teff (kK) & \logg & $y$ \\
+\hline
+34078 	& 37.0 & 4.2 & 0.09 & 36.5 & 4.05 & 0.09 \\
+207198	& 36.0 & 3.4 & 0.12 & 34.0 & 3.30 & 0.12 \\
+209975	& 35.0 & 3.4 & 0.09 & 32.5 & 3.20 & 0.09 \\
+210809	& 36.0 & 3.3 & 0.13 & 33.0 & 3.10 & 0.12 \\
+214680	& 38.0 & 4.2 & 0.09 & 37.5 & 4.00 & 0.10 \\
+\hline\hline
+\end{tabular}
+\label{ta:comp:herrero}
+\end{center}
+\end{table} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure} %%%%%%%%%%%%%%%%%%% FIGURE
+\epsfxsize=9cm
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_analyses/results/teffplot.eps}
+\caption[\teff\ against spectral types for sample stars]
+{\fcfont Effective temperatures against spectral types for sample
+stars. \textbf{top}~--~luminosity class I,
+\textbf{middle}~--~luminosity classes II and III, \textbf{bottom}~--~luminosity
+classes IV and V. The size of the symbols refers to the helium number
+fraction, $y$ (see top diagram for key). `Typical' parameters for O
+stars from Howarth and Prinja (1989) are drawn as lines.}
+\label{fig:teffplot}
+\end{figure} %%%%%%%%%%%%%%%%%%% END FIGURE
+
+\begin{figure} %%%%%%%%%%%%%%%%%%% FIGURE
+\epsfxsize=9cm
+\setlength{\cen}{(\textwidth / 2) - (\epsfxsize / 2)}
+\hspace{\cen}\epsfbox{fig_analyses/results/loggplot.eps}
+\caption[\logg\ against spectral types for sample stars]
+{\fcfont Surface gravity against spectral types for sample
+stars. \textbf{top}~--~luminosity class I,
+\textbf{middle}~--~luminosity classes II and III, \textbf{bottom}~--~luminosity
+classes IV and V. The size of the symbols refers to the helium number
+fraction, $y$ (see top diagram for key). `Typical' parameters for O
+stars from Howarth and Prinja (1989) are drawn as lines.}
+\label{fig:loggplot}
+\end{figure} %%%%%%%%%%%%%%%%%%% END FIGURE
+
+%%%%%%%%%%%%%%%%%% END-OF-CHAPTER FIGURES %%%%%%%%%%%%%%%
+\newpage
+
+
+\begin{figure}[H]
+\epsfxsize=14cm
+\epsfbox{fig_analyses/ewds.1.eps}
+\caption[Fit diagrams for all sample stars]
+{\fcfont Fit diagrams for all sample stars. Catalogue number and
+adopted value of $y$ shown in upper left-hand corner of each
+diagram. Lines that appear horizontal at the bottom of the diagrams fall
+outside the plotted area.}
+\label{fig:allewd}
+\end{figure}
+
+\begin{figure}[H]
+\epsfxsize=14cm
+\epsfbox{fig_analyses/ewds.2.eps}
+\begin{center}
+\vspace{\abovecaptionskip}
+Figure \ref{fig:allewd}: \fcfont -- continued
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\epsfxsize=14cm
+\epsfbox{fig_analyses/ewds.3.eps}
+\begin{center}
+\vspace{\abovecaptionskip}
+Figure \ref{fig:allewd}: \fcfont -- continued
+\end{center}
+\end{figure}
+
+
+
+

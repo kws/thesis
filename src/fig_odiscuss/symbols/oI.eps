@@ -1,0 +1,206 @@
+%!PS-Adobe-2.1 EPSF-2.0
+%%Creator: RAL GKS 1.37 Linux - Workstation 2702
+%%Creation date: 14/ 1/1999
+%%Pages: (atend)
+%%DocumentFonts: (atend)
+%%BoundingBox: 0 0 28 28
+%%EndComments
+200 dict begin
+/align{2 copy exch 5 -1 roll sub exch div ceiling mul sub}def
+/ca{currentfile line readhexstring pop}def
+/clnstat{
+         setlinewidth plsty exch get
+         [
+          exch
+              {
+                currentlinewidth 1 1 itransform pop 0 0 itransform pop sub
+                10 mul div 1 add mul
+              }
+          forall
+         ]
+         0 setdash
+         setrgbcolor
+        }def
+/fagen{
+       dup length 1 sub
+       1 1 3 -1 roll
+          {plseg}
+       for
+       pop pop
+      }def
+/fapdo{
+       closepath pathbbox
+          /ury exch def/urx exch def
+          /lly exch refy psizey align def
+          /llx exch refx psizex align def
+          /nxpix urx llx sub psizex div nx mul round cvi 1 add def
+          /nypix ury lly sub psizey div ny mul round cvi 1 add def
+          /nxbyte nxpix 1 mul def
+       /scan
+          ny
+             {nxbyte string}
+          repeat
+          ny array astore
+       def
+       0 1 ny 1 sub
+          {
+           dup patdef exch get/ww nxbyte nxb add 2 mul string def/indn nxb def
+           ww 0 3 -1 roll putinterval ww
+              {
+               0 indn getinterval ww exch indn dup nxbyte nxb add
+               lt
+                   {exch putinterval /indn indn dup add def ww}
+                   {
+                    pop 0 nxbyte nxb add getinterval exch pop 0 nxbyte
+                    getinterval exit
+                   }
+               ifelse
+              }
+              loop
+           scan 3 1 roll put
+          }
+       for
+       gsave
+          eoclip
+             newpath
+                llx lly translate
+                nxpix psizex mul nx div nypix psizey mul ny div scale
+                faput
+       grestore
+      }def
+/fapi{
+      /psizey exch def /psizex exch def
+      /refy exch def/refx exch def/ny exch def/nx exch def
+      /nxb nx 1 mul def
+      /line nxb string def /patdef ny array  def
+         0 1 ny 1 sub 
+            {patdef exch ca nxb string copy put}
+         for
+     }def
+/faput{
+       /temp ny 1 sub nypix ny mod sub def
+       nxpix nypix 8 [nxpix 0 0 nypix neg 0 nypix]
+          {
+           /temp
+              temp 1 add dup ny 1 sub le
+                                         {}
+                                         {pop 0}
+                                      ifelse
+           def
+           scan temp get
+          }
+       im
+      }def
+/fasoldo{eoclip eofill}def
+/fastat{/fsi exch def}def
+/hitdot{transform round exch round exch itransform}def
+/im{image}def
+/init{
+      /eflag 1 def/epsf exch def/margin exch def
+      1 sub/delta exch def/pflag 0 def/orient exch def
+      /port [1 0 0 1] def/land [0 1 -1 0] def
+      epsf eflag eq
+                    {/llx 0 def/lly 0 def}
+                    {initmatrix
+                     clippath pathbbox
+                        pop pop/lly exch def/llx exch def}
+                 ifelse
+      [
+       orient pflag eq
+                       {/off 0 def port}
+                       {/off delta def land}
+                    ifelse
+       aload pop off llx margin add add lly
+      ]
+      concat
+      1 setlinejoin 1 setlinecap
+      newpath
+     }def
+/pln{
+     2 copy 0 get exch 0 get exch moveto dup length 1 sub
+     1 1 3 -1 roll
+        {plseg}
+     for
+     pop pop
+    }def
+/plong{pln stroke restore}def
+/pls{1 sub 3 1 roll moveto {lineto} repeat stroke}def
+/plseg{3 copy get 3 1 roll exch get exch lineto}def
+/plsty[ [] [] [12 5.5] [0.5 2] [10 2 0.5 2] [ 8 2 0.5 2 0.5 2] ]def
+/pm{dup length 1 sub 0 1 3 -1 roll {pmdomk} for pop pop}def
+/pmdomk{
+        3 copy get 3 1 roll exch get exch
+        gsave
+           translate [] 0 setdash
+           /tempwd currentlinewidth msz div def
+           msz dup scale
+           tempwd setlinewidth
+           newpath
+              pmx mt get exec stroke
+        grestore
+       }def
+/pmstat{/msz exch def/mt exch def}def
+/pmx[{}
+     {0 0 moveto 0 0 lineto}
+     {-.5 0 moveto .5 0 lineto 0 -.5 moveto 0 .5 lineto}
+     {pmx 2 get exec pmx 5 get exec}
+     {.5 0 moveto 0 0 .5 0 360 arc}
+     {-.45 -.45 moveto .45 .45 lineto -.45 .45 moveto .45 -.45 lineto}
+    ]def
+/s{save}def
+/setclipbox{newpath moveto lineto lineto lineto closepath clip newpath}def
+/txchar{
+        dup length 1 sub
+        0 1 3 -1 roll
+           {txdoch}
+        for
+        pop pop pop
+       }def
+/txdoch{
+        dup 4 1 roll 3 copy get 3 1 roll exch get exch
+        gsave
+           translate
+           tng rotate
+           texp 1 scale
+           3 -1 roll 3 index exch 1 getinterval 0 0 moveto
+           show
+        grestore
+       }def
+/txstat{
+        /texp exch def /tng exch def
+        gsave
+           /ft 3 -1 roll findfont def ft 1 scalefont setfont
+           0 0 moveto ( ) stringwidth pop
+        grestore
+        div ft exch scalefont setfont
+        /ft 0 def
+       }def
+/txstr{
+       gsave
+          translate
+          tng rotate
+          texp 1 scale
+          0 0 moveto
+          show
+       grestore
+      }def
+/tz{
+    2 copy exch
+    8 -1 roll exch moveto
+    6 -1 roll exch lineto
+    3 -1 roll exch lineto lineto
+   }def
+0  543    0.000  1 init
+%%EndProlog
+%%Page: ? 1
+save
+restore save 
+      2.836      2.835      2.836     25.512     25.511     25.512     25.511      2.835 setclipbox
+ 0.00000 0.00000 0.00000  1    0.24 clnstat
+ s[  24.3  22.2  19.3  15.9  12.4   9.0   6.2   4.1   3.0   3.0   4.1   6.2   9.0  12.4  15.9  19.3  22.2  24.3  25.4  25.4  24.3][
+  19.3  22.2  24.3  25.4  25.4  24.3  22.2  19.3  15.9  12.4   9.0   6.2   4.1   3.0   3.0   4.1   6.2   9.0  12.4  15.9  19.3]plong
+showpage restore
+end
+%%Trailer
+%%DocumentFonts:
+%%Pages: 1

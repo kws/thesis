@@ -1,0 +1,104 @@
+#!/bin/csh -f
+
+source ../00bsconfig
+
+set vsinid = $bsdir/vsini
+set specd  = $bsdir/spec
+set bscd   = $bsdir/cats/bsc5
+
+set min = 40
+
+make -C $vsinid vsini.op
+
+set op = tab.tex
+echo -n "%Created: " >! $op
+date >> $op
+
+set tplts = (tausco iother picet alplyr)
+set workdir = $cwd
+
+set stars = `cat $vsinid/vsini.op | cut -d_ -f1 |sort |uniq`
+echo Found $#stars stars
+
+set refs  = `awk '{print $2}' $specd/ref.pref`
+
+foreach f ($stars)
+  set star = `echo $f | cut -d_ -f1`
+
+  echo Working on ${star}
+
+  foreach r ($refs)
+    set e = `grep $star $specd/spectypes.ref|grep $r|cut -d\| -f3`
+    if ("$e" != "") goto found
+  end
+
+found:
+  if ("$e" == "") then
+    set e = "{}"
+    set r = "{}"
+  endif
+
+  set cat = `echo $star | tr -d 'a-z'`
+  set spec = `echo $e |awk -F _ '{print $1$2" "$3$4}'`
+
+  set bscSpec = `$bscd/00lookup.csh $cat |cut -d'|' -f2`
+
+  set swps = `grep $star $vsinid/vsini.op | cut -d' ' -f1`
+  echo Found $#swps swps
+  
+  onintr -
+  foreach sw ($swps)
+      set swp = `echo $sw | cut -d_ -f2 | tr -d 'a-z'`
+      if ("$sw" == "$swps[1]") then
+        printf "%5.0f & %10s & %5s & %10s &" \
+        $cat "$spec" $r "$bscSpec" >> $op
+      else 
+        printf "%5s & %10s & %5s & %10s &" >> $op
+      endif
+
+      printf "%5.0f " $swp >>$op
+
+      set vsinis = `grep $sw $vsinid/vsini.op`
+      foreach n (2 3 4 5)
+        set vs = $vsinis[$n]
+	if ("$vs" == "-999") then
+	  set vs = '$\leq$'" $min"
+        endif
+	if ("$vs" == "+999") then
+	  set vs = "\ldots"
+        endif
+	if ("$vs" == "0") then
+	  set vs = "\ldots"
+        endif
+	if ("$vs" == `echo $vs | tr -d 'A-z'`) then
+	  set v = `echo $vs | tr -d '+'`
+          if ($v < $min) then
+            set vs = '$\leq$'" $min"
+          endif
+	endif
+
+        printf "& {" >> $op
+	@ nplus = $n - 1
+	if (($vsinis[6] == $nplus) & ("$vs" != "\ldots")) then
+	  printf "\\bfseries" >> $op
+        endif
+        printf "%5s } " "$vs" >> $op
+      end
+
+#      if ("$sw" == "$swps[1]") then
+#        set r2 = `$specd/00lookup.csh $star | cut -d: -f2`
+#	if ("$r" != "") then
+#	  set r2 = `echo $r2 | sed -e "s/$r//g"`
+#        endif
+#        printf "$r2" >> $op
+#      endif
+
+      printf '\\\\ \n' >> $op
+  end
+  onintr
+end
+
+
+
+
+
